@@ -10,3 +10,5 @@ In your terminal, run `docker-compose down` in the root of the project to close.
 Run `npm install` for node dependencies.
 
 To compile scss run: `npx mix` or `npx mix watch` to watch for changes and compile on the fly.
+
+You must run docker before running the watch task.

@@ -1,0 +1,311 @@
+// Font smoothing mixin
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+//clearfix
+@mixin clearfix() {
+	&:before, &:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+//font calling
+
+@mixin raleway() {
+	font-family: 'Raleway', sans-serif;
+}
+
+@mixin oxygen() {
+	font-family: 'Oxygen', sans-serif;
+}
+
+@mixin fontawesome() {
+	font-family: 'Font Awesome\ 5 Free';
+}
+
+//animation
+@mixin transition() {
+	transition: all 0.15s ease-in-out;
+}
+
+//button
+@mixin button() {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	border-radius: 3px;
+	text-decoration: none;
+	
+	@include oxygen();
+	line-height: 1.16;
+	font-size: 18px;
+	text-align: left;
+	background-color: $green;
+	color: white;
+	text-transform: uppercase;
+	padding: 18px 70px;
+	@include transition();
+	display: inline-block;
+	letter-spacing: 1px;
+	
+	// position: relative;
+    // transform: perspective(1px) translateZ(0);
+    // box-shadow: 0 0 1px transparent;
+    // position: relative;
+    // transition-property: color;
+    // transition-duration: 0.3s;
+	
+	&:hover {
+		color: white;
+		text-decoration: none;
+
+		background: $green-hover;
+		@include transition();
+
+		// &:before {
+		// 	transform: scaleY(1);
+		// }
+	}
+
+	&.btn-small {
+		font-size: 18px;
+		padding: 15px 48px;
+	}
+
+	&.btn-white {
+		background-color: $white;
+		&.btn-outline {
+			background: transparent;
+			color: $white;
+			border: 3px solid $white;
+		}
+
+		&:hover {
+			background-color: $white;
+			color: $purple;
+		}
+	}
+
+	&.btn-blue {
+		background-color: $blue;
+		
+		&.btn-outline {
+			background: transparent;
+			color: $blue;
+			border: 3px solid $blue;
+		}
+		&:hover {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+
+	&.btn-purple {
+		background-color: $purple;
+		
+		&.btn-outline {
+			background: transparent;
+			color: $purple;
+			border: 3px solid $purple;
+		}
+		&:hover {
+			background-color: $purple;
+			color: $white;
+		}
+	}
+
+	&.btn-outline {
+		padding: 15px 67px;
+	
+		&.btn-small {
+			padding: 12px 45px;
+		}
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active {
+		text-decoration: none;	
+	}
+
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	background: $green-hover;
+	// 	transform: scaleY(0);
+	// 	transform-origin: 50% 100%;
+	// 	transition-property: transform;
+	// 	transition-duration: 0.3s;
+	// 	transition-timing-function: ease-out;
+	// }
+	
+	&:after {
+		// content: "";
+		// background-image: url(../assets/images/custom-icons/icon-arrow-right-inv.svg);
+		// width: 9px;
+		// height: 9px;
+		// display: inline-block;
+		// margin-left: 12px;
+	}
+}
+
+//editor ul, ol
+@mixin editor-ul-ol() {
+	ol, ul {
+		margin-bottom: 10px;
+		
+		li {
+			color: $copy-color;
+			font-size: $base-font-size;
+			line-height: $base-line-height;
+			font-weight: normal;
+			margin-bottom: 10px;
+		}
+	}
+	
+	ol {
+		padding-left: 20px;
+	}
+	
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			padding-left: 23px;
+		
+			&:before {
+				@include fa-icon;
+				@extend .fas;
+				content: fa-content($fa-var-square);
+				@include fa-icon-rotate(45deg, 1);
+				margin-left: -22px; 
+				vertical-align: middle;
+				font-size: 8px;
+				color: $green;
+				position: relative;
+				padding-right: 12px;
+				top: 2px;
+			}
+		}
+
+		&.checked > li {
+			padding-left: 21px;
+		
+			&:before {
+				margin-right: 10px;
+				content: "";
+				background: url('../assets/images/custom-icons/icon-check.svg') no-repeat left top;
+				font-size: 15px;
+				position: relative;
+				width: 12px;
+				height: 15px;
+				display: inline-block;
+			}
+		}
+		
+		&.purple > li {
+			&:before {
+				color: $purple;
+			}
+		}
+		
+		&.checked.purple > li {
+			
+			&:before {
+				background: url('../assets/images/custom-icons/icon-check-purple.svg') no-repeat left top; 
+			}
+		}
+	}
+}
+
+//bg cover
+@mixin bg-cover() {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// fluid font size for shrinking fonts
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
+
+	@media screen and (min-width: $min-vw) {
+		@each $property in $properties {
+			#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+		}
+	}
+
+	@media screen and (min-width: $max-vw) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}
+
+
+@mixin smoothGradient($color, $direction) {
+  
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+  
+  $hue: hue($color);
+  $saturation: saturation($color);
+  $lightness: lightness($color);
+  $stops: ();
+  
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+  
+  background: linear-gradient($direction, $stops);
+  
+}
+
+
+
+
+
+
+
+
+
+
+

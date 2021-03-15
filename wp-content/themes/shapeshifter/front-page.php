@@ -1,3 +1,3 @@
 <?php get_header();?>
-test
+test2
 <?php get_footer();?>

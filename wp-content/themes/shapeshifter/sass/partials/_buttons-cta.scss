@@ -1,0 +1,39 @@
+.button {
+    @include button();
+}
+
+.cta {
+    @include oxygen();
+	font-size: 18px;
+	line-height: 1.12;
+	letter-spacing: 1.5;
+	color: $green;
+	text-transform: uppercase;
+	text-decoration: none;
+	@include transition();
+	
+	&:hover {
+		@include transition();
+		text-decoration: none;
+		color: $green-hover;
+	}
+  
+	&:after {
+		content: "\f054";
+		font-family: FontAwesome;
+		// background-image: url(../assets/images/custom-icons/icon-arrow-right.svg);
+		width: 9px;
+		height: 9px;
+		font-size: 12px;
+		display: inline-block;
+		margin-left: 12px;
+	}
+}
+
+.iconed-link {
+	@extend .cta;
+	
+	&:after {
+		display: none;
+	}
+}

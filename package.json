@@ -1,0 +1,29 @@
+{
+  "name": "shapeshifer-wp",
+  "version": "1.0.0",
+  "description": "To run using Docker:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorbak/shapeshifer-wp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorbak/shapeshifer-wp/issues"
+  },
+  "homepage": "https://github.com/victorbak/shapeshifer-wp#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.13",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "webpack-cli": "^4.5.0"
+  }
+}

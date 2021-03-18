@@ -1,3 +1,3 @@
 <?php get_header();?>
-test2
+<button class="button">hello</button>
 <?php get_footer();?>

@@ -22,4 +22,7 @@ node_modules/
 *.sql
 *.sqlite
 
-dist
+# CSS files
+**/css
+*.css
+**/css/*.css

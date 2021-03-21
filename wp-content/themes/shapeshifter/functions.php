@@ -263,6 +263,8 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 // name
 // add_filter('acf/fields/flexible_content/layout_title/name=content', 'my_acf_flexible_content_layout_title', 10, 4);
 
+/* -Custom Post Types-----------------	-------------------------------- */
+include get_template_directory() . '/custom-post-types/jobs.php';
 
 
 ?>

@@ -66,6 +66,7 @@ function create_taxonomy_job_categories() {
         'hierarchical'      => true,
         'public'            => true,
         'show_admin_column' => true,
+        'menu_position' => 40,
     );
     register_taxonomy( 'job_categories', array( 'jobs-post' ), $args );
 }

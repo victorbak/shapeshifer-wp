@@ -265,6 +265,8 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 /* -Custom Post Types-----------------	-------------------------------- */
 include get_template_directory() . '/custom-post-types/jobs.php';
+include get_template_directory() . '/custom-post-types/team-members.php';
+include get_template_directory() . '/custom-post-types/projects.php';
 
 
 ?>

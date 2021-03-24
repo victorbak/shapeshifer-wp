@@ -61,13 +61,13 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'site-options',
 	));
 	
-	acf_add_options_page(array(
-		'page_title' 	=> 'News',
-		'menu_title'	=> 'News',
-		'menu_slug' 	=> 'news',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
+	// acf_add_options_page(array(
+	// 	'page_title' 	=> 'News',
+	// 	'menu_title'	=> 'News',
+	// 	'menu_slug' 	=> 'news',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false
+	// ));
 }
 
 

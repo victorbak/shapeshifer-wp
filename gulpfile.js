@@ -8,9 +8,11 @@ const groupmq = require('gulp-group-css-media-queries');
 const bs = require('browser-sync');
 
 const SASS_SOURCES = [
-  '.wp-content/themes/shapeshifter/sass/**/*.scss', // This picks up our style.scss file at the root of the theme
-  '.wp-content/themes/shapeshifter/css/**/*.scss', // All other Sass files in the /css directory
+  './wp-content/themes/shapeshifter/sass/**/*.scss', // This picks up our style.scss file at the root of the theme
+  './wp-content/themes/shapeshifter/css/**/*.scss', // All other Sass files in the /css directory
 ];
+
+const CSS_DESTINATION = './wp-content/themes/shapeshifter/css/'
 
 /**
  * Compile Sass files
@@ -21,7 +23,7 @@ gulp.task('compile:sass', () =>
   .pipe(sass({
     indentType: 'tab',
     indentWidth: 1,
-    // outputStyle: 'expanded', // Expanded so that our CSS is readable
+    outputStyle: 'expanded', // Expanded so that our CSS is readable
   })).on('error', sass.logError)
   .pipe(postcss([
     autoprefixer({
@@ -30,7 +32,7 @@ gulp.task('compile:sass', () =>
     })
   ]))
   .pipe(groupmq()) // Group media queries!
-  .pipe(gulp.dest('./css/')) // Output compiled files in the same dir as Sass sources
+  .pipe(gulp.dest(CSS_DESTINATION)) // Output compiled files in the same dir as Sass sources
   .pipe(bs.stream())); // Stream to browserSync
 
   /**

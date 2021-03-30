@@ -3,7 +3,7 @@
 /* 
  * Template Name: Contact Us
  */
- 
+echo esc_url( get_template_directory_uri() . '/assets/map.png' );
 ?>
 
 <?php get_header(); ?>
@@ -11,25 +11,28 @@
 
 
   <!-- Content here -->
-    <section class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <?php the_title(); ?>
-                <?php the_content(); ?>
-                <button class="button">Contact Us</button>
-            </div>
-            <div class="col-lg-6">
-                <?php get_template_part( 'inc/partials/contact' ); ?>
+  <div class="page container-fluid gradient-background">
+        <div class="container pt-5 pb-5">
+            <section class="container mb-4">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4 class="mb-2"><?php the_title(); ?></h4>
+                        <p><?php the_content(); ?></p>
+                        <button class="btn">Contact Us</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <?php get_template_part( 'inc/partials/contact' ); ?>
+                    </div>
+                </div>
+            </section>
+            <div class="map-banner mt-4 mb-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <p><em>Google Maps banner goes here</em></p>
-            </div>
-        </div>
-    </section>
+    </div>
     
   
 <?php get_footer(); ?>

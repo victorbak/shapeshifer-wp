@@ -11,17 +11,18 @@ echo esc_url( get_template_directory_uri() . '/assets/map.png' );
 
 
   <!-- Content here -->
-  <div class="page container-fluid gradient-background">
-        <div class="container pt-5 pb-5">
-            <section class="container mb-4">
+    <div class="page container-fluid gradient-background">
+        <div class="container-fluid p-4 section-wrapper">
+            <!-- Can extract this part to its own partial -->
+            <section class="container-fluid m-4">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <h4 class="mb-2"><?php the_title(); ?></h4>
-                        <p><?php the_content(); ?></p>
+                    <div class="col-6 content">
+                        <h4 class="mb-4"><?php the_title(); ?></h4>
+                        <?php the_content() ?>
                         <button class="btn">Contact Us</button>
                     </div>
-                    <div class="col-lg-6">
-                        <?php get_template_part( 'inc/partials/contact' ); ?>
+                    <div class="container col-6">
+                        <?php get_template_part( 'inc/partials/contact-info' ); ?>
                     </div>
                 </div>
             </section>

@@ -6,9 +6,10 @@ In your terminal, run `docker-compose up` in the root of the project to run.
 
 Navigate to `localhost:8000` in your browser.
 
-In your terminal, run `docker-compose down` in the root of the project to close.
+To close, run `docker-compose down` in the root of the project.
+
 Run `npm install` for node dependencies.
 
-To compile scss run: `npx mix` or `npx mix watch` to watch for changes and compile on the fly.
+To compile scss run: `gulp compile:sass` or `gulp watch:sass` to watch for changes and compile on the fly.
 
 You must run docker before running the watch task.

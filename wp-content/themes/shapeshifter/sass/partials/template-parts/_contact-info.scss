@@ -1,8 +1,8 @@
 .contact-info {
 
     &__box {
-        width: 34rem;
-        margin: auto;
+        max-width: 100%;
+        // margin: auto;
         padding: 1.4rem 1.2rem;
         background: #222;
         border: 3px solid $white;
@@ -21,9 +21,9 @@
         margin-bottom: .3rem;
     }
 
-    &--contact {
+    &--contact,
+    &--social {
         padding: .5rem;
-
     }
 
 }

@@ -1,12 +1,16 @@
+@import "bootstrap-variables-override";
+// @import 'bootstrap-override';
+
 @import "bootstrap-grid";
 @import "bootstrap-reboot";
 @import "bootstrap";
 
 
-@import "custom/base";
-@import "custom/reusables";
+@import "partials/base";
+@import "partials/reusables";
+@import "partials/button";
+@import "partials/pages/contact-us.scss";
+@import "partials/template-parts/contact-info";
 
-@import "custom/pages/contact-us.scss";
-
-@import "custom/template-parts/contact-info";
-
+// @import "bootstrap-override";
+// @import "bootstrap-variables-override";

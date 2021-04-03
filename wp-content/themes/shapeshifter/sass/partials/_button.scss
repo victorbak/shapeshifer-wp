@@ -1,0 +1,19 @@
+.button {
+    position: relative;
+    color: $white;
+    background: $primary;
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid transparent;
+    border-radius: 5px;
+    // box-shadow: $light_shadow;
+	// padding: spacing(xxs) spacing(sm);
+	font-size: 1rem;
+	text-align: left;
+	min-height: 3.1rem;
+	width: 100%;
+	max-width: 22rem;
+	font-weight: 300;
+	cursor: pointer;
+	transition: all 0.3s;
+}

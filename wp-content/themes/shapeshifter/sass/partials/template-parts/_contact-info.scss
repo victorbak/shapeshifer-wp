@@ -2,11 +2,22 @@
 
     &__box {
         max-width: 100%;
-        // margin: auto;
         padding: 1.4rem 1.2rem;
-        background: #222;
         border: 3px solid $white;
         border-radius: 3px;
+        background: #222;
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 24px solid transparent;
+            border-bottom: 24px solid #FFF;
+            border-top: 24px solid transparent;
+            position: absolute;
+            top: 19rem;
+            right: 1rem;
+            z-index: 2;
+        }
 
         .underline {
             width: 100%;
@@ -14,6 +25,7 @@
             margin: .6rem 0;
             background: transparent linear-gradient(90deg, #777777 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
         }
+
     }
 
     &--header {

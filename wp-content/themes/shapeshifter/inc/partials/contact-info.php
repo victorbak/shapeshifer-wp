@@ -2,8 +2,10 @@
     $post = get_page_by_title('Contact Info', OBJECT, 'reusable_block'); 
     $fields = get_fields();
 ?>
+<!-- TODO: ADD ICONS, ADD CORNER TO BOX -->
 <main class="contact-info">
     <div class="contact-info__box">
+        <div class="triangle"></div>
         <div>
             <p class="contact-info--header">CONTACT INFO</p>
             <div class="underline"></div>

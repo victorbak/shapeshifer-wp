@@ -6,11 +6,16 @@
 @import "bootstrap";
 
 
-@import "partials/base";
+
 @import "partials/background";
+@import "partials/base";
+@import "partials/box";
 @import "partials/button";
-@import "partials/pages/contact-us.scss";
+@import "partials/underline";
+
 @import "partials/template-parts/contact-info";
+@import "partials/pages/contact-us.scss";
+
 
 // @import "bootstrap-override";
 // @import "bootstrap-variables-override";

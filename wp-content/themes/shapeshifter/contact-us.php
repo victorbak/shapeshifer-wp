@@ -11,19 +11,7 @@
     <!-- Content here -->
         <div class="page">
             <div class="gradient-background">
-                <section class="container px-4 py-5">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4">
-                            <h2 class="mb-5"><?php the_title(); ?></h2>
-                            <p class="mb-5"><?php the_content() ?></p>
-                            <button class="button">Contact Us</button>
-                        </div>
-                        <!-- <div class="col-xl-1"></div> -->
-                        <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4">    
-                            <?php get_template_part( 'inc/partials/contact-info' ); ?>
-                        </div>
-                    </div>
-                </section>
+                <?php get_template_part( 'inc/partials/content-contact-block' ); ?>
                 <section class="container-fluid py-md-4 py-lg-6 px-0">
                     <div class="map-banner">
                         <div class="overlay">

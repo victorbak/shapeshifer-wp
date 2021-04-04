@@ -1,0 +1,39 @@
+// $grid-gutter-width: 30px;
+// @import "variables";
+
+$primary: #DA8824;
+
+$grid-breakpoints: (
+  xxs: 0px,
+  xs: 270px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+  xxxxl: 1800px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1500px,
+  xxxxl: 1700px,
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 5)
+);
+
+@import "bootstrap";

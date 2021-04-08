@@ -1,0 +1,20 @@
+.box-modal {
+    max-width: 100%;
+    padding: 1.4rem 1.2rem;
+    border: 8px solid $white;
+    border-radius: 5px;
+    background: #222;
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 24px solid transparent;
+        border-bottom: 24px solid #FFF;
+        border-top: 24px solid transparent;
+        position: absolute;
+        bottom: 1.6rem;
+        right: 1.1rem;
+        z-index: 2;
+    }
+
+}

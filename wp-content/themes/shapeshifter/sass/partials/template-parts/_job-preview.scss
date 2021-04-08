@@ -1,0 +1,64 @@
+.job-preview {
+    width: 100%;
+    border: 3px solid $white;
+    border-radius: 5px;
+
+    .header {
+        
+        background: $white;
+
+        .triangle {
+            width: 12%;
+            height: 95%;
+            background-image: linear-gradient(to left bottom, #222 0%, #222 50%, transparent 50%);
+            // border-left: 24px solid transparent;
+            // border-top: 24px solid red;
+            // border-bottom: 24px solid transparent;
+            position: absolute;
+            bottom: .1rem;
+            left: 20.6rem;
+            z-index: 2;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 22%;
+        }
+
+        .title,
+        .date {
+            margin: 0;
+            color: #222;
+        }
+
+        .date {
+            font-weight: 300;
+        }
+    }
+
+    .content {  
+        background: #222;
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 75.4%;
+        }
+
+        .description {
+            margin: 0;
+            font-weight: 300;
+            line-height: 18px;
+        }
+
+
+
+    }
+    
+    .arrow {
+        background: $white;
+        // width: 3%;   
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 2.6%;
+        }
+
+    }
+}

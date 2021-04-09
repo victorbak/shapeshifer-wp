@@ -5,4 +5,21 @@
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+
+    .posts {
+        min-height: 35rem;
+    }
+
+    .postings {
+        visibility: visible;
+        transition: all 3s;
+    }
+    
+    .invisible {
+        transition: all 0.3s;
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
 }

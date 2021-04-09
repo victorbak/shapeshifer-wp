@@ -1,29 +1,25 @@
 <?php 
-    var_dump($args);
-    // $title = $args  
-    // $content = $args->content;
-    ob_start();
+    $fields = get_fields();
     the_title();
-    $title = ob_get_clean();
-    var_dump($title);
-
-    $slug = get_post_field( 'post_name', get_the_ID() );
-    var_dump($slug);
-
+    // var_dump($fields);
 ?>
-
 
 <div class="job-preview">
     <div class="row m-0">
         <div class="header col-xs-12 py-xs-2 py-md-1">
-            <h4 class='title'><?php the_title(); ?></h4>
+            <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
             <p class="date">Date Posted</p>
         </div>
         <div class="content col-xs-12 p-xs-2 px-md-5">
-            <p class="description">Are you driven to succeed, and looking to work with one of Vancouver’s highest volume studios? How does huge growth potential sound? We are looking for a motivated Sales Manager to add to our growing Team!</p>
+            <?php echo "<p class='description'>{$fields['preview_text']}</p>"; ?>
         </div>
         <div class="arrow col-xs-0 p-xs-2 p-md-0">
-            <p>-></p>
+            <p style="color: black">-></p>
         </div>
     </div>
 </div>
+
+<div class="col-md-12 py-4"> 
+    <?php get_template_part('inc/partials/modal', '', $fields); ?>
+</div>
+

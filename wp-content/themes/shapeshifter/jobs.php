@@ -55,7 +55,7 @@ endif;
             <?php endforeach; ?>
             </div>
         </section>
-        <section class="container py-4">
+        <section class="container posts py-4">
         <?php foreach ( $terms as $term ) : ?>
             <div data-category="<?php echo $term->slug ?>" class="postings my-4 py-2">
                 <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
@@ -74,12 +74,14 @@ endif;
                     if ($loop->have_posts()) {
                         var_dump("true");
                         while($loop->have_posts()) : $loop->the_post();
-                            get_template_part( 'inc/partials/job-preview', $terms );
+                            get_template_part( 'inc/partials/job-preview' );
                         endwhile;
                     } ?>
                 </div>
+                
             </div>
         <?php endforeach; ?>
+
         </section>
     </div>
 </div>

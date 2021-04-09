@@ -16007,7 +16007,7 @@ h6 {
   z-index: 2;
 }
 
-.box-modal {
+.shapeshifter-modal {
   max-width: 100%;
   padding: 1.4rem 1.2rem;
   border: 8px solid #fff;
@@ -16015,7 +16015,20 @@ h6 {
   background: #222;
 }
 
-.box-modal .triangle {
+.shapeshifter-modal .cta {
+  display: inline-block;
+  min-width: 11rem;
+  height: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 1.1rem;
+  z-index: 2;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+}
+
+.shapeshifter-modal .triangle {
   width: 0;
   height: 0;
   border-left: 24px solid transparent;
@@ -16205,6 +16218,25 @@ h6 {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+.jobs .posts {
+  min-height: 35rem;
+}
+
+.jobs .postings {
+  visibility: visible;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.jobs .invisible {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 @media (min-width: 270px) {
@@ -26516,14 +26548,14 @@ h6 {
 
   .job-preview .header {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 22%;
-    flex: 0 0 22%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
   }
 
   .job-preview .content {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 75.4%;
-    flex: 0 0 75.4%;
+    -ms-flex: 0 0 77.4%;
+    flex: 0 0 77.4%;
   }
 
   .job-preview .arrow {

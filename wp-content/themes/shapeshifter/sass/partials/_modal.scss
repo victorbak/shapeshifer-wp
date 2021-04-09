@@ -1,9 +1,22 @@
-.box-modal {
+.shapeshifter-modal {
     max-width: 100%;
     padding: 1.4rem 1.2rem;
     border: 8px solid $white;
     border-radius: 5px;
     background: #222;
+
+    .cta {
+        display: inline-block;
+        min-width: 11rem;
+        height: 2.4rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 1.1rem;
+        z-index: 2;
+        background-color: $white;
+        color: #222;
+        text-decoration: none;
+    }
 
     .triangle {
         width: 0;

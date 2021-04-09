@@ -28,20 +28,18 @@ jQuery(document).ready(function($) {
 
   function onFilter(event) {
     var name = event.dataset.filter;
-    console.log(name);
     var el = document.querySelectorAll('[data-category]');
-    console.log(el);
     for (var i = 0; i < el.length; i++) {
-        el[i].style.display = '';
+        el[i].classList.remove('invisible')
     }
 
     if(name == 'all') {
         return;
     }
-    
+
     for (var i = 0; i < el.length; i++) {
         if(el[i].dataset.category != name) {
-            el[i].style.display = 'none';
+            el[i].classList.add('invisible');
         }
     }
   }

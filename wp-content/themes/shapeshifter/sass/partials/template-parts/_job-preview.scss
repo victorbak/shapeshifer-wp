@@ -21,7 +21,7 @@
         }
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 22%;
+            flex: 0 0 20%;
         }
 
         .title,
@@ -30,6 +30,9 @@
             color: #222;
         }
 
+        .title {
+            // letter-spacing: .3px;
+        }
         .date {
             font-weight: 300;
         }
@@ -39,7 +42,7 @@
         background: #222;
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 75.4%;
+            flex: 0 0 77.4%;
         }
 
         .description {

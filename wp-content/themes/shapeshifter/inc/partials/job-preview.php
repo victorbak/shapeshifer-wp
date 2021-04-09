@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="col-md-12 py-4"> 
+<!-- <div class="col-md-12 py-4"> 
     <?php get_template_part('inc/partials/modal', '', $fields); ?>
-</div>
+</div> -->
 

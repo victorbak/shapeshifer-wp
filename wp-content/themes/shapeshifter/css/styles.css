@@ -7202,6 +7202,10 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.col-half-offset {
+  margin-left: 4.166666667%;
+}
+
 /*!
  * Bootstrap Grid v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -16003,6 +16007,39 @@ h6 {
   z-index: 2;
 }
 
+.shapeshifter-modal {
+  max-width: 100%;
+  padding: 1.4rem 1.2rem;
+  border: 8px solid #fff;
+  border-radius: 5px;
+  background: #222;
+}
+
+.shapeshifter-modal .cta {
+  display: inline-block;
+  min-width: 11rem;
+  height: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 1.1rem;
+  z-index: 2;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+}
+
+.shapeshifter-modal .triangle {
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-bottom: 24px solid #FFF;
+  border-top: 24px solid transparent;
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.1rem;
+  z-index: 2;
+}
+
 .button {
   width: 100%;
   max-width: 22rem;
@@ -16024,12 +16061,47 @@ h6 {
   background-color: #C37A21;
 }
 
+.filter {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px 38px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.filter:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
 .underline {
   width: 100%;
   height: 1px;
   margin: .6rem 0;
   background: transparent -webkit-gradient(linear, left top, right top, from(#777777), to(#FFFFFF00)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(90deg, #777777 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+}
+
+.category-header .name {
+  color: #777;
+  letter-spacing: 0;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .contact-info--header {
@@ -16040,6 +16112,51 @@ h6 {
 .contact-info--contact,
 .contact-info--social {
   padding: .5rem;
+}
+
+.job-preview {
+  width: 100%;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.job-preview .header {
+  background: #fff;
+}
+
+.job-preview .header .triangle {
+  width: 12%;
+  height: 95%;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#222), color-stop(50%, #222), color-stop(50%, transparent));
+  background-image: linear-gradient(to left bottom, #222 0%, #222 50%, transparent 50%);
+  position: absolute;
+  bottom: .1rem;
+  left: 20.6rem;
+  z-index: 2;
+}
+
+.job-preview .header .title,
+.job-preview .header .date {
+  margin: 0;
+  color: #222;
+}
+
+.job-preview .header .date {
+  font-weight: 300;
+}
+
+.job-preview .content {
+  background: #222;
+}
+
+.job-preview .content .description {
+  margin: 0;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.job-preview .arrow {
+  background: #fff;
 }
 
 .map-banner {
@@ -16089,6 +16206,37 @@ h6 {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+.jobs .filters {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.jobs .posts {
+  min-height: 35rem;
+}
+
+.jobs .postings {
+  visibility: visible;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.jobs .invisible {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 @media (min-width: 270px) {
@@ -26392,6 +26540,28 @@ h6 {
 
   .text-md-center {
     text-align: center !important;
+  }
+
+  .filter {
+    margin-right: 32px;
+  }
+
+  .job-preview .header {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+
+  .job-preview .content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 77.4%;
+    flex: 0 0 77.4%;
+  }
+
+  .job-preview .arrow {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 2.6%;
+    flex: 0 0 2.6%;
   }
 
   .map-banner .overlay {

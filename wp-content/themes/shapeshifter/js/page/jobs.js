@@ -5,43 +5,45 @@ jQuery(document).ready(function($) {
         $(this).addClass("active");
 
         var name = $(event.target).data('filter');
-        console.log(event.target);
-        
-        // if(name == 'all') {
-        //     $('.postings').css({ 'display': '' });
-        // } else {
-        //     var categories = $("[data-category]")
-        //         .filter();
-        //     console.log(categories);
-        //     var newArray = [];
-        //     for(var i = 0; i < categories.length; i++) {
-        //         if(categories[i].dataset['category'] !== name) {
-        //             newArray.push(categories[i]);
-        //         }
-        //     }
-            
-        //     newArray.css({ 'display': 'none' })
-        // }
 
     })
+
   })
 
-  function onFilter(event) {
-    var name = event.dataset.filter;
-    var el = document.querySelectorAll('[data-category]');
-    for (var i = 0; i < el.length; i++) {
-        el[i].classList.remove('invisible')
-    }
+    setFilter = 'all';
+    function onFilter(event) {
+        filterName = event.dataset.filter;
+        if(setFilter == filterName) { return; }
+        var el = document.querySelectorAll('[data-category]');
+        for (var i = 0; i < el.length; i++) {
 
-    if(name == 'all') {
-        return;
-    }
+            el[i].classList.add('fade-out');
+            el[i].addEventListener('animationend', removeFadeOut);
 
-    for (var i = 0; i < el.length; i++) {
-        if(el[i].dataset.category != name) {
-            el[i].classList.add('invisible');
+            if (el[i].dataset['category'] == filterName || filterName == 'all' ) {
+
+                el[i].classList.add('fade-in');
+                el[i].addEventListener('animationend', removeFadeIn);
+
+                if(el[i].classList.contains('hidden')) {
+                    el[i].classList.remove('hidden');
+                }
+            } else {
+                el[i].classList.add('hidden');
+            }
+
         }
+        setFilter = filterName;
     }
-  }
+
+    function removeFadeOut(e) {
+        e.target.classList.remove('fade-out');
+        e.target.removeEventListener('animationend', removeFadeOut);
+    }
+
+    function removeFadeIn(e) {
+        e.target.classList.remove('fade-in');
+        e.target.removeEventListener('animationend', removeFadeIn);
+    }
 
 

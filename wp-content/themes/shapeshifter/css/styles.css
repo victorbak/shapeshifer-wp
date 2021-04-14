@@ -15978,6 +15978,7 @@ a.text-dark:focus {
 }
 
 p,
+li,
 h1,
 h2,
 h3,
@@ -16015,13 +16016,35 @@ h6 {
   background: #222;
 }
 
+.shapeshifter-modal .header {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-width: 20rem;
+  background: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: -3.3rem;
+  left: 0;
+}
+
+.shapeshifter-modal .header .title,
+.shapeshifter-modal .header .date {
+  margin: 0;
+  color: #222;
+}
+
+.shapeshifter-modal .header .date {
+  font-weight: 300;
+}
+
 .shapeshifter-modal .cta {
   display: inline-block;
   min-width: 11rem;
   height: 2.4rem;
   position: absolute;
-  bottom: 2rem;
-  right: 1.1rem;
+  bottom: 0.5rem;
+  right: 0.5rem;
   z-index: 2;
   background-color: #fff;
   color: #222;
@@ -16082,7 +16105,7 @@ h6 {
   cursor: pointer;
 }
 
-.active {
+.filter.active {
   background-color: #fff;
   color: #222;
   -webkit-transition: 0s;
@@ -16115,13 +16138,17 @@ h6 {
 }
 
 .job-preview {
+  display: inline-block;
   width: 100%;
   border: 3px solid #fff;
   border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .job-preview .header {
   background: #fff;
+  text-decoration: none;
 }
 
 .job-preview .header .triangle {
@@ -16139,6 +16166,12 @@ h6 {
 .job-preview .header .date {
   margin: 0;
   color: #222;
+}
+
+.job-preview .header .title {
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .job-preview .header .date {
@@ -16224,19 +16257,63 @@ h6 {
   min-height: 35rem;
 }
 
-.jobs .postings {
-  visibility: visible;
-  -webkit-transition: all 3s;
-  transition: all 3s;
+.jobs .hidden {
+  display: none;
+  opacity: 0;
 }
 
-.jobs .invisible {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  visibility: hidden;
-  height: 0;
-  width: 0;
-  overflow: hidden;
+.jobs .fade-in {
+  animation: fadeIn ease-in-out .05s;
+  -webkit-animation: fadeIn ease-in-out .05s;
+  -moz-animation: fadeIn ease-in-out .05s;
+  -o-animation: fadeIn ease-in-out .05s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.jobs .fade-out {
+  animation: fadeOut ease-in-out .05s;
+  -webkit-animation: fadeOut ease-in-out .05s;
+  -moz-animation: fadeOut ease-in-out .05s;
+  -o-animation: fadeOut ease-in-out .05s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 270px) {

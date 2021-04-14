@@ -1,11 +1,15 @@
 .job-preview {
+    display: inline-block;
     width: 100%;
     border: 3px solid $white;
     border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 
     .header {
         
         background: $white;
+        text-decoration: none;
 
         .triangle {
             width: 12%;
@@ -32,6 +36,9 @@
 
         .title {
             // letter-spacing: .3px;
+            white-space:pre;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .date {
             font-weight: 300;
@@ -51,8 +58,11 @@
             line-height: 18px;
         }
 
+    }
 
-
+    .title,
+    .description {
+        // text-decoration: none;
     }
     
     .arrow {

@@ -1,10 +1,10 @@
 <?php 
     $fields = get_fields();
     the_title();
-    // var_dump($fields);
+    $id = get_the_ID();
 ?>
 
-<div class="job-preview">
+<a class="job-preview" data-toggle="modal" data-target="<?php echo '#modalCenter-' . $id ?>">
     <div class="row m-0">
         <div class="header col-xs-12 py-xs-2 py-md-1">
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
@@ -17,9 +17,20 @@
             <p style="color: black">-></p>
         </div>
     </div>
+</a>
+
+<!-- Modal -->
+<div class="modal fade" 
+    id="<?php echo 'modalCenter-' . $id ?>" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" 
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+        <div class="modal-content"> 
+            <?php get_template_part('inc/partials/modal', '', $fields); ?>
+        </div>
+    </div>
 </div>
 
-<!-- <div class="col-md-12 py-4"> 
-    <?php get_template_part('inc/partials/modal', '', $fields); ?>
-</div> -->
 

@@ -19,10 +19,11 @@
         margin-right: 32px;
     }
 
+    &.active {
+        background-color: $white;
+        color: #222;    
+        transition: 0s;
+    }
+
 }
 
-.active {
-    background-color: $white;
-    color: #222;    
-    transition: 0s;
-}

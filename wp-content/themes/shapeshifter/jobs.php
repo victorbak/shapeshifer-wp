@@ -49,7 +49,7 @@ endif;
         </section>
         <section class="container py-2 mb-5">
             <div class="filters">
-                <a data-filter="all" onclick="onFilter(this)" class="filter active">All</a>           
+                <a data-filter="all" class="filter active">All</a>           
             <?php foreach ( $terms as $term ) :?>
                 <?php get_template_part( 'inc/partials/filter', '', $term); ?>
             <?php endforeach; ?>
@@ -57,7 +57,7 @@ endif;
         </section>
         <section class="container posts py-4">
         <?php foreach ( $terms as $term ) : ?>
-        <div data-category="<?php echo $term->slug ?>" class="postings my-4 py-2">
+        <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
             <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
             <div>
                 <?php 

@@ -1,5 +1,5 @@
 
-<a data-filter="<?php echo $args->slug ?>" onclick="onFilter(this)" class="filter">
+<a data-filter="<?php echo $args->slug ?>" class="filter">
     <?php echo $args->name ?>
 </a>
 

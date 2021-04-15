@@ -16259,14 +16259,11 @@ h6 {
 
 .jobs .hidden {
   display: none;
-  opacity: 0;
 }
 
-.jobs .fade-in {
-  animation: fadeIn ease-in-out .05s;
-  -webkit-animation: fadeIn ease-in-out .05s;
-  -moz-animation: fadeIn ease-in-out .05s;
-  -o-animation: fadeIn ease-in-out .05s;
+.jobs .is-animated {
+  -webkit-animation: .2s fadeIn;
+  animation: .2s fadeIn;
 }
 
 @keyframes fadeIn {
@@ -16289,30 +16286,30 @@ h6 {
   }
 }
 
-.jobs .fade-out {
-  animation: fadeOut ease-in-out .05s;
-  -webkit-animation: fadeOut ease-in-out .05s;
-  -moz-animation: fadeOut ease-in-out .05s;
-  -o-animation: fadeOut ease-in-out .05s;
+.jobs .fade-in {
+  animation: fadeIn ease-in-out .2s;
+  -webkit-animation: fadeIn ease-in-out .2s;
+  -moz-animation: fadeIn ease-in-out .2s;
+  -o-animation: fadeIn ease-in-out .2s;
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes fadeIn {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 

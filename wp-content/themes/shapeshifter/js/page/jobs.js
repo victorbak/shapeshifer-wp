@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         if(setFilter == filterName) { return; }
         var el = document.querySelectorAll('[data-category]');
         for (var i = 0; i < el.length; i++) {
-
+            // Need to not fade out every timea
             el[i].classList.add('fade-out');
             el[i].addEventListener('animationend', removeFadeOut);
 

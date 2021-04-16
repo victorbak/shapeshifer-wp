@@ -19,6 +19,19 @@ function script_styles_setup() {
 add_action( 'wp_enqueue_scripts', 'script_styles_setup' );
 
 
+/* -MENU SETUP------------------------------------------------- */
+
+register_nav_menus( array( 
+	'header' => 'Header menu', 
+	'footer' => 'Footer menu' 
+) );
+
+
+/* -Fonts ----------------------------------------------------- */
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+}
 
 /* -BASIC SETUP------------------------------------------------- */
 function setup() {
@@ -44,32 +57,6 @@ add_action('admin_head', 'admin_styles');
 
 /* -INCLUDES------------------------------------------------- */
 // require_once 'inc/autoload.php';
-
-//add Site Options
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Site Options',
-		'menu_title'	=> 'Site Options',
-		'menu_slug' 	=> 'site-options',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Footer',
-		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'site-options',
-	));
-	
-	// acf_add_options_page(array(
-	// 	'page_title' 	=> 'News',
-	// 	'menu_title'	=> 'News',
-	// 	'menu_slug' 	=> 'news',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false
-	// ));
-}
 
 
 
@@ -157,12 +144,12 @@ add_filter( 'script_loader_src', 'remove_version_from_style_js');
 
 
 
-/* -REMOVE MENU LINKS FROM ADMIN SIDEBAR------------------------------------------------- */
-function remove_menus(){
-  remove_menu_page( 'edit.php' ); // POSTS
-  remove_menu_page( 'edit-comments.php' ); // COMMENTS
-}
-add_action( 'admin_menu', 'remove_menus' );
+// /* -REMOVE MENU LINKS FROM ADMIN SIDEBAR------------------------------------------------- */
+// function remove_menus(){
+//   remove_menu_page( 'edit.php' ); // POSTS
+//   remove_menu_page( 'edit-comments.php' ); // COMMENTS
+// }
+// add_action( 'admin_menu', 'remove_menus' );
 
 
 

@@ -15987,6 +15987,14 @@ h6 {
   color: #fff;
 }
 
+.fa-icon {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fab-linked-in:before {
+  content: "\f0e1";
+}
+
 .box {
   max-width: 100%;
   padding: 1.4rem 1.2rem;

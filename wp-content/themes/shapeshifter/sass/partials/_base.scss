@@ -7,3 +7,13 @@ h5,
 h6 {
     color: $white;
 }
+
+.fa-icon {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fab-linked-in {
+    &:before {
+        content: "\f0e1";
+    }
+}

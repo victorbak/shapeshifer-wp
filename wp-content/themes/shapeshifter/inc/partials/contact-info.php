@@ -20,7 +20,7 @@
             <div class="underline"></div>
             <div class="row p-2">
                 <!-- Add conditionals -->
-                <p class="col-1 fa-icon">in</p>
+                <p class="col-1 fa-icon fab-linked-in"></p>
                 <p class="col-1 fa-icon">vm</p>
                 <p class="col-1 fa-icon">yt</p>
                 <p class="col-1 fa-icon">tw</p>

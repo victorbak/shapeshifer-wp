@@ -1,10 +1,17 @@
 .job-preview {
     display: inline-block;
     width: 100%;
+    margin: 1rem 0;
     border: 3px solid $white;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    
+    .content {
+      @include media-breakpoint-up(md) {
+        display: flex;
+      }
+    }
 
     .header {
         
@@ -14,18 +21,19 @@
         .triangle {
             width: 12%;
             height: 95%;
-            background-image: linear-gradient(to left bottom, #222 0%, #222 50%, transparent 50%);
-            // border-left: 24px solid transparent;
-            // border-top: 24px solid red;
-            // border-bottom: 24px solid transparent;
+            // background-image: linear-gradient(to left bottom, #fff 0%, #FFF 50%, transparent 50%);
+            border-left: 32px solid transparent;
+            border-top: 56px solid #222;
+            border-bottom: 56px solid transparent;
             position: absolute;
-            bottom: .1rem;
-            left: 20.6rem;
+            top: 0px;
+            right: 0;
             z-index: 2;
         }
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 20%;
+            flex: 5;
+            padding-right: 2.4rem
         }
 
         .title,
@@ -48,8 +56,9 @@
     .content {  
         background: #222;
 
-        @include media-breakpoint-up(md) {
-            flex: 0 0 77.4%;
+        @include media-breakpoint-up(md) {  
+            // max-width: 80.5rem;
+            flex: 28;
         }
 
         .description {
@@ -60,17 +69,12 @@
 
     }
 
-    .title,
-    .description {
-        // text-decoration: none;
-    }
-    
     .arrow {
         background: $white;
         // width: 3%;   
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 2.6%;
+            flex: 1;
         }
 
     }

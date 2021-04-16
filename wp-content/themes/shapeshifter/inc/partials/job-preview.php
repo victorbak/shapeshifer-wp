@@ -1,12 +1,12 @@
 <?php 
     $fields = get_fields();
-    the_title();
     $id = get_the_ID();
 ?>
 
 <a class="job-preview" data-toggle="modal" data-target="<?php echo '#modalCenter-' . $id ?>">
-    <div class="row m-0">
+    <div class="content row m-0">
         <div class="header col-xs-12 py-xs-2 py-md-1">
+            <div class="triangle"></div>
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
             <p class="date">Date Posted</p>
         </div>

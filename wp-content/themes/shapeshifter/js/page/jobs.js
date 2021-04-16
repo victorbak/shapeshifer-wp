@@ -14,14 +14,13 @@ jQuery(document).ready(function ($) {
 
     if ($filterCategory == 'all') {
       $postings.removeClass('is-animated')
-        .fadeOut(200).promise().done(function () {
-          $postings.addClass('is-animated').fadeIn(200);
+        .fadeOut(100).promise().done(function () {
+          $postings.fadeIn(100);
         });
     } else {
       $postings.removeClass('is-animated')
-        .fadeOut(200).promise().done(function () {
-          $postings.filter('[data-category = "' + $filterCategory + '"]')
-            .addClass('is-animated').fadeIn(200);
+        .fadeOut(100).promise().done(function () {
+          $postings.filter('[data-category = "' + $filterCategory + '"]').fadeIn(100);
         });
     }
   });

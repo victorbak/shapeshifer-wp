@@ -9,27 +9,25 @@
 <!-- TODO: ADD ICONS -->
 
     <!-- Content here -->
-        <div class="page">
-            <div class="gradient-background">
-                <?php get_template_part( 'inc/partials/content-contact-block' ); ?>
-                <section class="container-fluid py-md-4 py-lg-6 px-0">
-                    <div class="map-banner">
-                        <div class="overlay">
-                        <a href="http://google.ca/maps" target="_blank" >
-                            <div class="row mx-0">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-4 text-center">
-						            <h6 class="cta">GET DIRECTIONS</h6>
-                                </div>
-                                <div class="col-md-4">
-                                </div>
+        <div class="contact-us page">
+            <?php get_template_part( 'inc/sections/content-contact-block' ); ?>
+            <section class="container-fluid py-md-4 py-lg-6 px-0">
+                <div class="map-banner">
+                    <div class="overlay">
+                    <a href="http://google.ca/maps" target="_blank" >
+                        <div class="row mx-0">
+                            <div class="col-md-4">
                             </div>
-                        </a>
+                            <div class="col-md-4 text-center">
+                              <h6 class="cta">GET DIRECTIONS</h6>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
                         </div>
+                    </a>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
         
     

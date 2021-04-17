@@ -15977,6 +15977,10 @@ a.text-dark:focus {
   opacity: 1;
 }
 
+body {
+  background-color: #222222;
+}
+
 p,
 h1,
 h2,
@@ -15987,12 +15991,25 @@ h6 {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .fa-icon {
   font-family: "Font Awesome 5 Free";
 }
 
 .fab-linked-in:before {
   content: "\f0e1";
+}
+
+.content {
+  color: #fff;
 }
 
 .box {
@@ -16139,7 +16156,7 @@ h6 {
   height: 34px;
   -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) translateY(-65%);
   transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) translateY(-65%);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #fff;
   opacity: 0.16;
   -webkit-transition: 0.4s border ease-in;
   transition: 0.4s border ease-in;

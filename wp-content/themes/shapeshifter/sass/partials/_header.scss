@@ -17,7 +17,7 @@
 }
 
 .menu-item {
-  color: #fff;
+  color: $white;
   display: inline-block;
   padding: 30px 20px 30px 55px;
   position: relative;
@@ -30,7 +30,7 @@
     width: 34px;
     height: 34px;
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) translateY(-65%);
-    border: 1px solid #FFFFFF;
+    border: 1px solid $white;
     opacity: 0.16;
     transition: 0.4s border ease-in;
   }
@@ -51,7 +51,7 @@
   }
 
   a {
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.4s color ease-in;

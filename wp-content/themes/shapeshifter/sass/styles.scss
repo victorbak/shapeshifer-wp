@@ -6,14 +6,13 @@
 @import "bootstrap";
 
 
-
-@import "partials/background";
 @import "partials/base";
 @import "partials/box";
 @import "partials/modal";
 @import "partials/button";
 @import "partials/filter";
 @import "partials/underline";
+@import "partials/header";
 
 @import "partials/template-parts/category-header";
 @import "partials/template-parts/contact-info";
@@ -22,6 +21,7 @@
 
 @import "partials/pages/contact-us";
 @import "partials/pages/jobs";
+@import "partials/pages/page";
 
 
 // @import "bootstrap-override";

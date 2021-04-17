@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    height: auto;
+    background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
 p,
 li,
 h1,
@@ -6,5 +12,28 @@ h3,
 h4,
 h5,
 h6 {
+    color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.fa-icon {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fab-linked-in {
+    &:before {
+        content: "\f0e1";
+    }
+}
+
+.content {
     color: $white;
 }

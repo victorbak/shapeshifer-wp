@@ -20,11 +20,11 @@
             <div class="underline"></div>
             <div class="row p-2">
                 <!-- Add conditionals -->
-                <p class="col-1">in</p>
-                <p class="col-1">vm</p>
-                <p class="col-1">yt</p>
-                <p class="col-1">tw</p>
-                <p class="col-1">ig</p>
+                <p class="col-1 fa-icon fab-linked-in"></p>
+                <p class="col-1 fa-icon">vm</p>
+                <p class="col-1 fa-icon">yt</p>
+                <p class="col-1 fa-icon">tw</p>
+                <p class="col-1 fa-icon">ig</p>
             </div>
         </div>
     </div>

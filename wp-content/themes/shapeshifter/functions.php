@@ -46,6 +46,7 @@ function setup() {
 
 }
 add_action( 'after_setup_theme', 'setup' );
+remove_filter('the_content', 'wpautop');
 
 
 //add admin styles
@@ -250,7 +251,16 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 // name
 // add_filter('acf/fields/flexible_content/layout_title/name=content', 'my_acf_flexible_content_layout_title', 10, 4);
-remove_filter('the_content','wpautop');
+
+// function disable_wp_auto_p( $content ) {
+//   if ( is_singular( 'page' ) ) {
+//     remove_filter( 'the_content', 'wpautop' );
+//     remove_filter( 'the_excerpt', 'wpautop' );
+//   }
+//   return $content;
+// }
+// add_filter( 'the_content', 'disable_wp_auto_p', 0 );
+
 /* -Custom Post Types-----------------	-------------------------------- */
 include get_template_directory() . '/inc/post-types/jobs.php';
 include get_template_directory() . '/inc/post-types/projects.php';

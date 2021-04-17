@@ -15971,14 +15971,11 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
-.gradient-background {
+body {
+  min-height: 100vh;
   height: auto;
   background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
   opacity: 1;
-}
-
-body {
-  background-color: #222222;
 }
 
 p,
@@ -16017,6 +16014,7 @@ a:hover {
   padding: 1.4rem 1.2rem;
   border: 3px solid #fff;
   border-radius: 3px;
+  position: relative;
   background: #222;
 }
 
@@ -16027,8 +16025,8 @@ a:hover {
   border-bottom: 24px solid #FFF;
   border-top: 24px solid transparent;
   position: absolute;
-  bottom: 1.6rem;
-  right: 1.1rem;
+  bottom: 0;
+  right: 0;
   z-index: 2;
 }
 

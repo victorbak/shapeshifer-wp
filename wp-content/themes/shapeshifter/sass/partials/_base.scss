@@ -1,5 +1,8 @@
 body {
-    background-color: #222222;
+    min-height: 100vh;
+    height: auto;
+    background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
 }
 p,
 h1,

@@ -1,4 +1,5 @@
 .jobs {
+
     .filters {
         width: 100%;
         display: flex;
@@ -10,16 +11,93 @@
         min-height: 35rem;
     }
 
-    .postings {
-        visibility: visible;
-        transition: all 3s;
+    .hidden {
+        display: none;
     }
-    
-    .invisible {
-        transition: all 0.3s;
-        visibility: hidden;
-        height: 0;
-        width: 0;
-        overflow: hidden;
+
+    .is-animated {
+      animation: .2s fadeIn;
     }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+        animation: fadeIn ease-in-out .2s;
+        -webkit-animation: fadeIn ease-in-out .2s;
+        -moz-animation: fadeIn ease-in-out .2s;
+        -o-animation: fadeIn ease-in-out .2s;
+      }@keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+
 }

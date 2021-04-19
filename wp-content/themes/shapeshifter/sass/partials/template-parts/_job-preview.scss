@@ -1,27 +1,30 @@
 .job-preview {
+    display: inline-block;
     width: 100%;
+    margin: 1rem 0;
     border: 3px solid $white;
     border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+    .card {
+      @include media-breakpoint-up(md) {
+        display: flex;
+      }
+    }
 
     .header {
         
         background: $white;
+        text-decoration: none;
 
-        .triangle {
-            width: 12%;
-            height: 95%;
-            background-image: linear-gradient(to left bottom, #222 0%, #222 50%, transparent 50%);
-            // border-left: 24px solid transparent;
-            // border-top: 24px solid red;
-            // border-bottom: 24px solid transparent;
-            position: absolute;
-            bottom: .1rem;
-            left: 20.6rem;
-            z-index: 2;
-        }
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 20%;
+            flex: 5;
+            padding-right: 2.4rem;
+            --notchSize: 32px;
+
+            clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0.00%, 100% 100%, 0px 100%);
         }
 
         .title,
@@ -32,6 +35,9 @@
 
         .title {
             // letter-spacing: .3px;
+            white-space:pre;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .date {
             font-weight: 300;
@@ -41,8 +47,9 @@
     .content {  
         background: #222;
 
-        @include media-breakpoint-up(md) {
-            flex: 0 0 77.4%;
+        @include media-breakpoint-up(md) {  
+            // max-width: 80.5rem;
+            flex: 28;
         }
 
         .description {
@@ -51,16 +58,18 @@
             line-height: 18px;
         }
 
-
-
     }
-    
+
     .arrow {
-        background: $white;
-        // width: 3%;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: $primary_gray;
 
         @include media-breakpoint-up(md) {
-            flex: 0 0 2.6%;
+            flex: 1;
+            background: $white;
         }
 
     }

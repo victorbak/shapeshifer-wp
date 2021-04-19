@@ -28,9 +28,12 @@ register_nav_menus( array(
 
 
 /* -Fonts ----------------------------------------------------- */
-add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
-function enqueue_load_fa() {
-wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+add_action( 'wp_enqueue_scripts', 'tu_load_font_awesome' );
+/**
+ * Enqueue Font Awesome.
+ */
+function tu_load_font_awesome() {
+    wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.3.1/css/all.css', array(), '5.3.1' );
 }
 
 /* -BASIC SETUP------------------------------------------------- */
@@ -46,7 +49,7 @@ function setup() {
 
 }
 add_action( 'after_setup_theme', 'setup' );
-remove_filter('the_content', 'wpautop');
+// remove_filter('the_content', 'wpautop');
 
 
 //add admin styles

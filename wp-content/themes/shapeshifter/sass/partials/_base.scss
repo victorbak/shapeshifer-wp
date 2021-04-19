@@ -15,12 +15,24 @@ h6 {
     color: $white;
 }
 
-p {
+p, ul, ol, a {
+
+  font-weight: 300;
 
   @include media-breakpoint-down(md) {
     font-size: 14px;
   }
 
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content:"•";
+  font-size:10pt;
+  padding-right: 5px;
 }
 
 a {

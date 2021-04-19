@@ -4,6 +4,7 @@
     border: 8px solid $white;
     border-radius: 5px;
     background: #222;
+    line-height: 19px;
 
     &__header {
         max-width: max-content;
@@ -11,7 +12,7 @@
         background: $white;
         text-decoration: none;
         position: absolute;
-        top: -3.3rem;
+        top: -3rem;
         left: 0;
 
         --notchSize: 32px;
@@ -30,22 +31,34 @@
     }
 
     .cta {
-        display: inline-block;
+        display: flex;
         min-width: 11.5rem;
         height: 2.9rem;
         position: absolute;
         bottom: 0rem;
         right: 0rem;
         z-index: 2;
+        justify-content: space-between;
+        align-items: center;
         background-color: $white;
         color: #222;
         text-decoration: none;
+        cursor: pointer;
+        
 
         --notchSize: 16px;
 
         clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
     }
 
+    ul, ol {
+      padding-left: 0;
+    }
+
+    a {
+      color: $green_link;
+    }
 
 
 }

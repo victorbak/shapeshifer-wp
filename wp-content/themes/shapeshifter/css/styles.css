@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -15989,6 +15991,23 @@ h6 {
   color: #fff;
 }
 
+p,
+ul,
+ol,
+a {
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: "•";
+  font-size: 10pt;
+  padding-right: 5px;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -16033,6 +16052,7 @@ a:hover {
   border: 8px solid #fff;
   border-radius: 5px;
   background: #222;
+  line-height: 19px;
 }
 
 .ss-modal__header {
@@ -16043,7 +16063,7 @@ a:hover {
   background: #fff;
   text-decoration: none;
   position: absolute;
-  top: -3.3rem;
+  top: -3rem;
   left: 0;
   --notchSize: 32px;
   -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
@@ -16061,19 +16081,37 @@ a:hover {
 }
 
 .ss-modal .cta {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-width: 11.5rem;
   height: 2.9rem;
   position: absolute;
   bottom: 0rem;
   right: 0rem;
   z-index: 2;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #fff;
   color: #222;
   text-decoration: none;
+  cursor: pointer;
   --notchSize: 16px;
   -webkit-clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.ss-modal ul,
+.ss-modal ol {
+  padding-left: 0;
+}
+
+.ss-modal a {
+  color: #85BD86;
 }
 
 .button {
@@ -16107,6 +16145,7 @@ a:hover {
   color: #fff;
   letter-spacing: 0px;
   text-transform: uppercase;
+  line-height: 18px;
 }
 
 .filter:hover {
@@ -16279,6 +16318,19 @@ a:hover {
   margin: 0;
   font-weight: 300;
   line-height: 18px;
+}
+
+.job-preview .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222222;
 }
 
 .map-banner {
@@ -43599,7 +43651,10 @@ a:hover {
     padding-left: 0;
   }
 
-  p {
+  p,
+  ul,
+  ol,
+  a {
     font-size: 14px;
   }
 }

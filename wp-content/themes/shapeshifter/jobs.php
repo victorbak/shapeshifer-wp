@@ -35,7 +35,7 @@ endif;
 ?>
 <!-- Content here -->
 <div class="jobs page">
-  <section class="container py-4 my-4">
+  <section class="container py-2 mt-4 mb-3">
       <div class="row">
           <div class="content col-12">
               <h2 class="mb-5"><?php the_title(); ?></h2>
@@ -44,7 +44,7 @@ endif;
       </div>
   </section>
 
-  <section class="container py-2 mt-2 mb-5">
+  <section class="container py-2 mt-2 mb-4">
       <div class="filters">
           <a data-filter="all" class="filter active">All</a>           
       <?php foreach ( $terms as $term ) :?>

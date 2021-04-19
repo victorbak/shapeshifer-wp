@@ -61,6 +61,11 @@
     }
 
     .arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: $primary_gray;
 
         @include media-breakpoint-up(md) {
             flex: 1;

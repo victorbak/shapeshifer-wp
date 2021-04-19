@@ -6,15 +6,14 @@
 <a class="job-preview" data-toggle="modal" data-target="<?php echo '#modalCenter-' . $id ?>">
     <div class="content row m-0">
         <div class="header col-xs-12 py-xs-2 py-md-1">
-            <div class="triangle"></div>
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
-            <p class="date">Date Posted</p>
+            <p class="date"><span><em class="far fa-clock mr-1"></em></span>Date Posted: </p>
         </div>
         <div class="content col-xs-12 p-xs-2 pr-md-5">
             <?php echo "<p class='description'>{$fields['preview_text']}</p>"; ?>
         </div>
         <div class="arrow col-xs-0 p-xs-2 p-md-0">
-            <p style="color: black">-></p>
+            <em class="fas fa-arrow-right"></em>
         </div>
     </div>
 </a>

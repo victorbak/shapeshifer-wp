@@ -35,16 +35,16 @@ endif;
 ?>
 <!-- Content here -->
 <div class="jobs page">
-  <section class="container px-4 pt-5 pb-2 mb-2">
+  <section class="container py-4 my-4">
       <div class="row">
-          <div class="col-12">
+          <div class="content col-12">
               <h2 class="mb-5"><?php the_title(); ?></h2>
-              <p class="mb-5"><?php the_content() ?></p>
+              <?php the_content() ?>
           </div>
       </div>
   </section>
 
-  <section class="container py-2 mb-5">
+  <section class="container py-2 mt-2 mb-5">
       <div class="filters">
           <a data-filter="all" class="filter active">All</a>           
       <?php foreach ( $terms as $term ) :?>

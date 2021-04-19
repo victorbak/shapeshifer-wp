@@ -7,7 +7,7 @@
     cursor: pointer;
     text-decoration: none;
     
-    .content {
+    .card {
       @include media-breakpoint-up(md) {
         display: flex;
       }
@@ -18,22 +18,13 @@
         background: $white;
         text-decoration: none;
 
-        .triangle {
-            width: 12%;
-            height: 95%;
-            // background-image: linear-gradient(to left bottom, #fff 0%, #FFF 50%, transparent 50%);
-            border-left: 32px solid transparent;
-            border-top: 56px solid #222;
-            border-bottom: 56px solid transparent;
-            position: absolute;
-            top: 0px;
-            right: 0;
-            z-index: 2;
-        }
 
         @include media-breakpoint-up(md) {
             flex: 5;
-            padding-right: 2.4rem
+            padding-right: 2.4rem;
+            --notchSize: 32px;
+
+            clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0.00%, 100% 100%, 0px 100%);
         }
 
         .title,
@@ -70,11 +61,10 @@
     }
 
     .arrow {
-        background: $white;
-        // width: 3%;   
 
         @include media-breakpoint-up(md) {
             flex: 1;
+            background: $white;
         }
 
     }

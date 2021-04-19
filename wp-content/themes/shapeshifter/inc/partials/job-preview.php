@@ -10,7 +10,7 @@
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
             <p class="date">Date Posted</p>
         </div>
-        <div class="content col-xs-12 p-xs-2 px-md-5">
+        <div class="content col-xs-12 p-xs-2 pr-md-5">
             <?php echo "<p class='description'>{$fields['preview_text']}</p>"; ?>
         </div>
         <div class="arrow col-xs-0 p-xs-2 p-md-0">

@@ -16006,10 +16006,6 @@ a:hover {
   content: "\f0e1";
 }
 
-.content {
-  color: #fff;
-}
-
 .box {
   max-width: 100%;
   padding: 1.4rem 1.2rem;
@@ -16031,7 +16027,7 @@ a:hover {
   z-index: 2;
 }
 
-.shapeshifter-modal {
+.ss-modal {
   max-width: 100%;
   padding: 1.4rem 1.2rem;
   border: 8px solid #fff;
@@ -16039,7 +16035,7 @@ a:hover {
   background: #222;
 }
 
-.shapeshifter-modal .header {
+.ss-modal__header {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -16049,41 +16045,35 @@ a:hover {
   position: absolute;
   top: -3.3rem;
   left: 0;
+  --notchSize: 32px;
+  -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+  clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
 }
 
-.shapeshifter-modal .header .title,
-.shapeshifter-modal .header .date {
+.ss-modal__header--title,
+.ss-modal__header--date {
   margin: 0;
   color: #222;
 }
 
-.shapeshifter-modal .header .date {
+.ss-modal__header--date {
   font-weight: 300;
 }
 
-.shapeshifter-modal .cta {
+.ss-modal .cta {
   display: inline-block;
-  min-width: 11rem;
-  height: 2.4rem;
+  min-width: 11.5rem;
+  height: 2.9rem;
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 0rem;
+  right: 0rem;
   z-index: 2;
   background-color: #fff;
   color: #222;
   text-decoration: none;
-}
-
-.shapeshifter-modal .triangle {
-  width: 0;
-  height: 0;
-  border-left: 24px solid transparent;
-  border-bottom: 24px solid #FFF;
-  border-top: 24px solid transparent;
-  position: absolute;
-  bottom: 1.6rem;
-  right: 1.1rem;
-  z-index: 2;
+  --notchSize: 16px;
+  -webkit-clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .button {
@@ -16265,18 +16255,6 @@ a:hover {
   text-decoration: none;
 }
 
-.job-preview .header .triangle {
-  width: 12%;
-  height: 95%;
-  border-left: 32px solid transparent;
-  border-top: 56px solid #222;
-  border-bottom: 56px solid transparent;
-  position: absolute;
-  top: 0px;
-  right: 0;
-  z-index: 2;
-}
-
 .job-preview .header .title,
 .job-preview .header .date {
   margin: 0;
@@ -16301,10 +16279,6 @@ a:hover {
   margin: 0;
   font-weight: 300;
   line-height: 18px;
-}
-
-.job-preview .arrow {
-  background: #fff;
 }
 
 .map-banner {
@@ -26735,7 +26709,7 @@ a:hover {
     margin-right: 32px;
   }
 
-  .job-preview .content {
+  .job-preview .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26746,6 +26720,9 @@ a:hover {
     -ms-flex: 5;
     flex: 5;
     padding-right: 2.4rem;
+    --notchSize: 32px;
+    -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+    clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
   }
 
   .job-preview .content {
@@ -26758,6 +26735,7 @@ a:hover {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    background: #fff;
   }
 
   .map-banner .overlay {
@@ -43619,6 +43597,10 @@ a:hover {
   .navbar-expand-lg > .container-xxxxl {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  p {
+    font-size: 14px;
   }
 }
 

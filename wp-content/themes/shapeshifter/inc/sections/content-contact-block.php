@@ -8,10 +8,6 @@
             <?php get_template_part( 'inc/partials/contact-info' ); ?>
         </div>
     <!-- Button trigger modal -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCenter">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

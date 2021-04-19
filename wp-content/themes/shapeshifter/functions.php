@@ -46,7 +46,7 @@ function setup() {
 
 }
 add_action( 'after_setup_theme', 'setup' );
-remove_filter('the_content', 'wpautop');
+// remove_filter('the_content', 'wpautop');
 
 
 //add admin styles

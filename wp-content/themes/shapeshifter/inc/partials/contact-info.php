@@ -7,7 +7,7 @@
     <div class="box">
         <div class="triangle"></div>
         <div>
-            <p class="contact-info--header">CONTACT INFO</p>
+            <h5 class="contact-info--header">CONTACT INFO</h5>
             <div class="underline"></div>
             <div class="p-2">
                 <p><?php echo $fields['phone_number']; ?>
@@ -16,15 +16,15 @@
             </div>
         </div>
         <div>
-            <p class="contact-info--header">SOCIAL</p>
+            <h5 class="contact-info--header">SOCIAL</h5>
             <div class="underline"></div>
             <div class="row p-2">
                 <!-- Add conditionals -->
-                <p class="col-1 fa-icon fab-linked-in"></p>
-                <p class="col-1 fa-icon">vm</p>
-                <p class="col-1 fa-icon">yt</p>
-                <p class="col-1 fa-icon">tw</p>
-                <p class="col-1 fa-icon">ig</p>
+                <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-twitter"></em></a>
+                <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-facebook-f"></em></a>
+                <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-vimeo"></em></a>
+                <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-youtube"></em></a>
+                <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-linkedin-in"></em></a>
             </div>
         </div>
     </div>

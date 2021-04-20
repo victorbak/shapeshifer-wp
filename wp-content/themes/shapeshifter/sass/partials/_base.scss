@@ -14,6 +14,23 @@ h5,
 h6 {
     color: $white;
 }
+.content {
+  h2 {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 0;
+      transform: rotate(45deg);
+      width: 35px;
+      height: 35px;
+      border: 2px solid $white;
+      outline-offset: 6px;
+      opacity: 0.08;
+    }
+  }
+}
 
 p, ul, ol, a {
 
@@ -42,6 +59,10 @@ a {
     &:hover {
         text-decoration: none;
     }
+}
+
+img {
+  max-width: 100%;
 }
 
 .fa-icon {

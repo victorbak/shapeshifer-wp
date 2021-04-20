@@ -15991,6 +15991,24 @@ h6 {
   color: #fff;
 }
 
+.content h2 {
+  position: relative;
+}
+
+.content h2:before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  outline-offset: 6px;
+  opacity: 0.08;
+}
+
 p,
 ul,
 ol,
@@ -16015,6 +16033,10 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .fa-icon {
@@ -16452,6 +16474,58 @@ a:hover {
   100% {
     opacity: 1;
   }
+}
+
+.team-images-container img {
+  width: 100%;
+}
+
+.project-container {
+  position: relative;
+}
+
+.project-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project-title:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 6px;
+  opacity: 0.16;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project-title:hover:after {
+  opacity: 0.8;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project-release-banner {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
 }
 
 @media (min-width: 270px) {

@@ -1,6 +1,7 @@
 .contact-info {
 
     &--header {
+        font-size: 16px;
         color: $gray-600;
         margin-bottom: .3rem;
     }
@@ -10,4 +11,12 @@
         padding: .5rem;
     }
 
+    .icon {
+      color: $white;
+
+      &:hover {
+        color: $primary;
+        transition: .1s;
+      }
+    }
 }

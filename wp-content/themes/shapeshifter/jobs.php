@@ -45,12 +45,7 @@ endif;
   </section>
 
   <section class="container py-2 mt-2 mb-4">
-      <div class="filters">
-          <a data-filter="all" class="filter active">All</a>           
-      <?php foreach ( $terms as $term ) :?>
-          <?php get_template_part( 'inc/partials/filter', '', $term); ?>
-      <?php endforeach; ?>
-      </div>
+    <?php get_template_part( 'inc/partials/filters', $terms ); ?>
   </section>
 
   <section class="container posts py-4">

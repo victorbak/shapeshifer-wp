@@ -8,6 +8,20 @@
 
 <?php get_header(); ?>
 
+<?php
+
+if( $terms = get_terms( array(
+    'taxonomy' => 'departments',
+    'orderby' => 'name'
+) ) ) : 
+  foreach ( $terms as $term ) : 
+      var_dump($term);
+	endforeach;
+
+endif;
+
+?>
+
 <!-- Content here -->
 <div class="about-us page">
     <section class="container px-4 py-5">
@@ -27,7 +41,9 @@
             </div>
         </div>
     </section>
-    
+    <section class="container py-2 mt-2 mb-4">
+        <?php get_template_part( 'inc/partials/filters', $terms ); ?>
+    </section>
 </div>
 
 <?php get_footer(); ?>

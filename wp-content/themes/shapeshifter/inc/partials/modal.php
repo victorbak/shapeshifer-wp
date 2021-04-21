@@ -11,7 +11,7 @@
                     <p class="ss-modal__header--date"><span><em class="far fa-clock mr-1"></em></span>Date Posted: </p>
                 </div>
                 <p class='description'><?php the_content() ?></p>
-                <a class="cta py-2 px-4">
+                <a class="cta py-2 px-4" href="https://indeed.com" target="_blank">
                   <span>Apply Now</span>
                   <em class="icon fas fa-chevron-right"></em>
                 </a>

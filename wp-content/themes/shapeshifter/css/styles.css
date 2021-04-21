@@ -16140,6 +16140,7 @@ img {
   width: 100%;
   max-width: 22rem;
   min-height: 3.1rem;
+  padding: 0 16px;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -16151,6 +16152,15 @@ img {
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .button:hover {
@@ -16292,6 +16302,7 @@ img {
 }
 
 .contact-info--header {
+  font-size: 16px;
   color: #6c757d;
   margin-bottom: .3rem;
 }
@@ -16299,6 +16310,16 @@ img {
 .contact-info--contact,
 .contact-info--social {
   padding: .5rem;
+}
+
+.contact-info .icon {
+  color: #fff;
+}
+
+.contact-info .icon:hover {
+  color: #DA8824;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .job-preview {

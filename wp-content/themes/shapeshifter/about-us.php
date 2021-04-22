@@ -15,7 +15,7 @@ if( $terms = get_terms( array(
     'orderby' => 'name'
 ) ) ) : 
   foreach ( $terms as $term ) : 
-      var_dump($term);
+      // var_dump($term);
 	endforeach;
 
 endif;
@@ -31,9 +31,11 @@ endif;
             </div>
         </div>
     </section>
+
     <section class="container-fluid px-0 team-images-container">
         <img src="<?php bloginfo('template_url'); ?>/assets/about-us/temp-team.jpg" alt="team images">
     </section>
+
     <section class="container px-4 py-5">
         <div class="row">
             <div class="content col-md-12 mb-xs-4 mb-lg-0 py-lg-4 content">
@@ -41,8 +43,37 @@ endif;
             </div>
         </div>
     </section>
+
     <section class="container py-2 mt-2 mb-4">
-        <?php get_template_part( 'inc/partials/filters', $terms ); ?>
+        <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
+    </section>
+
+    <section class="container posts py-4">
+        <?php foreach ( $terms as $term ) : ?>
+        <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
+            <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
+
+            <div>
+                <?php 
+                    $q = array('post_type' => 'team-member-post',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'departments',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ),
+                        ),
+                    );
+                $loop = new WP_Query($q);
+                if ($loop->have_posts()) {
+                    while($loop->have_posts()) : $loop->the_post();
+                        // get_template_part( 'inc/partials/job-preview' );
+                    endwhile;
+                } ?>
+            </div>
+
+        </div>
+        <?php endforeach; ?>
     </section>
 </div>
 

@@ -45,7 +45,7 @@ endif;
   </section>
 
   <section class="container py-2 mt-2 mb-4">
-    <?php get_template_part( 'inc/partials/filters', $terms ); ?>
+    <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
   </section>
 
   <section class="container posts py-4">
@@ -67,7 +67,7 @@ endif;
             $loop = new WP_Query($q);
             if ($loop->have_posts()) {
                 while($loop->have_posts()) : $loop->the_post();
-                    get_template_part( 'inc/partials/job-preview' );
+                    get_template_part( 'inc/partials/job-preview-card' );
                 endwhile;
             } ?>
         </div>

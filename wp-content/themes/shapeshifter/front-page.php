@@ -16,7 +16,7 @@
                 <?php the_content() ?>
             </div>
             <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
-                <?php get_template_part( 'inc/partials/contact-info' ); ?>
+                <?php get_template_part( 'inc/partials/contact-info-card' ); ?>
             </div>
         </div>
     </section>

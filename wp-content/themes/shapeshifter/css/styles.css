@@ -16376,6 +16376,44 @@ img {
   color: #222222;
 }
 
+.team-member {
+  padding: 0;
+  max-width: 33.1rem;
+}
+
+.team-member .content {
+  padding: 1rem;
+}
+
+.team-member .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 9.2rem;
+  height: 1.2rem;
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  z-index: 2;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  --notchSize: 16px;
+  -webkit-clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.team-member .cta .icon {
+  font-size: 14px;
+}
+
 .map-banner {
   width: 100%;
   height: 28rem;

@@ -52,24 +52,27 @@ endif;
         <?php foreach ( $terms as $term ) : ?>
         <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
             <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
+            <div class="row">
 
-            <div>
-                <?php 
-                    $q = array('post_type' => 'team-member-post',
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'departments',
-                                'field' => 'slug',
-                                'terms' => $term->slug,
+                    <?php 
+                        $q = array('post_type' => 'team-member-post',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'departments',
+                                    'field' => 'slug',
+                                    'terms' => $term->slug,
+                                ),
                             ),
-                        ),
-                    );
-                $loop = new WP_Query($q);
-                if ($loop->have_posts()) {
-                    while($loop->have_posts()) : $loop->the_post();
-                        // get_template_part( 'inc/partials/job-preview' );
-                    endwhile;
-                } ?>
+                        );
+                    $loop = new WP_Query($q);
+                    if ($loop->have_posts()) {
+                        while($loop->have_posts()) : $loop->the_post();
+                        echo "<div class='col-xs-12 col-md-4'>";
+                            get_template_part( 'inc/partials/team-member-card' );
+                        echo "</div>";
+                        endwhile;
+                    } ?>
+                
             </div>
 
         </div>

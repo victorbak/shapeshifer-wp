@@ -1,11 +1,9 @@
 .team-member {
+    padding: 0;
+    max-width: 33.1rem;
 
-    &__box {
-        
-    }
-
-    &__photo {
-
+    .content {
+        padding: 1rem;
     }
 
     &__identity {
@@ -17,6 +15,32 @@
     }
 
     &__bio {
+
+    }
+
+    .cta {
+        display: flex;
+        min-width: 9.2rem;
+        height: 1.2rem;
+        position: absolute;
+        bottom: 0rem;
+        right: 0rem;
+        z-index: 2;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $white;
+        color: #222;
+        text-decoration: none;
+        cursor: pointer;
+        
+
+        --notchSize: 16px;
+
+        clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
+        .icon {
+            font-size: 14px;
+        }
 
     }
 

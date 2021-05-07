@@ -1,0 +1,90 @@
+.team-member {
+    display: inline-block;
+    padding: 0;
+    max-width: 33.1rem;
+
+    &.selected {
+        position: absolute;
+        z-index: 4;
+    }
+
+    .content {
+        padding: 1rem 1rem .6rem 1rem;
+    }
+
+    &__photo {
+        height: 16.7rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__identity {
+
+        .full-name {
+            margin-bottom: .25rem;
+            font-size: 1.1rem;
+        }
+
+        .job-title {
+            color: $light_gray;
+            font-weight: 300;
+        }
+    }
+
+    &__contact-info {
+        
+        &-item {
+            margin-bottom: .5rem;
+            
+            .icon {
+                margin-right: .5rem;
+            }
+
+        }
+
+    }
+
+    &__bio {
+        height: 0;
+        overflow: hidden;
+
+        &-content {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &.expanded {
+            height: min-content;
+        }
+
+    }
+
+    .cta {
+        display: flex;
+        min-width: 9.2rem;
+        height: 1.2rem;
+        position: absolute;
+        bottom: -.2px;
+        right: 0rem;
+        z-index: 2;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: $white;
+        color: #222;
+        text-decoration: none;
+        cursor: pointer;
+        
+
+        --notchSize: 16px;
+
+        clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
+        .icon {
+            font-size: 14px;
+        }
+
+    }
+
+}

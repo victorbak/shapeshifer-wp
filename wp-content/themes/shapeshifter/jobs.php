@@ -7,13 +7,7 @@
 ?>
 <?php 
 function job_scripts() {
-    // wp_register_script( 'jobs-js', get_template_directory_uri() . '/js/page/jobs.js' );
-    // wp_enqueue_script( 'jobs-js' );
-    wp_enqueue_script(
-        'jobs-js', // name your script so that you can attach other scripts and de-register, etc.
-        get_template_directory_uri() . '/js/page/jobs.js', // this is the location of your script file
-        array('jquery') // this array lists the scripts upon which your script depends
-    );
+    wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'job_scripts' );
 ?>
@@ -45,12 +39,7 @@ endif;
   </section>
 
   <section class="container py-2 mt-2 mb-4">
-      <div class="filters">
-          <a data-filter="all" class="filter active">All</a>           
-      <?php foreach ( $terms as $term ) :?>
-          <?php get_template_part( 'inc/partials/filter', '', $term); ?>
-      <?php endforeach; ?>
-      </div>
+    <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
   </section>
 
   <section class="container posts py-4">
@@ -72,7 +61,7 @@ endif;
             $loop = new WP_Query($q);
             if ($loop->have_posts()) {
                 while($loop->have_posts()) : $loop->the_post();
-                    get_template_part( 'inc/partials/job-preview' );
+                    get_template_part( 'inc/partials/job-preview-card' );
                 endwhile;
             } ?>
         </div>

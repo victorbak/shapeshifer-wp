@@ -16236,6 +16236,14 @@ input[type="reset"] {
   background: transparent linear-gradient(90deg, #777777 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
 }
 
+.full-divider {
+  width: inherit;
+  height: 1px;
+  margin: .6rem 0;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#FFFFFF00), color-stop(47%, #FFFFFF), to(#FFFFFF00)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 47%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+}
+
 .header {
   background: #111111;
   background: -webkit-gradient(linear, left top, right top, from(#111111), to(#333333));
@@ -16350,6 +16358,22 @@ input[type="reset"] {
   color: #DA8824;
   -webkit-transition: 0.4s color ease-in;
   transition: 0.4s color ease-in;
+}
+
+.footer-content {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-content-links {
+  display: none;
 }
 
 .category-header .name {
@@ -16640,8 +16664,16 @@ input[type="reset"] {
   }
 }
 
+.team-images-container {
+  margin-bottom: 6rem;
+}
+
 .team-images-container img {
   width: 100%;
+}
+
+.full-divider {
+  margin: 2rem 0;
 }
 
 .team-posts .overlay {
@@ -30426,6 +30458,16 @@ input[type="reset"] {
     display: block;
   }
 
+  .footer-content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .footer-content-links {
+    display: inline-block;
+  }
+
   .team-posts .team-member {
     margin-right: 1rem;
   }
@@ -44002,6 +44044,17 @@ input[type="reset"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .footer-content-logo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-content-logo p {
+    text-align: center;
   }
 
   .team-member__bio {

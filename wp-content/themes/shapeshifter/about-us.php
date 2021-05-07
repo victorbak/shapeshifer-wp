@@ -45,6 +45,8 @@ endif;
     <section class="container-fluid px-0 team-images-container">
         <img src="<?php bloginfo('template_url'); ?>/assets/about-us/temp-team.jpg" alt="team images">
     </section>
+    
+    <div class="container-fluid full-divider"></div>
 
     <section class="container px-4 py-5">
         <div class="row">

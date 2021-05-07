@@ -1,6 +1,12 @@
 .team-member {
+    display: inline-block;
     padding: 0;
     max-width: 33.1rem;
+
+    &.selected {
+        position: absolute;
+        z-index: 4;
+    }
 
     .content {
         padding: 1rem;
@@ -15,6 +21,17 @@
     }
 
     &__bio {
+        height: 0;
+        overflow: hidden;
+
+        &-content
+        .underline {
+            height: auto;
+        }
+
+        &.expanded {
+            height: min-content;
+        }
 
     }
 

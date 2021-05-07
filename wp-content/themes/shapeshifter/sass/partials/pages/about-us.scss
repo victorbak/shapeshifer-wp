@@ -3,3 +3,24 @@
         width: 100%;
     }
 }
+
+.team-posts {
+
+    .overlay {
+        display:none;
+        background-color: #000;
+        bottom: 0;
+        left: 0;
+        opacity: 0.5;
+        filter: alpha(opacity = 50); /* IE7 & 8 */
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 3;
+    }
+
+    .team-cards {
+        min-height: 38rem;
+    }
+
+}

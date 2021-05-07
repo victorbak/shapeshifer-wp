@@ -16377,12 +16377,33 @@ img {
 }
 
 .team-member {
+  display: inline-block;
   padding: 0;
   max-width: 33.1rem;
 }
 
+.team-member.selected {
+  position: absolute;
+  z-index: 4;
+}
+
 .team-member .content {
   padding: 1rem;
+}
+
+.team-member__bio {
+  height: 0;
+  overflow: hidden;
+}
+
+.team-member__bio-content .underline {
+  height: auto;
+}
+
+.team-member__bio.expanded {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .team-member .cta {
@@ -16537,6 +16558,24 @@ img {
 
 .team-images-container img {
   width: 100%;
+}
+
+.team-posts .overlay {
+  display: none;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* IE7 & 8 */
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.team-posts .team-cards {
+  min-height: 38rem;
 }
 
 .project-container {

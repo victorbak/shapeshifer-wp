@@ -6,6 +6,19 @@
  
 ?>
 
+<?php 
+function about_scripts() {
+    // wp_register_script( 'jobs-js', get_template_directory_uri() . '/js/page/jobs.js' );
+    // wp_enqueue_script( 'jobs-js' );
+    wp_enqueue_script(
+        'about-js', // name your script so that you can attach other scripts and de-register, etc.
+        get_template_directory_uri() . '/js/page/about.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+add_action( 'wp_enqueue_scripts', 'about_scripts' );
+?>
+
 <?php get_header(); ?>
 
 <?php
@@ -48,11 +61,12 @@ endif;
         <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
     </section>
 
-    <section class="container posts py-4">
+    <section class="container team-posts py-4">
+        <div class="overlay"></div>
         <?php foreach ( $terms as $term ) : ?>
         <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
             <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
-            <div class="row">
+            <div class="row team-cards">
 
                     <?php 
                         $q = array('post_type' => 'team-member-post',

@@ -45,6 +45,8 @@ endif;
     <section class="container-fluid px-0 team-images-container">
         <img src="<?php bloginfo('template_url'); ?>/assets/about-us/temp-team.jpg" alt="team images">
     </section>
+    
+    <div class="container-fluid full-divider"></div>
 
     <section class="container px-4 py-5">
         <div class="row">
@@ -78,7 +80,7 @@ endif;
                     $loop = new WP_Query($q);
                     if ($loop->have_posts()) {
                         while($loop->have_posts()) : $loop->the_post();
-                        echo "<div class='col-xs-12 col-md-4'>";
+                        echo "<div class='col-xs-12 col-lg-4'>";
                             get_template_part( 'inc/partials/team-member-card' );
                         echo "</div>";
                         endwhile;

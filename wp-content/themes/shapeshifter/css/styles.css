@@ -16084,26 +16084,16 @@ input[type="reset"] {
 
 .ss-modal {
   max-width: 100%;
-  padding: 1.4rem 1.2rem;
   border: 8px solid #fff;
   border-radius: 5px;
   background: #222;
   line-height: 19px;
+  padding: 0 15px;
 }
 
 .ss-modal__header {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  min-width: 20rem;
   background: #fff;
   text-decoration: none;
-  position: absolute;
-  top: -3rem;
-  left: 0;
-  --notchSize: 32px;
-  -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
-  clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
 }
 
 .ss-modal__header--title,
@@ -16114,6 +16104,10 @@ input[type="reset"] {
 
 .ss-modal__header--date {
   font-weight: 300;
+}
+
+.ss-modal .content {
+  padding: 1rem;
 }
 
 .ss-modal .cta {
@@ -16181,7 +16175,7 @@ input[type="reset"] {
   background-color: #C37A21;
 }
 
-.filter {
+.filters .filter {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -16194,7 +16188,7 @@ input[type="reset"] {
   line-height: 18px;
 }
 
-.filter:hover {
+.filters .filter:hover {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background-color: #fff;
@@ -16203,11 +16197,35 @@ input[type="reset"] {
   cursor: pointer;
 }
 
-.filter.active {
+.filters .filter.active {
   background-color: #fff;
   color: #222;
   -webkit-transition: 0s;
   transition: 0s;
+}
+
+.filters .button {
+  max-width: none;
+}
+
+.filters .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #222222;
+}
+
+.filters .card .filter {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .divider {
@@ -16216,6 +16234,14 @@ input[type="reset"] {
   margin: .6rem 0;
   background: transparent -webkit-gradient(linear, left top, right top, from(#777777), to(#FFFFFF00)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(90deg, #777777 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+}
+
+.full-divider {
+  width: inherit;
+  height: 1px;
+  margin: .6rem 0;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#FFFFFF00), color-stop(47%, #FFFFFF), to(#FFFFFF00)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 47%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
 }
 
 .header {
@@ -16334,6 +16360,22 @@ input[type="reset"] {
   transition: 0.4s color ease-in;
 }
 
+.footer-content {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-content-links {
+  display: none;
+}
+
 .category-header .name {
   color: #777;
   letter-spacing: 0;
@@ -16381,12 +16423,6 @@ input[type="reset"] {
 .job-preview .header .date {
   margin: 0;
   color: #222;
-}
-
-.job-preview .header .title {
-  white-space: pre;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .job-preview .header .date {
@@ -16451,6 +16487,7 @@ input[type="reset"] {
 }
 
 .team-member__contact-info-item {
+  font-size: 1rem;
   margin-bottom: .5rem;
 }
 
@@ -16553,7 +16590,6 @@ input[type="reset"] {
 }
 
 .jobs .filters {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16562,6 +16598,10 @@ input[type="reset"] {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+}
+
+.jobs .modal {
+  padding-right: 0;
 }
 
 .jobs .posts {
@@ -16624,8 +16664,16 @@ input[type="reset"] {
   }
 }
 
+.team-images-container {
+  margin-bottom: 6rem;
+}
+
 .team-images-container img {
   width: 100%;
+}
+
+.full-divider {
+  margin: 2rem 0;
 }
 
 .team-posts .overlay {
@@ -16643,7 +16691,7 @@ input[type="reset"] {
 }
 
 .team-posts .team-cards {
-  min-height: 28.75rem;
+  min-height: 30.75rem;
 }
 
 .project-container {
@@ -26997,7 +27045,7 @@ input[type="reset"] {
     text-align: center !important;
   }
 
-  .filter {
+  .filters .filter {
     margin-right: 32px;
   }
 
@@ -30388,9 +30436,40 @@ input[type="reset"] {
     text-align: center !important;
   }
 
+  .ss-modal .ss-modal-content {
+    display: inline;
+  }
+
+  .ss-modal__header {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    min-width: 20rem;
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    --notchSize: 32px;
+    -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+    clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+  }
+
   .header-logo {
     max-width: 240px;
     display: block;
+  }
+
+  .footer-content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .footer-content-links {
+    display: inline-block;
+  }
+
+  .team-posts .team-member {
+    margin-right: 1rem;
   }
 }
 
@@ -43940,6 +44019,24 @@ input[type="reset"] {
     font-size: 14px;
   }
 
+  .ss-modal {
+    border: 2px solid white;
+  }
+
+  .ss-modal__header {
+    width: 100%;
+    min-width: 0;
+    padding-bottom: .4rem;
+  }
+
+  .ss-modal__header--title {
+    font-size: 20px;
+  }
+
+  .ss-modal .content {
+    margin-bottom: 2rem;
+  }
+
   .logo-col {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -43947,6 +44044,30 @@ input[type="reset"] {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+
+  .footer-content-logo {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer-content-logo p {
+    text-align: center;
+  }
+
+  .team-member__bio {
+    margin-bottom: .5rem;
+  }
+
+  .jobs .modal .modal-dialog {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .team-posts .team-member {
+    margin-bottom: 2rem;
   }
 }
 

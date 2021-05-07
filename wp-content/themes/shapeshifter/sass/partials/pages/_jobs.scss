@@ -1,11 +1,22 @@
 .jobs {
 
     .filters {
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+
+    .modal {
+      padding-right: 0;
+        .modal-dialog {
+          @include media-breakpoint-down(md) {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+          }
+      }
+    }
+
+
 
     .posts {
         min-height: 35rem;

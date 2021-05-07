@@ -1,7 +1,14 @@
 .team-images-container {
+
+    margin-bottom: 6rem;
+
     img {
         width: 100%;
     }
+}
+
+.full-divider {
+    margin: 2rem 0;
 }
 
 .team-posts {
@@ -20,7 +27,16 @@
     }
 
     .team-cards {
-        min-height: 28.75rem;
+        min-height: 30.75rem;
+    }
+
+    .team-member {
+        @include media-breakpoint-up(lg) {
+            margin-right: 1rem;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
+        }
     }
 
 }

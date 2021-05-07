@@ -4,3 +4,10 @@
     margin: .6rem 0;
     background: transparent linear-gradient(90deg, #777777 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
 }
+
+.full-divider {
+    width: inherit;
+    height: 1px;
+    margin: .6rem 0;
+    background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 47%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+}

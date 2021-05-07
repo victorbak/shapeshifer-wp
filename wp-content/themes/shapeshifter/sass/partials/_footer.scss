@@ -1,0 +1,29 @@
+.footer {
+
+    &-content {
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include media-breakpoint-up(lg) {
+            justify-content: space-between;
+        }
+        
+        &-logo {
+            @include media-breakpoint-down(md) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+
+        &-links {
+            display: none;
+            @include media-breakpoint-up(lg) {
+                display: inline-block;
+            }
+        }
+    }
+}

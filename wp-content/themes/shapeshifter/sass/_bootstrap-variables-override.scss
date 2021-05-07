@@ -3,6 +3,7 @@
 
 $primary: #DA8824;
 $primary_gray: #222222;
+$light_gray: #BBB;
 $green_link: #85BD86;
 
 $grid-breakpoints: (
@@ -34,7 +35,7 @@ $spacers: (
   2: ($spacer * .5),
   3: $spacer,
   4: ($spacer * 1.5),
-  5: ($spacer * 3),
+  5: ($spacer * 2.5),
   6: ($spacer * 5)
 );
 

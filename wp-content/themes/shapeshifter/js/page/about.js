@@ -1,13 +1,6 @@
 jQuery(document).ready(function ($) {
 
     var $cards = $('.team-member');
-
-    $('.overlay').on("click", function(event){
-        var $this = $(this);
-        $('.team-member__bio').removeClass('expanded');
-        $('.team-member').removeClass('selected');
-        $this.fadeOut(100);
-    });
   
     $cards.on('click', function (e) {
         e.preventDefault();
@@ -19,33 +12,33 @@ jQuery(document).ready(function ($) {
         
         $this.toggleClass( 'selected' );
         
+        let cta = $this.find('.cta span');
+        let cta_icon = $this.find('.cta .icon');
         if($this.hasClass('selected')) {
             $('.overlay').fadeIn(100);
             bio.addClass( 'expanded' );
+            cta.text('Close Details')
+            cta_icon.removeClass('fas fa-plus')
+            cta_icon.addClass('fas fa-times')
         } else {
             $('.overlay').fadeOut(100);
             bio.removeClass('expanded');
+            $this.find('.cta span').text('View Details')
+            cta_icon.removeClass('fas fa-times')
+            cta_icon.addClass('fas fa-plus')
         }
-        
+    });
 
-        // $(".overlay").fadeIn(500);
-
-    //   $filters.removeClass('active');
-    //   $this.addClass('active');
-  
-    //   var $filterCategory = $this.attr('data-filter');
-  
-    //   if ($filterCategory == 'all') {
-    //     $postings.removeClass('is-animated')
-    //       .fadeOut(100).promise().done(function () {
-    //         $postings.fadeIn(100);
-    //       });
-    //   } else {
-    //     $postings.removeClass('is-animated')
-    //       .fadeOut(100).promise().done(function () {
-    //         $postings.filter('[data-category = "' + $filterCategory + '"]').fadeIn(100);
-    //       });
-    //   }
+    $('.overlay').on("click", function(event){
+        var $this = $(this);
+        let card = $('.team-member').removeClass('selected');
+        $('.team-member__bio').removeClass('expanded');
+        let cta = card.find('.cta span')
+        let cta_icon = card.find('.cta .icon')
+        cta.text('View Details')
+        cta_icon.removeClass('fas fa-times')
+        cta_icon.addClass('fas fa-plus')
+        $this.fadeOut(100);
     });
   
   })

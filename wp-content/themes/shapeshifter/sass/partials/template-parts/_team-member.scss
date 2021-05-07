@@ -36,6 +36,7 @@
     &__contact-info {
         
         &-item {
+            font-size: 1rem;
             margin-bottom: .5rem;
             
             .icon {
@@ -47,6 +48,11 @@
     }
 
     &__bio {
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: .5rem;
+        }
+
         height: 0;
         overflow: hidden;
 

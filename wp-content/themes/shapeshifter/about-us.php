@@ -78,7 +78,7 @@ endif;
                     $loop = new WP_Query($q);
                     if ($loop->have_posts()) {
                         while($loop->have_posts()) : $loop->the_post();
-                        echo "<div class='col-xs-12 col-md-4'>";
+                        echo "<div class='col-xs-12 col-lg-4'>";
                             get_template_part( 'inc/partials/team-member-card' );
                         echo "</div>";
                         endwhile;

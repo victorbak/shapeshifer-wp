@@ -16018,6 +16018,8 @@ a {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul li:before {
@@ -16045,6 +16047,18 @@ img {
 
 .fab-linked-in:before {
   content: "\f0e1";
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .box {
@@ -16232,17 +16246,43 @@ img {
   list-style: none;
 }
 
+.header-container {
+  max-width: 1700px;
+}
+
 .header-logo {
   padding: 20px;
+  display: inline-block;
+}
+
+.header-logo img {
+  max-width: 220px;
+}
+
+.mobile-menu-btn {
+  color: #fff;
+  display: inline-block;
 }
 
 .header-nav {
-  text-align: right;
+  background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  height: 100vw;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in;
+  transition: 0.2s opacity ease-in;
+  padding: 20px 40px 0;
 }
 
 .menu-item {
   color: #fff;
-  display: inline-block;
+  display: block;
   padding: 30px 20px 30px 55px;
   position: relative;
 }
@@ -16250,7 +16290,7 @@ img {
 .menu-item:before {
   content: '';
   position: absolute;
-  left: -5px;
+  left: -15px;
   top: 50%;
   width: 34px;
   height: 34px;
@@ -16265,7 +16305,7 @@ img {
 .menu-item:after {
   content: '';
   position: absolute;
-  left: 33px;
+  left: 22px;
   top: 48%;
   width: 7px;
   height: 7px;
@@ -26976,6 +27016,35 @@ img {
     margin-right: 32px;
   }
 
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .header-nav {
+    background: none;
+    pointer-events: all;
+    position: relative;
+    text-align: right;
+    right: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    opacity: 1;
+  }
+
+  .menu-item {
+    display: inline-block;
+    padding: 30px 20px 30px 55px;
+  }
+
+  .menu-item:before {
+    left: -5px;
+  }
+
+  .menu-item:after {
+    left: 33px;
+  }
+
   .job-preview .card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -30334,6 +30403,7 @@ img {
     text-align: center !important;
   }
 
+<<<<<<< HEAD
   .ss-modal .ss-modal-content {
     display: inline;
   }
@@ -30349,6 +30419,11 @@ img {
     --notchSize: 32px;
     -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
     clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+=======
+  .header-logo {
+    max-width: 240px;
+    display: block;
+>>>>>>> e3fb9cbd075d82aa2cdd7204b7c4798beba7aca4
   }
 }
 
@@ -33671,6 +33746,14 @@ img {
 
   .text-xl-center {
     text-align: center !important;
+  }
+
+  .header-logo {
+    padding: 10px 20px 0;
+  }
+
+  .header-logo img {
+    max-width: 290px;
   }
 }
 
@@ -43890,6 +43973,7 @@ img {
     font-size: 14px;
   }
 
+<<<<<<< HEAD
   .ss-modal {
     border: 2px solid white;
   }
@@ -43911,6 +43995,15 @@ img {
   .jobs .modal .modal-dialog {
     margin-top: 3rem;
     margin-bottom: 3rem;
+=======
+  .logo-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+>>>>>>> e3fb9cbd075d82aa2cdd7204b7c4798beba7aca4
   }
 }
 
@@ -43961,6 +44054,22 @@ img {
   .navbar-expand-md > .container-xxxxl {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .header .header-nav-container {
+    position: relative;
+    display: block;
+    -webkit-box-flex: unset;
+    -ms-flex: unset;
+    flex: unset;
+    max-width: unset;
+  }
+
+  .header-nav.nav-open {
+    pointer-events: all;
+    opacity: 1;
+    -webkit-transition: 0.2s opacity ease-in;
+    transition: 0.2s opacity ease-in;
   }
 
   .map-banner .overlay {
@@ -44069,6 +44178,20 @@ img {
   .navbar-expand-xs > .container-xxxxl {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .menu-item {
+    padding: 30px 20px 30px;
+  }
+
+  .menu-item:after {
+    content: none;
+  }
+
+  .menu-item:before {
+    content: none;
   }
 }
 

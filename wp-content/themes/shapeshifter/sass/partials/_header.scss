@@ -8,24 +8,101 @@
   
 }
 
-.header-logo {
-  padding: 20px;
+.header-container{
+  max-width: 1700px;
 }
 
+.logo-col {
+  @include media-breakpoint-down(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header-logo {
+  padding: 20px;
+  display: inline-block;
+  img {
+    max-width: 220px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 240px;
+    display: block;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 10px 20px 0;
+    img {
+      max-width: 290px;
+    }
+  } 
+}
+
+.mobile-menu-btn {
+  color: $white;
+  display: inline-block;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.header {
+  .header-nav-container {
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      display: block;
+      flex: unset;
+      max-width: unset;
+    }
+  }
+}
+
+
 .header-nav {
-  text-align: right;
+  background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  height: 100vw;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s opacity ease-in;
+  padding: 20px 40px 0;
+
+  &.nav-open {
+    @include media-breakpoint-down(sm) {
+      pointer-events: all;
+      opacity: 1;
+      transition: 0.2s opacity ease-in;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background: none;
+    pointer-events: all;
+    position: relative;
+    text-align: right;
+    right: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    opacity: 1;
+  }
 }
 
 .menu-item {
   color: $white;
-  display: inline-block;
+  display: block;
   padding: 30px 20px 30px 55px;
   position: relative;
 
   &:before {
     content: '';
     position: absolute;
-    left: -5px;
+    left: -15px;
     top: 50%;
     width: 34px;
     height: 34px;
@@ -38,7 +115,7 @@
   &:after {
     content: '';
     position: absolute;
-    left: 33px;
+    left: 22px;
     top: 48%;
     width: 7px;
     height: 7px;
@@ -48,6 +125,27 @@
     outline-offset: 2px;
     opacity: 0;
     transition: 0.4s opacity ease-in;
+  }
+
+  @include media-breakpoint-only(md) {
+    padding: 30px 20px 30px;
+    &:after {
+      content: none;
+    }
+    &:before {
+      content: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+    padding: 30px 20px 30px 55px;
+    &:before {
+      left: -5px;
+    }
+    &:after {
+      left: 33px;
+    }
   }
 
   a {

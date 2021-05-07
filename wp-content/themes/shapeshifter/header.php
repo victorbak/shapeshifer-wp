@@ -10,7 +10,7 @@
           <div class="col-md-4 logo-col">
             <div class="header-logo">
               <a href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Lockup.svg" alt="Shapeshifter">
+                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup.svg" alt="Shapeshifter">
               </a>
             </div>
             <button class="mobile-menu-btn">MENU</button>

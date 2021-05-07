@@ -1,23 +1,45 @@
 .ss-modal {
     max-width: 100%;
-    padding: 1.4rem 1.2rem;
     border: 8px solid $white;
     border-radius: 5px;
     background: #222;
     line-height: 19px;
+    padding: 0 15px;
+
+    @include media-breakpoint-down(md) {
+        // position: absolute;
+        // top: 0rem;
+        border: 2px solid white;
+    }
+
+    .ss-modal-content {
+        @include media-breakpoint-up(lg) {
+            display: inline;
+        }
+    }
 
     &__header {
-        max-width: max-content;
-        min-width: 20rem;
+
         background: $white;
         text-decoration: none;
-        position: absolute;
-        top: -3rem;
-        left: 0;
 
-        --notchSize: 32px;
-        
-        clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0.00%, 100% 100%, 0px 100%);
+
+        @include media-breakpoint-up(lg) {
+            max-width: max-content;
+            min-width: 20rem;
+            position: absolute;
+            top: -3rem;
+            left: 0;
+            --notchSize: 32px;
+            clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0.00%, 100% 100%, 0px 100%);
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            min-width: 0;
+            // margin-bottom: 2rem;
+            padding-bottom: .4rem;
+        }
 
         &--title,
         &--date {
@@ -25,8 +47,24 @@
             color: #222;
         }
 
+        &--title {
+            @include media-breakpoint-down(md) {
+                font-size: 20px
+            }
+
+        }
         &--date {
             font-weight: 300;
+        }
+        
+    }
+    
+    .content {
+        // margin-top: 2rem;
+        padding: 1rem;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
         }
     }
 
@@ -49,6 +87,12 @@
         --notchSize: 16px;
 
         clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
+        @include media-breakpoint-down(md) {
+            // margin-top: 1rem;
+            // padding-bottom: 1rem;
+            // font-size: 24px;
+        }
 
     }
 

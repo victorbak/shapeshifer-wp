@@ -16454,6 +16454,7 @@ input[type="reset"] {
   letter-spacing: 1px;
   -webkit-transition: 0.4s color ease-in;
   transition: 0.4s color ease-in;
+  padding-left: .5rem;
 }
 
 .header .menu-item a:hover {

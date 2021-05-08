@@ -44,7 +44,8 @@
         </div>
     </div>
   </div>
-    <section class="header">
+
+    <section class="header py-2">
       <div class="container-fluid header-container">
         <div class="row">
           <div class="col-md-4 logo-col">
@@ -64,6 +65,7 @@
       </div>
     </section>
   </body>
+
   <script>  
   var currentLocation = window.location.pathname;
   if(currentLocation == "/") {
@@ -71,4 +73,5 @@
     console.log($('.loading'));
   }
   </script>
+
 </html>

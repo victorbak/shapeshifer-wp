@@ -10,4 +10,35 @@
     height: 1px;
     margin: .6rem 0;
     background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 47%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        height: 8px;
+        width: 8px;
+        background-color: $white;
+        transform: rotate(45deg);
+        opacity: 0.3;
+        outline: 2px solid $white;
+        outline-offset: 2px;
+        transition: 0.8s transform ease-in;
+
+        
+    }
+    &:hover {
+        &:before,
+        &:after {
+            transition: 0.8s transform ease-in;
+            transform: rotate(585deg);
+        }
+    }
+    &:before {
+        left: 20px;
+    }
+    &:after {
+        right: 20px;
+    }
 }

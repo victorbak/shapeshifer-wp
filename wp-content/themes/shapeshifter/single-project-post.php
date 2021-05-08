@@ -21,7 +21,7 @@
     <section class="container px-4 py-5">
         <div class="row">
             <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
-                <?php the_content() ?>
+                <p><?php echo $fields['project_description']; ?></p>
             </div>
             <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
                 <?php get_template_part( 'inc/partials/project-info-card' ); ?>

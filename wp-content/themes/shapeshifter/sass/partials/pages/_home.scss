@@ -15,10 +15,10 @@
         }
 
         @include media-breakpoint-up(md) {
-            min-height: 350px;
+            min-height: 550px;
         }
         @include media-breakpoint-up(lg) {
-            min-height: 400px;
+            min-height: 600px;
         }
     }
 

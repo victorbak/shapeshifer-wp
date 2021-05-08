@@ -244,16 +244,16 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 function reset_editor()
 {
-     global $_wp_post_type_features;
+	global $_wp_post_type_features;
 
-     $post_type="page";
-     $feature = "editor";
-     if ( !isset($_wp_post_type_features[$post_type]) )
-     {
+	$post_type="page";
+	$feature = "editor";
+	if ( !isset($_wp_post_type_features[$post_type]) )
+	{
 
-     }
-     elseif ( isset($_wp_post_type_features[$post_type][$feature]) )
-     unset($_wp_post_type_features[$post_type][$feature]);
+	}
+	elseif ( isset($_wp_post_type_features[$post_type][$feature]) )
+	unset($_wp_post_type_features[$post_type][$feature]);
 }
 
 add_action("init","reset_editor");

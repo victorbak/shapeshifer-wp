@@ -1,7 +1,7 @@
 .home {
     .project-container {
         position: relative;
-        min-height: 700px;
+        min-height: 80vh;
         background-size: cover;
         background-position: center;
 
@@ -15,10 +15,10 @@
         }
 
         @include media-breakpoint-up(md) {
-            min-height: 650px;
+            min-height: 70vh;
         }
         @include media-breakpoint-up(lg) {
-            min-height: 700px;
+            min-height: 80vh;
         }
     }
 
@@ -102,14 +102,18 @@
             }
         }
     }
-
-
-
-
-
+    //==============================
+    //-- parallax homepage backgrounds --
+    //==============================
     .parallax-slide {
         position: relative;
-        height: 100vh;
+        height: 80vh;
+        @include media-breakpoint-up(md) {
+            height: 70vh;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 80vh;
+        }
     }
     
     .parallax-clip {

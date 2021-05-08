@@ -63,7 +63,7 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project3->ID );
                 $projectImage = get_field( 'gallery', $featured_project3->ID );
             ?>
-             <div class="container-fluid px-0 project-container">
+            <div class="container-fluid px-0 project-container">
                 <div class="parallax-slide">
 					<div class="parallax-clip">
 						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>

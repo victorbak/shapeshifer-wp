@@ -16917,7 +16917,7 @@ input[type="reset"] {
 
 .home .project-container {
   position: relative;
-  min-height: 700px;
+  min-height: 80vh;
   background-size: cover;
   background-position: center;
 }
@@ -17012,7 +17012,7 @@ input[type="reset"] {
 
 .home .parallax-slide {
   position: relative;
-  height: 100vh;
+  height: 80vh;
 }
 
 .home .parallax-clip {
@@ -27432,12 +27432,16 @@ input[type="reset"] {
   }
 
   .home .project-container {
-    min-height: 650px;
+    min-height: 70vh;
   }
 
   .home .project-release-banner {
     width: auto;
     text-align: left;
+  }
+
+  .home .parallax-slide {
+    height: 70vh;
   }
 }
 
@@ -30802,7 +30806,11 @@ input[type="reset"] {
   }
 
   .home .project-container {
-    min-height: 700px;
+    min-height: 80vh;
+  }
+
+  .home .parallax-slide {
+    height: 80vh;
   }
 }
 

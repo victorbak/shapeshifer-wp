@@ -58,12 +58,18 @@
   }
 
   .pagination-buttons {
+    .row {
+      align-items: center;
+    }
+
     .current-mobile {
       margin-bottom: 2rem;
       .text {
         transform: translateX(-50%);
       }
     }
+
+    .current-desktop,
     .prev,
     .next {
       .text {
@@ -71,6 +77,7 @@
       }
     }
     .current-mobile,
+    .current-desktop,
     .prev,
     .next {
       position: relative;
@@ -87,5 +94,9 @@
         margin: 0 auto;
       }
     }
+  }
+
+  .image-button {
+    opacity: 0.5;
   }
 }

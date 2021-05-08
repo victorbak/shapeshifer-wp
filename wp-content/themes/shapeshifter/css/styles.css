@@ -16912,8 +16912,6 @@ input[type="reset"] {
 }
 
 .home {
-  /* used only as overlay for the images,
-       darkens it a little in this case */
   /* CSS specific to iOS devices */
 }
 
@@ -17036,16 +17034,6 @@ input[type="reset"] {
   background-position: center top;
   background-attachment: fixed;
   /* -webkit-transform: translateZ(0); /* necessary for iOS! */
-}
-
-.home .fixed-parallax:before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.2);
-  content: "";
 }
 
 @supports (-webkit-overflow-scrolling: touch) {

@@ -1,6 +1,6 @@
 <?php 
-    // $post = get_page_by_title('Contact Info', OBJECT, 'reusable_block'); 
-    // $fields = get_fields();
+    $post = get_page_by_title('Contact Info', OBJECT, 'projects'); 
+    $fields = get_fields();
 ?>
 <!-- TODO: ADD ICONS -->
 <main class="contact-info">
@@ -10,9 +10,7 @@
             <h5 class="contact-info--header">ARTISTS</h5>
             <div class="divider"></div>
             <div class="p-2">
-                <p><?php echo $fields['phone_number']; ?></p>
-                <p><?php echo $fields['email']; ?></p>
-                <p><?php echo $fields['street_address']; ?></p>
+                <p><?php echo $fields['artists']; ?></p>
             </div>
         </div>
         <div>

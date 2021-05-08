@@ -1,22 +1,26 @@
 <?php get_header();?>
+<?php $fields = get_fields(); ?>
 
 <div class="project post">
-    <section class="container-fluid px-0 project-container">
-        <a href="/">
+    <?php $image = get_field('gallery'); ?>
+    <section class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
+        <div class="project-bg-color"></div>
+        <div class="project-content">
           <div class="project-title">
-            <h2 class="title">Project One</h2>
-            <h4 class="subtitle">Subtext</h4>
+            <h2 class="title"><?php echo $fields['project_name']; ?></h2>
+            <h4 class="subtitle"><?php echo $fields['project_subtitle']; ?></h4>
           </div>
-            <img src="<?php bloginfo('template_url'); ?>/assets/projects/project1-2x.png" alt="project1">
-            <div class="project-release-banner">
-                Back to Projects
-            </div>
-        </a>
+          <a href="/">
+              <div class="project-release-banner">
+                  Back to Projects
+              </div>
+          </a>
+        </div>
     </section>
 
     <section class="container px-4 py-5">
         <div class="row">
-            <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
+            <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
                 <?php the_content() ?>
             </div>
             <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
@@ -27,10 +31,11 @@
 
     <div class="full-divider"></div>
 
+    <!-- Replace with image gallery
     <section class="container-fluid px-0 team-images-container">
-        <!-- Replace with image gallery -->
         <img src="<?php bloginfo('template_url'); ?>/assets/projects/project-gallery.png" alt="project images">
     </section>
+    -->
 
     <section class="pagination-buttons">
       <div class="container">

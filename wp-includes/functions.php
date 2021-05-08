@@ -50,11 +50,6 @@ function mysql2date( $format, $date, $translate = true ) {
 	return $datetime->format( $format );
 }
 
-add_action('admin_init', 'remove_textarea');
-
-function remove_textarea() {
-				remove_post_type_support( 'page', 'editor' );
-}
 /**
  * Retrieves the current time based on specified type.
  *

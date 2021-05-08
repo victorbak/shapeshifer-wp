@@ -30861,9 +30861,9 @@ input[type="reset"] {
   }
 
   .job-preview .header {
-    -webkit-box-flex: 5;
-    -ms-flex: 5;
-    flex: 5;
+    -webkit-box-flex: 7;
+    -ms-flex: 7;
+    flex: 7;
   }
 
   .team-posts .team-member {
@@ -34206,6 +34206,12 @@ input[type="reset"] {
 
   .header-logo img {
     max-width: 290px;
+  }
+
+  .job-preview .header {
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
   }
 }
 

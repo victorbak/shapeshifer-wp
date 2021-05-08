@@ -28,6 +28,10 @@
         }
 
         @include media-breakpoint-up(lg) {
+            flex: 7;
+        }
+
+        @include media-breakpoint-up(xl) {
             flex: 5;
         }
 

@@ -30,7 +30,12 @@
         text-transform: uppercase;
         text-shadow: 0px 3px 10px rgba(0,0,0,0.8);
 
-        &:after {
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &:before {
             content: '';
             position: absolute;
             left: 50%;
@@ -42,13 +47,15 @@
             outline: 1px solid $white;
             outline-offset: 6px;
             opacity: 0.16;
-            transition: 0.4s opacity ease-in;
+            transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
         }
 
         &:hover {
-            &:after {
-                opacity: 0.8;
-                transition: 0.4s opacity ease-in;
+            &:before {
+                background-color: $orange;
+                outline: 1px solid $orange;
+                opacity: 0.5;
+                transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
             }
         }
     }

@@ -16929,7 +16929,12 @@ input[type="reset"] {
   text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-.home .project-title:after {
+.home .project-title span {
+  position: relative;
+  z-index: 1;
+}
+
+.home .project-title:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -16942,14 +16947,16 @@ input[type="reset"] {
   outline: 1px solid #fff;
   outline-offset: 6px;
   opacity: 0.16;
-  -webkit-transition: 0.4s opacity ease-in;
-  transition: 0.4s opacity ease-in;
+  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
 }
 
-.home .project-title:hover:after {
-  opacity: 0.8;
-  -webkit-transition: 0.4s opacity ease-in;
-  transition: 0.4s opacity ease-in;
+.home .project-title:hover:before {
+  background-color: #fd7e14;
+  outline: 1px solid #fd7e14;
+  opacity: 0.5;
+  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
 }
 
 .home .project-release-banner {

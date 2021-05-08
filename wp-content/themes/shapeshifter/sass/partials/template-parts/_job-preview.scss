@@ -20,11 +20,15 @@
         padding-right: 2.4rem;
 
         @include media-breakpoint-up(md) {
-            flex: 5;
+            flex: 8;
             padding-right: 2.4rem;
             --notchSize: 32px;
 
             clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0.00%, 100% 100%, 0px 100%);
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex: 5;
         }
 
         .title,
@@ -56,13 +60,15 @@
             }
         }
     }
-
-    .content {  
+    .content-container {
         background: #222;
+    }
+
+    .content {
 
         @include media-breakpoint-up(md) {  
             // max-width: 80.5rem;
-            flex: 28;
+            flex: 27;
         }
 
         .description {

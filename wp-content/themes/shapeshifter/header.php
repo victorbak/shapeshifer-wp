@@ -70,7 +70,7 @@
   var currentLocation = window.location.pathname;
   if(currentLocation == "/") {
     $('.loading').css('visibility', '');
-    console.log($('.loading'));
+    // console.log($('.loading'));
   }
   </script>
 

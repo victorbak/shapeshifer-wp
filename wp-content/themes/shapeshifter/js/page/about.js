@@ -4,11 +4,10 @@ jQuery(document).ready(function ($) {
   
     $cards.on('click', function (e) {
         e.preventDefault();
-        console.log(e);
+        // console.log(e);
         var $this = $(this);
         
         let bio = $this.find('.team-member__bio');
-        console.log(bio);
         
         $this.toggleClass( 'selected' );
         

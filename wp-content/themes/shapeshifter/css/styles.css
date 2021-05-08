@@ -16701,6 +16701,9 @@ input[type="reset"] {
 .team-member__bio {
   height: 0;
   overflow: hidden;
+  max-height: 0;
+  -webkit-transition: 0.3s max-height ease-in;
+  transition: 0.3s max-height ease-in;
 }
 
 .team-member__bio-content {
@@ -16712,6 +16715,9 @@ input[type="reset"] {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  max-height: 1000px;
+  -webkit-transition: 0.3s max-height ease-in;
+  transition: 0.3s max-height ease-in;
 }
 
 .team-member .cta {

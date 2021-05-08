@@ -55,6 +55,8 @@
 
         height: 0;
         overflow: hidden;
+        max-height: 0;
+        transition: 0.3s max-height ease-in;
 
         &-content {
             font-size: 14px;
@@ -63,6 +65,8 @@
 
         &.expanded {
             height: min-content;
+            max-height: 1000px;
+            transition: 0.3s max-height ease-in;
         }
 
     }

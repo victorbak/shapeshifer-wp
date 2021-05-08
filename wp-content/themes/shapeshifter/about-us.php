@@ -24,7 +24,7 @@ if( $terms = get_terms( array(
     'taxonomy' => 'departments',
     'orderby' => 'name'
 ) ) ) : 
-  foreach ( $terms as $term ) : 
+    foreach ( $terms as $term ) : 
       // var_dump($term);
 	endforeach;
 
@@ -37,7 +37,7 @@ endif;
     <section class="container px-4 py-5">
         <div class="row">
             <div class="content col-md-12 mb-xs-4 mb-lg-0 py-lg-4 content">
-                <?php the_content() ?>
+                <?php the_field('about_intro'); ?>
             </div>
         </div>
     </section>

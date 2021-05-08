@@ -15975,6 +15975,18 @@ a.text-dark:focus {
 
 .project .project-container {
   position: relative;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project .project-container .project-bg-color {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .project .project-title {
@@ -16025,13 +16037,16 @@ a.text-dark:focus {
 
 .project .project-release-banner {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 0;
+  left: 0;
+  margin: 40px 40px;
+  width: calc(100% - 80px);
   color: #fff;
   text-transform: uppercase;
   padding: 12px 20px;
   border: 1px solid #fff;
   border-radius: 4px;
+  text-align: center;
 }
 
 .project .pagination-buttons .row {
@@ -16891,14 +16906,14 @@ input[type="reset"] {
   min-height: 30.75rem;
 }
 
-.project-container {
+.home .project-container {
   position: relative;
   min-height: 700px;
   background-size: cover;
   background-position: center;
 }
 
-.project-container .project-bg-color {
+.home .project-container .project-bg-color {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -16907,7 +16922,7 @@ input[type="reset"] {
   width: 100%;
 }
 
-.project-title {
+.home .project-title {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -16917,7 +16932,7 @@ input[type="reset"] {
   text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-.project-title:after {
+.home .project-title:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -16934,13 +16949,13 @@ input[type="reset"] {
   transition: 0.4s opacity ease-in;
 }
 
-.project-title:hover:after {
+.home .project-title:hover:after {
   opacity: 0.8;
   -webkit-transition: 0.4s opacity ease-in;
   transition: 0.4s opacity ease-in;
 }
 
-.project-release-banner {
+.home .project-release-banner {
   position: absolute;
   top: 0;
   left: 0;
@@ -16951,9 +16966,10 @@ input[type="reset"] {
   padding: 12px 20px;
   border: 1px solid #fff;
   border-radius: 4px;
+  text-align: center;
 }
 
-.project-release-banner .icon {
+.home .project-release-banner .icon {
   padding-right: 10px;
 }
 
@@ -27260,6 +27276,15 @@ input[type="reset"] {
     text-align: center !important;
   }
 
+  .project .project-container {
+    min-height: 350px;
+  }
+
+  .project .project-release-banner {
+    width: auto;
+    text-align: left;
+  }
+
   .filters .filter {
     margin-right: 32px;
   }
@@ -27330,12 +27355,13 @@ input[type="reset"] {
     opacity: 0;
   }
 
-  .project-container {
+  .home .project-container {
     min-height: 350px;
   }
 
-  .project-release-banner {
+  .home .project-release-banner {
     width: auto;
+    text-align: left;
   }
 }
 
@@ -30659,6 +30685,10 @@ input[type="reset"] {
     text-align: center !important;
   }
 
+  .project .project-container {
+    min-height: 400px;
+  }
+
   .ss-modal .ss-modal-content {
     display: inline;
   }
@@ -30695,7 +30725,7 @@ input[type="reset"] {
     margin-right: 1rem;
   }
 
-  .project-container {
+  .home .project-container {
     min-height: 400px;
   }
 }

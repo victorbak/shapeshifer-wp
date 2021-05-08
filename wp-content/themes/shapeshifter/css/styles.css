@@ -16658,6 +16658,7 @@ input[type="reset"] {
 .job-preview .header {
   background: #fff;
   text-decoration: none;
+  padding-right: 2.4rem;
 }
 
 .job-preview .header .title,
@@ -16668,6 +16669,16 @@ input[type="reset"] {
 
 .job-preview .header .date {
   font-weight: 300;
+}
+
+.job-preview .header .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #222;
+  font-size: 25px;
 }
 
 .job-preview .content {
@@ -27452,6 +27463,10 @@ input[type="reset"] {
     --notchSize: 32px;
     -webkit-clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
     clip-path: polygon(0px 0px, calc(100% - var(--notchSize)) 0%, 100% 100%, 0px 100%);
+  }
+
+  .job-preview .header .icon {
+    display: none;
   }
 
   .job-preview .content {

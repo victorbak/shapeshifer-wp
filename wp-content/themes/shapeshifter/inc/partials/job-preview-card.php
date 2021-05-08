@@ -8,6 +8,7 @@
         <div class="header col-xs-12 py-xs-2 py-md-1">
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
             <?php echo "<p class='date'><span><em class='far fa-clock mr-1'></em></span>Date Posted: {$fields['date_posted']}</p>" ?>
+            <em class="fas fa-arrow-right icon"></em>
         </div>
         <div class="content col-xs-12 p-xs-2 pr-md-5">
             <?php echo "<p class='description'>{$fields['preview_text']}</p>"; ?>

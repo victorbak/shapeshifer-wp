@@ -6,17 +6,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-content-logo">
-                    <p>
+                    <!-- <p> -->
                         <img class="mr-2" src="<?php bloginfo('template_url'); ?>/assets/bw-new.png" alt="Shapeshifter">
-                        <span>SHAPESHIFTER VFX 2021</span>
-                    </p>
+                        <span class="text">SHAPESHIFTER VFX 2021</span>
+                    <!-- </p> -->
                 </div>
                 <div class="footer-content-links">
-                    <p>
-                        <a>SITEMAP |</a>
-                        <a>PRIVACY POLICY |</a>
-                        <a>TERMS & CONDITIONS </a>
-                    </p>
+                    <nav id="footer-navigation" class="site-navigation footer-nav" role="navigation">
+                        <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
+                    </nav>
                 </div>
             </div>
         </div>

@@ -15973,6 +15973,119 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.project .project-container {
+  position: relative;
+}
+
+.project .project-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project .project-title .title {
+  margin-top: 3rem;
+}
+
+.project .project-title .title,
+.project .project-title .subtitle {
+  text-align: center;
+}
+
+.project .project-title:before {
+  margin-top: 2rem;
+}
+
+.project .project-title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 6px;
+  opacity: 0.16;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project .project-title:hover:after {
+  opacity: 0.8;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project .project-release-banner {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.project .pagination-buttons .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.project .pagination-buttons .current-mobile {
+  margin-bottom: 2rem;
+}
+
+.project .pagination-buttons .current-mobile .text {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.project .pagination-buttons .current-desktop .text,
+.project .pagination-buttons .prev .text,
+.project .pagination-buttons .next .text {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.project .pagination-buttons .current-mobile,
+.project .pagination-buttons .current-desktop,
+.project .pagination-buttons .prev,
+.project .pagination-buttons .next {
+  position: relative;
+  text-align: center;
+}
+
+.project .pagination-buttons .current-mobile .text,
+.project .pagination-buttons .current-desktop .text,
+.project .pagination-buttons .prev .text,
+.project .pagination-buttons .next .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project .pagination-buttons .current-mobile img,
+.project .pagination-buttons .current-desktop img,
+.project .pagination-buttons .prev img,
+.project .pagination-buttons .next img {
+  margin: 0 auto;
+}
+
+.project .image-button {
+  opacity: 0.5;
+}
+
 body {
   min-height: 100vh;
   height: auto;
@@ -16272,30 +16385,14 @@ input[type="reset"] {
   display: inline-block;
 }
 
-.header-nav {
-  background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
-  text-align: left;
-  position: absolute;
-  top: 0;
-  height: 100vw;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transition: 0.2s opacity ease-in;
-  transition: 0.2s opacity ease-in;
-  padding: 20px 40px 0;
-}
-
-.menu-item {
+.header .menu-item {
   color: #fff;
   display: block;
   padding: 30px 20px 30px 55px;
   position: relative;
 }
 
-.menu-item:before {
+.header .menu-item:before {
   content: '';
   position: absolute;
   left: -15px;
@@ -16310,7 +16407,7 @@ input[type="reset"] {
   transition: 0.4s border ease-in;
 }
 
-.menu-item:after {
+.header .menu-item:after {
   content: '';
   position: absolute;
   left: 22px;
@@ -16327,7 +16424,7 @@ input[type="reset"] {
   transition: 0.4s opacity ease-in;
 }
 
-.menu-item a {
+.header .menu-item a {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -16335,29 +16432,45 @@ input[type="reset"] {
   transition: 0.4s color ease-in;
 }
 
-.menu-item a:hover {
+.header .menu-item a:hover {
   text-decoration: none;
 }
 
-.menu-item:hover:after,
-.menu-item:focus:after {
+.header .menu-item:hover:after,
+.header .menu-item:focus:after {
   opacity: 1;
   -webkit-transition: 0.4s opacity ease-in;
   transition: 0.4s opacity ease-in;
 }
 
-.menu-item:hover:before,
-.menu-item:focus:before {
+.header .menu-item:hover:before,
+.header .menu-item:focus:before {
   border: 1px solid #DA8824;
   -webkit-transition: 0.4s border ease-in;
   transition: 0.4s border ease-in;
 }
 
-.menu-item:hover a,
-.menu-item:focus a {
+.header .menu-item:hover a,
+.header .menu-item:focus a {
   color: #DA8824;
   -webkit-transition: 0.4s color ease-in;
   transition: 0.4s color ease-in;
+}
+
+.header-nav {
+  background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  height: 100vw;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in;
+  transition: 0.2s opacity ease-in;
+  padding: 20px 40px 0;
 }
 
 .footer-content {
@@ -16370,10 +16483,71 @@ input[type="reset"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer-content-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer-content-logo .text {
+  color: #fff;
 }
 
 .footer-content-links {
+  padding: 1rem;
+}
+
+.footer .menu-footer-menu-container > ul li a {
+  list-style-type: none;
+}
+
+.footer #site-navigation ul li {
+  list-style: none;
+}
+
+.footer .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.footer .nav-menu:before {
   display: none;
+}
+
+.footer .nav-menu li:last-child a:after {
+  content: "";
+  margin: 0 10px;
+}
+
+.footer .nav-menu .menu-item {
+  color: #fff;
+  display: block;
+  position: relative;
+}
+
+.footer .nav-menu .menu-item a {
+  text-transform: uppercase;
+}
+
+.footer .nav-menu .menu-item a:after {
+  content: "|";
+  margin: 0 10px;
+}
+
+.footer .nav-menu .menu-item:before {
+  display: none;
+  text-transform: "uppercase";
 }
 
 .category-header .name {
@@ -16568,8 +16742,12 @@ input[type="reset"] {
 }
 
 .map-banner .overlay {
-  width: 100%;
-  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
@@ -27067,6 +27245,19 @@ input[type="reset"] {
     display: none;
   }
 
+  .header .menu-item {
+    display: inline-block;
+    padding: 30px 20px 30px 55px;
+  }
+
+  .header .menu-item:before {
+    left: -5px;
+  }
+
+  .header .menu-item:after {
+    left: 33px;
+  }
+
   .header-nav {
     background: none;
     pointer-events: all;
@@ -27077,19 +27268,6 @@ input[type="reset"] {
     height: auto;
     width: auto;
     opacity: 1;
-  }
-
-  .menu-item {
-    display: inline-block;
-    padding: 30px 20px 30px 55px;
-  }
-
-  .menu-item:before {
-    left: -5px;
-  }
-
-  .menu-item:after {
-    left: 33px;
   }
 
   .job-preview .card {
@@ -44060,15 +44238,21 @@ input[type="reset"] {
     justify-content: space-between;
   }
 
+  .footer .full-divider {
+    margin-bottom: 1rem;
+  }
+
   .footer-content-logo {
+    max-width: 100%;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .footer-content-logo p {
-    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .team-member__bio {
@@ -44260,15 +44444,15 @@ input[type="reset"] {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .menu-item {
+  .header .menu-item {
     padding: 30px 20px 30px;
   }
 
-  .menu-item:after {
+  .header .menu-item:after {
     content: none;
   }
 
-  .menu-item:before {
+  .header .menu-item:before {
     content: none;
   }
 }

@@ -15973,6 +15973,105 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.project .project-container {
+  position: relative;
+}
+
+.project .project-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project .project-title .title {
+  margin-top: 3rem;
+}
+
+.project .project-title .title,
+.project .project-title .subtitle {
+  text-align: center;
+}
+
+.project .project-title:before {
+  margin-top: 2rem;
+}
+
+.project .project-title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 6px;
+  opacity: 0.16;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project .project-title:hover:after {
+  opacity: 0.8;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.project .project-release-banner {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.project .pagination-buttons .current-mobile {
+  margin-bottom: 2rem;
+}
+
+.project .pagination-buttons .current-mobile .text {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.project .pagination-buttons .prev .text,
+.project .pagination-buttons .next .text {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.project .pagination-buttons .current-mobile,
+.project .pagination-buttons .prev,
+.project .pagination-buttons .next {
+  position: relative;
+  text-align: center;
+}
+
+.project .pagination-buttons .current-mobile .text,
+.project .pagination-buttons .prev .text,
+.project .pagination-buttons .next .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project .pagination-buttons .current-mobile img,
+.project .pagination-buttons .prev img,
+.project .pagination-buttons .next img {
+  margin: 0 auto;
+}
+
 body {
   min-height: 100vh;
   height: auto;

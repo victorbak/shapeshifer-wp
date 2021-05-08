@@ -1,0 +1,91 @@
+.project {
+  .project-container {
+    position: relative;
+  }
+  .project-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+
+    .title {
+      margin-top: 3rem;
+    }
+
+    .title,
+    .subtitle {
+      text-align: center;
+    }
+
+    &:before {
+      margin-top: 2rem;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 50px;
+      height: 50px;
+      background-color: $white;
+      outline: 1px solid $white;
+      outline-offset: 6px;
+      opacity: 0.16;
+      transition: 0.4s opacity ease-in;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 0.8;
+        transition: 0.4s opacity ease-in;
+      }
+    }
+  }
+
+  .project-release-banner {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: $white;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: 1px solid $white;
+    border-radius: 4px;
+  }
+
+  .pagination-buttons {
+    .current-mobile {
+      margin-bottom: 2rem;
+      .text {
+        transform: translateX(-50%);
+      }
+    }
+    .prev,
+    .next {
+      .text {
+        transform: translate(-50%, -50%);
+      }
+    }
+    .current-mobile,
+    .prev,
+    .next {
+      position: relative;
+      text-align: center;
+      .text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-transform: uppercase;
+        text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

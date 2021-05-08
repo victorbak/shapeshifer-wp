@@ -11,10 +11,12 @@ function job_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'job_scripts' );
 ?>
-
 <?php get_header(); ?>
 
+<?php $jobs_intro = get_field('jobs_intro'); ?>
+
 <?php
+
 
 if( $terms = get_terms( array(
     'taxonomy' => 'job_categories',
@@ -32,8 +34,7 @@ endif;
   <section class="container py-2 mt-4 mb-3">
       <div class="row">
           <div class="content col-12">
-              <h2 class="mb-5"><?php the_title(); ?></h2>
-              <?php the_content() ?>
+              <?php the_field('jobs_intro'); ?>
           </div>
       </div>
   </section>

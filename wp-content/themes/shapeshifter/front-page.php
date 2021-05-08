@@ -15,10 +15,15 @@ $featured_project3 = get_field('featured_project_3');
             <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="/coming-soon">
+                    <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
                         <div class="project-release-banner">
                             <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                        <div class="project-num-squares">
+                            <div class="project-square active"></div>
+                            <div class="project-square"></div>
+                            <div class="project-square"></div>
                         </div>
                     </a>
                 </div>
@@ -32,9 +37,14 @@ $featured_project3 = get_field('featured_project_3');
             <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="/coming-soon">
+                    <a href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
                         <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
                     </a>
+                </div>
+                <div class="project-num-squares">
+                    <div class="project-square"></div>
+                    <div class="project-square active"></div>
+                    <div class="project-square"></div>
                 </div>
             </div>
         <?php endif; ?>
@@ -46,9 +56,14 @@ $featured_project3 = get_field('featured_project_3');
             <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="/coming-soon">
+                    <a href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
                         <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
                     </a>
+                </div>
+                <div class="project-num-squares">
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square active"></div>
                 </div>
             </div>
         <?php endif; ?>

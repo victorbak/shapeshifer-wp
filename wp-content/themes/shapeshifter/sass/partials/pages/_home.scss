@@ -15,10 +15,10 @@
         }
 
         @include media-breakpoint-up(md) {
-            min-height: 550px;
+            min-height: 650px;
         }
         @include media-breakpoint-up(lg) {
-            min-height: 600px;
+            min-height: 700px;
         }
     }
 
@@ -72,6 +72,27 @@
         @include media-breakpoint-up(md) {
             width: auto;
             text-align: left;
+        }
+    }
+
+    .project-num-squares {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 40px 40px;
+        
+        .project-square {
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid $white;
+            border-radius: 4px;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+
+            &.active {
+                background-color: $white;
+            }
         }
     }
 }

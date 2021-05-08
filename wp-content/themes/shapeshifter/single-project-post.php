@@ -7,13 +7,11 @@
         <div class="project-bg-color"></div>
         <div class="project-content">
           <div class="project-title">
-            <h2 class="title"><?php echo $fields['project_name']; ?></h2>
-            <h4 class="subtitle"><?php echo $fields['project_subtitle']; ?></h4>
+            <h2 class="title"><span><?php echo $fields['project_name']; ?></span></h2>
+            <h4 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h4>
           </div>
-          <a href="/">
-              <div class="project-release-banner">
-                  Back to Projects
-              </div>
+          <a href="/" class="project-release-banner">
+            Back to Projects
           </a>
         </div>
     </section>

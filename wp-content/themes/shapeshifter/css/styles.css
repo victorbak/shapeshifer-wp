@@ -16008,6 +16008,12 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.project .project-title .title span,
+.project .project-title .subtitle span {
+  position: relative;
+  z-index: 1;
+}
+
 .project .project-title:before {
   margin-top: 2rem;
 }
@@ -16025,14 +16031,16 @@ a.text-dark:focus {
   outline: 1px solid #fff;
   outline-offset: 6px;
   opacity: 0.16;
-  -webkit-transition: 0.4s opacity ease-in;
-  transition: 0.4s opacity ease-in;
+  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
 }
 
 .project .project-title:hover:after {
-  opacity: 0.8;
-  -webkit-transition: 0.4s opacity ease-in;
-  transition: 0.4s opacity ease-in;
+  background-color: #fd7e14;
+  outline: 1px solid #fd7e14;
+  opacity: 0.5;
+  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
 }
 
 .project .project-release-banner {

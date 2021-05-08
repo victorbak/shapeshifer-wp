@@ -16540,6 +16540,20 @@ input[type="reset"] {
   font-size: 14px;
 }
 
+.coming-soon.page .content {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.coming-soon.page .logo {
+  margin: 0 auto 20px;
+  max-width: 120px;
+}
+
+.coming-soon.page p {
+  font-size: 36px;
+}
+
 .map-banner {
   width: 100%;
   height: 28rem;

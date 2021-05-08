@@ -1,6 +1,27 @@
 .project-container {
     position: relative;
+
+    min-height: 700px;
+    background-size: cover;
+    background-position: center;
+
+    .project-bg-color {
+        background-color: rgba(0,0,0,0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+        min-height: 350px;
+    }
+    @include media-breakpoint-up(lg) {
+        min-height: 400px;
+    }
 }
+
 .project-title {
     position: absolute;
     left: 50%;
@@ -34,11 +55,20 @@
 
 .project-release-banner {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 0;
+    left: 0;
+    margin: 40px 40px;
+    width: calc(100% - 80px);
     color: $white;
     text-transform: uppercase;
     padding: 12px 20px;
     border: 1px solid $white;
     border-radius: 4px;
+
+    .icon {
+        padding-right: 10px;
+    }
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
 }

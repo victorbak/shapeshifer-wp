@@ -12,14 +12,16 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project1->ID );
                 $projectImage = get_field( 'gallery', $featured_project1->ID );
             ?>
-            <div class="container-fluid px-0 project-container">
-                <a href="/coming-soon">
-                    <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
-                    <img src="<?php echo esc_url($projectImage['url']); ?>" alt="<?php echo esc_url($projectImage['alt']); ?>">
-                    <div class="project-release-banner">
-                        Newest Release
-                    </div>
-                </a>
+            <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
+                <div class="project-bg-color"></div>
+                <div class="project-content">
+                    <a href="/coming-soon">
+                        <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    </a>
+                </div>
             </div>
         <?php endif; ?>
         <?php if($featured_project2): ?>
@@ -27,14 +29,13 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project2->ID );
                 $projectImage = get_field( 'gallery', $featured_project2->ID );
             ?>
-            <div class="container-fluid px-0 project-container">
-                <a href="/coming-soon">
-                    <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
-                    <img src="<?php echo esc_url($projectImage['url']); ?>" alt="<?php echo esc_url($projectImage['alt']); ?>">
-                    <div class="project-release-banner">
-                        Newest Release
-                    </div>
-                </a>
+            <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
+                <div class="project-bg-color"></div>
+                <div class="project-content">
+                    <a href="/coming-soon">
+                        <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
+                    </a>
+                </div>
             </div>
         <?php endif; ?>
         <?php if($featured_project3): ?>
@@ -42,14 +43,13 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project3->ID );
                 $projectImage = get_field( 'gallery', $featured_project3->ID );
             ?>
-            <div class="container-fluid px-0 project-container">
-                <a href="/coming-soon">
-                    <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
-                    <img src="<?php echo esc_url($projectImage['url']); ?>" alt="<?php echo esc_url($projectImage['alt']); ?>">
-                    <div class="project-release-banner">
-                        Newest Release
-                    </div>
-                </a>
+            <div class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');">
+                <div class="project-bg-color"></div>
+                <div class="project-content">
+                    <a href="/coming-soon">
+                        <h2 class="project-title"><?php echo esc_html( $projectName ); ?></h2>
+                    </a>
+                </div>
             </div>
         <?php endif; ?>
     <section>

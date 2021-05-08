@@ -13,7 +13,8 @@
   fadePreloader();
   });
 </script>
-<div class="loading" 
+  <body <?php body_class();?>>  
+  <div class="loading" 
     style="
         visibility: hidden;
         height: 100vh;
@@ -43,7 +44,6 @@
         </div>
     </div>
   </div>
-  <body <?php body_class();?>>  
     <section class="header">
       <div class="container-fluid header-container">
         <div class="row">

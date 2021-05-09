@@ -4,7 +4,7 @@
     $post = get_post();
     $id = ! empty( $post ) ? $post->ID : false;
     $gallery = acf_photo_gallery('image_gallery_test', $id);  // params: field name, post id
-    var_dump($gallery);
+    // var_dump($gallery);
 ?>
 
 <div class="project post">

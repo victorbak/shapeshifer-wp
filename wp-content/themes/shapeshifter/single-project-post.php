@@ -1,5 +1,11 @@
 <?php get_header();?>
 <?php $fields = get_fields(); ?>
+<?php
+    $post = get_post();
+    $id = ! empty( $post ) ? $post->ID : false;
+    $gallery = acf_photo_gallery('image_gallery_test', $id);  // params: field name, post id
+    var_dump($gallery);
+?>
 
 <div class="project post">
     <?php $image = get_field('gallery'); ?>
@@ -27,13 +33,35 @@
         </div>
     </section>
 
-    <!-- <div class="full-divider"></div> -->
+    <div class="full-divider"></div>
 
-    <!-- Replace with image gallery
-    <section class="container-fluid px-0 team-images-container">
-        <img src="<?php bloginfo('template_url'); ?>/assets/projects/project-gallery.png" alt="project images">
+    <!-- Replace with image gallery -->
+    <section class="project-gallery container-fluid py-5 my-3 px-0">
+      <div class="row no-gutters"> 
+        <?php for ( $i = 0; $i < count( $gallery ); $i++ ): ?> 
+          <?php if ( $i == 0): ?>
+            <div class="col-lg-6">
+              <div class="row no-gutters">
+                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
+                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i + 1]['full_image_url']}' alt='{$gallery[$i + 1]['title']}'>"; ?>
+              </div>
+          <?php endif ?>
+          <?php if ( $i == 2): ?>
+              <div class="row no-gutters">
+                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
+                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i + 1]['full_image_url']}' alt='{$gallery[$i + 1]['title']}'>"; ?>
+              </div>
+            </div>
+          <?php endif ?>
+          <?php if ( $i == 4): ?>
+            <div class="row col-lg-6 no-gutters">
+              <?php echo "<img class='col-lg-12 project-gallery-image big-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
+            </div>
+          <?php endif ?>
+        <?php endfor ?>
+      </div>
     </section>
-    -->
+   
 
     <!-- <section class="pagination-buttons">
       <div class="container">

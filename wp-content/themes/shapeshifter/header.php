@@ -55,7 +55,10 @@
                 <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup.svg" alt="Shapeshifter">
               </a>
             </div>
-            <button class="mobile-menu-btn">MENU</button>
+            <button class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </button>
           </div>
           <div class="col-md-8 header-nav-container">
             <nav id="header-navigation" class="site-navigation header-nav" role="navigation">

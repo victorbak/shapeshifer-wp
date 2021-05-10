@@ -3,7 +3,7 @@
 <?php
     $post = get_post();
     $id = ! empty( $post ) ? $post->ID : false;
-    $gallery = acf_photo_gallery('image_gallery_test', $id);  // params: field name, post id
+    $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post id
     // var_dump($gallery);
 ?>
 
@@ -42,20 +42,20 @@
           <?php if ( $i == 0): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
-                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i + 1]['full_image_url']}' alt='{$gallery[$i + 1]['title']}'>"; ?>
+                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i+1 ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i+1]['full_image_url']); ?>');"></div>
               </div>
           <?php endif ?>
           <?php if ( $i == 2): ?>
               <div class="row no-gutters">
-                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
-                <?php echo "<img class='col-lg-6 project-gallery-image small-image' src='{$gallery[$i + 1]['full_image_url']}' alt='{$gallery[$i + 1]['title']}'>"; ?>
+              <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i+1 ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i+1]['full_image_url']); ?>');"></div>
               </div>
             </div>
           <?php endif ?>
           <?php if ( $i == 4): ?>
-            <div class="row col-lg-6 no-gutters">
-              <?php echo "<img class='col-lg-12 project-gallery-image big-image' src='{$gallery[$i]['full_image_url']}' alt='{$gallery[$i]['title']}'>"; ?>
+            <div class="row col-lg-6 no-gutters">              
+              <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
         <?php endfor ?>
@@ -93,6 +93,20 @@
         </div>
       </div>
     </section> -->
+</div>
+
+<!-- Modal -->
+<div class="modal fade" 
+    id="<?php echo 'modalCenter-' . $i ?>" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-labelledby="exampleModalCenterTitle" 
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+        <div class="modal-content"> 
+          <img src="<?php echo esc_url($gallery[$i]['full_image_url']); ?>">
+        </div>
+    </div>
 </div>
 
 <?php get_footer();?>

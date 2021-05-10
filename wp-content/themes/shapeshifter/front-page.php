@@ -10,7 +10,7 @@ $featured_project3 = get_field('featured_project_3');
         <?php if($featured_project1): ?>
             <?php
                 $projectName = get_field( 'project_name', $featured_project1->ID );
-                $projectImage = get_field( 'gallery', $featured_project1->ID );
+                $projectImage = get_field( 'featured_image', $featured_project1->ID );
             ?>
             <div class="container-fluid px-0 project-container">
                 <div class="parallax-slide">
@@ -37,7 +37,7 @@ $featured_project3 = get_field('featured_project_3');
         <?php if($featured_project2): ?>
             <?php
                 $projectName = get_field( 'project_name', $featured_project2->ID );
-                $projectImage = get_field( 'gallery', $featured_project2->ID );
+                $projectImage = get_field( 'featured_image', $featured_project2->ID );
             ?>
              <div class="container-fluid px-0 project-container">
                 <div class="parallax-slide">
@@ -61,7 +61,7 @@ $featured_project3 = get_field('featured_project_3');
         <?php if($featured_project3): ?>
             <?php
                 $projectName = get_field( 'project_name', $featured_project3->ID );
-                $projectImage = get_field( 'gallery', $featured_project3->ID );
+                $projectImage = get_field( 'featured_image', $featured_project3->ID );
             ?>
             <div class="container-fluid px-0 project-container">
                 <div class="parallax-slide">

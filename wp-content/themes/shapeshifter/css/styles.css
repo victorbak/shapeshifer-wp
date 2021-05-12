@@ -16341,6 +16341,15 @@ input[type="reset"] {
   color: #85BD86;
 }
 
+.modal .simple-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .project-gallery-image {
   padding: 0;
 }

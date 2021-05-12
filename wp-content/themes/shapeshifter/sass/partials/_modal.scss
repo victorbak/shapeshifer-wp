@@ -103,6 +103,15 @@
     a {
       color: $green_link;
     }
+}
 
-
+.modal {
+    .simple-modal-close {
+        position: absolute;
+        top: -40px;
+        right: 10px;
+        color: $white;
+        font-size: 20px;
+        cursor: pointer;
+    }
 }

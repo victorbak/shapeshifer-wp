@@ -100,14 +100,20 @@
 
 <!-- Modal -->
 <div class="modal fade" 
-    id="<?php echo 'modalCenter-' . $i ?>" 
+    id="<?php echo 'modalCenter-0' ?>" 
     tabindex="-1" 
     role="dialog" 
     aria-labelledby="exampleModalCenterTitle" 
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content"> 
-          <img src="<?php echo esc_url($gallery[$i]['full_image_url']); ?>">
+          <div class="image-modal">
+            <span class="image-modal-close">
+              <span class="mr-2">Close Image</span>
+              <em class="icon fas fa-times"></em>
+            </span>
+            <img class="image-modal-content" src="<?php echo esc_url($gallery[0]['full_image_url']); ?>">
+          </div>
         </div>
     </div>
 </div>

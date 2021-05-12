@@ -16118,7 +16118,11 @@ a.text-dark:focus {
   box-shadow: 2px 4px 7px #00000026;
   border: 3px solid #FFFFFF;
   border-radius: 3px;
-  height: 48rem;
+  height: auto;
+}
+
+.image-modal .image-modal-content {
+  width: 100%;
 }
 
 .image-modal .image-modal-close {
@@ -16560,7 +16564,7 @@ input[type="reset"] {
   position: sticky;
   top: 0;
   z-index: 5;
-  width: 100vw;
+  width: 100%;
 }
 
 .header li {
@@ -17212,6 +17216,11 @@ input[type="reset"] {
   background-position: center;
 }
 
+.home .project-container .project-anchor {
+  position: absolute;
+  top: -105px;
+}
+
 .home .project-container .project-bg-color {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -17279,7 +17288,7 @@ input[type="reset"] {
   padding-right: 10px;
 }
 
-.home .project-scroll {
+.home .project-next-scroll {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -17288,13 +17297,33 @@ input[type="reset"] {
   color: #fff;
   text-transform: uppercase;
   padding: 12px 20px;
-  border: 1px solid #fff;
-  border-radius: 4px;
   text-align: center;
+  -webkit-transition: 0.1s color ease-in;
+  transition: 0.1s color ease-in;
+  font-size: 18px;
 }
 
-.home .project-scroll .icon {
-  padding-right: 10px;
+.home .project-next-scroll .icon {
+  padding-left: 10px;
+  -webkit-transition: 0.1s -webkit-transform ease-in;
+  transition: 0.1s -webkit-transform ease-in;
+  transition: 0.1s transform ease-in;
+  transition: 0.1s transform ease-in, 0.1s -webkit-transform ease-in;
+}
+
+.home .project-next-scroll:hover {
+  color: #fd7e14;
+  -webkit-transition: 0.2s color ease-in;
+  transition: 0.2s color ease-in;
+}
+
+.home .project-next-scroll:hover .icon {
+  -webkit-transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s transform ease-in;
+  transition: 0.2s transform ease-in, 0.2s -webkit-transform ease-in;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 .home .project-num-squares {
@@ -17302,6 +17331,7 @@ input[type="reset"] {
   bottom: 0;
   left: 0;
   margin: 40px 40px;
+  display: none;
 }
 
 .home .project-num-squares .project-square {
@@ -27717,9 +27747,13 @@ input[type="reset"] {
     text-align: left;
   }
 
-  .home .project-scroll {
+  .home .project-next-scroll {
     width: auto;
     text-align: left;
+  }
+
+  .home .project-num-squares {
+    display: block;
   }
 }
 

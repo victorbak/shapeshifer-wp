@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
-// Select all links with hashes
-$('a[href*="#"]')
+  // Select all links with hashes
+  $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -34,5 +34,14 @@ $('a[href*="#"]')
         });
       }
     }
+  });
+
+  //gallery modal
+  var targetString
+  $(".project-gallery-image").click(function() {
+    targetString = $(this).data("target").replace("#", "");
+    $('.modal').attr('id', targetString);
+    targetImage = $(this).data("image");
+    $('.image-modal-content').attr('src', targetImage);
   });
 });

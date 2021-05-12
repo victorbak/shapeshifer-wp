@@ -38,32 +38,74 @@
 
     <div class="full-divider"></div>
 
-    <!-- Replace with image gallery -->
-    <section class="project-gallery container-fluid py-5 my-3 px-0">
-      <div class="row no-gutters"> 
-        <?php for ( $i = 0; $i < count( $gallery ); $i++ ): ?> 
-          <?php if ( $i == 0): ?>
+    <!-- Image gallery -->
+    <?php if ( count( $gallery ) > 0): ?>
+
+      <section class="project-gallery container-fluid py-5 my-3 px-0">
+        <div class="row no-gutters">
+          <!-- if 5 images -->
+          <?php if ( count( $gallery ) == 5): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
-                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i+1 ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i+1]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
               </div>
-          <?php endif ?>
-          <?php if ( $i == 2): ?>
               <div class="row no-gutters">
-              <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
-                <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i+1 ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[$i+1]['full_image_url']); ?>');"></div>
+              <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></div>
               </div>
             </div>
-          <?php endif ?>
-          <?php if ( $i == 4): ?>
             <div class="row col-lg-6 no-gutters">              
-              <div data-toggle="modal" data-target="<?php echo '#modalCenter-' . $i ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[$i]['full_image_url']); ?>');"></div>
+              <div data-toggle="modal" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
-        <?php endfor ?>
-      </div>
-    </section>
+          <!-- if 4 images -->
+          <?php if ( count( $gallery ) == 4): ?>
+            <div class="col-lg-6">
+              <div class="row no-gutters">
+                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+              </div>
+              <div class="row no-gutters">
+              <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+                <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
+              </div>
+            </div>
+            <div class="row col-lg-6 no-gutters">              
+              <div data-toggle="modal" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></div>
+            </div>
+          <?php endif ?>
+          <!-- If 3 images -->
+          <?php if ( count( $gallery ) == 3): ?>
+            <div class="col-lg-6">
+              <div class="row no-gutters">
+                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+              </div>
+              <div class="row no-gutters">
+              <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+              </div>
+            </div>
+            <div class="row col-lg-6 no-gutters">              
+              <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
+            </div>
+          <?php endif ?>
+          <!-- If 2 images -->
+          <?php if ( count( $gallery ) == 2): ?>
+            <div class="row col-lg-12 no-gutters">  
+              <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+            </div>
+            <div class="row col-lg-12 no-gutters">              
+              <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+            </div>
+          <?php endif ?>
+          <!-- If 1 image -->
+          <?php if ( count( $gallery ) == 1): ?>
+            <div class="row col-lg-12 no-gutters">  
+              <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+            </div>
+          <?php endif ?>
+        </div>
+      </section>
+    <?php endif ?>
    
 
     <!-- <section class="pagination-buttons">
@@ -100,7 +142,7 @@
 
 <!-- Modal -->
 <div class="modal fade" 
-    id="<?php echo 'modalCenter-0' ?>" 
+    id="" 
     tabindex="-1" 
     role="dialog" 
     aria-labelledby="exampleModalCenterTitle" 
@@ -112,7 +154,7 @@
               <span class="mr-2">Close Image</span>
               <em class="icon fas fa-times"></em>
             </span>
-            <img class="image-modal-content" src="<?php echo esc_url($gallery[0]['full_image_url']); ?>">
+            <img class="image-modal-content" src="">
           </div>
         </div>
     </div>

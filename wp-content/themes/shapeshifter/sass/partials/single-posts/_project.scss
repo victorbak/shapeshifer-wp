@@ -142,7 +142,11 @@
   box-shadow: 2px 4px 7px #00000026;
   border: 3px solid #FFFFFF;
   border-radius: 3px;
-  height: 48rem;
+  height: auto;
+
+  .image-modal-content {
+    width: 100%;
+  }
 
   .image-modal-close {
     display: flex;

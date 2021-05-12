@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
-
-    $(".mobile-menu-btn" ).click(function() {
+    $(".mobile-menu-btn").click(function() {
+        console.log("clicked");
         if( $(".header-nav").hasClass("nav-open") ) {
             $(".header-nav").removeClass("nav-open");
             $(".mobile-menu-btn").removeClass("active");

@@ -37,8 +37,9 @@ jQuery(document).ready(function ($) {
   });
 
   //gallery modal
-  var targetString
-  $(".project-gallery-image").click(function() {
+  var targetString;
+  var targetImage;
+  $(".gallery-image").click(function() {
     targetString = $(this).data("target").replace("#", "");
     $('.modal').attr('id', targetString);
     targetImage = $(this).data("image");

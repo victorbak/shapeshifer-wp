@@ -16113,6 +16113,50 @@ a.text-dark:focus {
   opacity: 0.5;
 }
 
+.image-modal {
+  -webkit-box-shadow: 2px 4px 7px #00000026;
+  box-shadow: 2px 4px 7px #00000026;
+  border: 3px solid #FFFFFF;
+  border-radius: 3px;
+  height: 48rem;
+}
+
+.image-modal .image-modal-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 8rem;
+  height: 1.4rem;
+  padding: .6rem;
+  position: absolute;
+  top: -.2px;
+  right: 0rem;
+  z-index: 2;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  --notchSize: 10px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, var(--notchSize) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--notchSize) 100%);
+}
+
+.image-modal .image-modal-close .icon {
+  font-size: 14px;
+}
+
+.image-modal-content {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   min-height: 100vh;
   height: auto;

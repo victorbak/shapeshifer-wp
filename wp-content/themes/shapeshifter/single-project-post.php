@@ -150,7 +150,7 @@
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content"> 
           <div class="image-modal">
-            <span class="image-modal-close">
+            <span data-dismiss="modal" class="image-modal-close">
               <span class="mr-2">Close Image</span>
               <em class="icon fas fa-times"></em>
             </span>

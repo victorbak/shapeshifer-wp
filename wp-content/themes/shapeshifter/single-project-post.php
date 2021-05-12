@@ -6,31 +6,34 @@
     $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post id
     // var_dump($gallery);
 ?>
+<?php $image = get_field('gallery'); ?>
 
 <div class="project post">
-    <?php $image = get_field('gallery'); ?>
-    <section class="container-fluid px-0 project-container" style="background-image: url('<?php echo esc_url($image['url']); ?>');">
-        <div class="project-bg-color"></div>
-        <div class="project-content">
-          <div class="project-title">
-            <h2 class="title"><span><?php echo $fields['project_name']; ?></span></h2>
-            <h4 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h4>
-          </div>
-          <a href="/" class="project-release-banner">
-            Back to Projects
-          </a>
+    <section class="container-fluid px-0 project-container">
+      <div class="parallax-slide">
+        <div class="parallax-clip">
+          <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
         </div>
+      </div>
+      <div class="project-bg-color"></div>
+      <div class="project-content">
+        <div class="project-title">
+          <h2 class="title"><span><?php echo $fields['project_name']; ?></span></h2>
+          <h4 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h4>
+        </div>
+        <a href="/" class="project-release-banner">Back to Projects</a>
+      </div>
     </section>
 
     <section class="container px-4 py-5">
-        <div class="row">
-            <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
-                <p><?php echo $fields['project_description']; ?></p>
-            </div>
-            <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
-                <?php get_template_part( 'inc/partials/project-info-card' ); ?>
-            </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
+          <p><?php echo $fields['project_description']; ?></p>
         </div>
+        <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
+          <?php get_template_part( 'inc/partials/project-info-card' ); ?>
+        </div>
+      </div>
     </section>
 
     <div class="full-divider"></div>

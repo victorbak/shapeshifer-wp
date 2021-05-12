@@ -12,7 +12,7 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project1->ID );
                 $projectImage = get_field( 'featured_image', $featured_project1->ID );
             ?>
-            <div class="container-fluid px-0 project-container">
+            <div class="container-fluid px-0 project-container" id="project1">
                 <div class="parallax-slide">
 					<div class="parallax-clip">
 						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -26,6 +26,11 @@ $featured_project3 = get_field('featured_project_3');
                     <div class="project-release-banner">
                         <i class="far fa-star icon"></i> Newest Release
                     </div>
+                    <?php if($featured_project2): ?>
+                        <a href="/#project2" class="project-scroll">
+                            <i class="fas fa-arrow-down icon"></i> Next Project
+                        </a>
+                    <?php endif; ?>
                     <div class="project-num-squares">
                         <div class="project-square active"></div>
                         <div class="project-square"></div>
@@ -39,7 +44,7 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project2->ID );
                 $projectImage = get_field( 'featured_image', $featured_project2->ID );
             ?>
-             <div class="container-fluid px-0 project-container">
+             <div class="container-fluid px-0 project-container" id="project2">
                 <div class="parallax-slide">
 					<div class="parallax-clip">
 						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -51,6 +56,11 @@ $featured_project3 = get_field('featured_project_3');
                         <h2 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h2>
                     </a>
                 </div>
+                <?php if($featured_project3): ?>
+                    <a href="/#project3" class="project-scroll">
+                        <i class="fas fa-arrow-down icon"></i> Next Project
+                    </a>
+                <?php endif; ?>
                 <div class="project-num-squares">
                     <div class="project-square"></div>
                     <div class="project-square active"></div>
@@ -63,7 +73,7 @@ $featured_project3 = get_field('featured_project_3');
                 $projectName = get_field( 'project_name', $featured_project3->ID );
                 $projectImage = get_field( 'featured_image', $featured_project3->ID );
             ?>
-            <div class="container-fluid px-0 project-container">
+            <div class="container-fluid px-0 project-container" id="project3">
                 <div class="parallax-slide">
 					<div class="parallax-clip">
 						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>

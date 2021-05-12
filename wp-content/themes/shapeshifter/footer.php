@@ -8,7 +8,7 @@
                 <div class="footer-content-logo">
                     <!-- <p> -->
                         <img class="mr-2" src="<?php bloginfo('template_url'); ?>/assets/bw-new.png" alt="Shapeshifter">
-                        <span class="text">SHAPESHIFTER VFX 2021</span>
+                        <span class="text">SHAPESHIFTER VFX ®2021</span>
                     <!-- </p> -->
                 </div>
                 <div class="footer-content-links">

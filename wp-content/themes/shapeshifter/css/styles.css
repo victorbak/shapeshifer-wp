@@ -15980,6 +15980,10 @@ a.text-dark:focus {
   background-position: center;
 }
 
+.project .project-container .parallax-slide {
+  max-height: 700px;
+}
+
 .project .project-container .project-bg-color {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
@@ -16767,6 +16771,47 @@ input[type="reset"] {
   text-transform: "uppercase";
 }
 
+.parallax-slide {
+  position: relative;
+  height: 80vh;
+}
+
+.parallax-clip {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  /*clip: rect(auto, auto, auto, auto);*/
+}
+
+.fixed-parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  /* -webkit-transform: translateZ(0); /* necessary for iOS! */
+}
+
+/* CSS specific to iOS devices */
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .parallax-clip {
+    clip: rect(auto, auto, auto, auto);
+  }
+
+  .fixed-parallax {
+    position: fixed;
+    background-attachment: unset;
+    -webkit-transform: translateZ(0);
+    /* necessary for iOS! */
+  }
+}
+
 .category-header .name {
   color: #777;
   letter-spacing: 0;
@@ -17116,10 +17161,6 @@ input[type="reset"] {
   min-height: 30.75rem;
 }
 
-.home {
-  /* CSS specific to iOS devices */
-}
-
 .home .project-container {
   position: relative;
   min-height: 80vh;
@@ -17194,6 +17235,24 @@ input[type="reset"] {
   padding-right: 10px;
 }
 
+.home .project-scroll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 40px 40px;
+  width: calc(100% - 80px);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.home .project-scroll .icon {
+  padding-right: 10px;
+}
+
 .home .project-num-squares {
   position: absolute;
   bottom: 0;
@@ -17213,45 +17272,6 @@ input[type="reset"] {
 
 .home .project-num-squares .project-square.active {
   background-color: #fff;
-}
-
-.home .parallax-slide {
-  position: relative;
-  height: 80vh;
-}
-
-.home .parallax-clip {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  /*clip: rect(auto, auto, auto, auto);*/
-}
-
-.home .fixed-parallax {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-  /* -webkit-transform: translateZ(0); /* necessary for iOS! */
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  .home .parallax-clip {
-    clip: rect(auto, auto, auto, auto);
-  }
-
-  .home .fixed-parallax {
-    position: fixed;
-    background-attachment: unset;
-    -webkit-transform: translateZ(0);
-    /* necessary for iOS! */
-  }
 }
 
 @media (min-width: 270px) {
@@ -27599,6 +27619,10 @@ input[type="reset"] {
     opacity: 1;
   }
 
+  .parallax-slide {
+    height: 70vh;
+  }
+
   .job-preview .card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27649,8 +27673,9 @@ input[type="reset"] {
     text-align: left;
   }
 
-  .home .parallax-slide {
-    height: 70vh;
+  .home .project-scroll {
+    width: auto;
+    text-align: left;
   }
 }
 
@@ -31018,6 +31043,10 @@ input[type="reset"] {
     display: inline-block;
   }
 
+  .parallax-slide {
+    height: 80vh;
+  }
+
   .job-preview .header {
     -webkit-box-flex: 7;
     -ms-flex: 7;
@@ -31030,10 +31059,6 @@ input[type="reset"] {
 
   .home .project-container {
     min-height: 80vh;
-  }
-
-  .home .parallax-slide {
-    height: 80vh;
   }
 }
 

@@ -1,17 +1,17 @@
 .single-project-post {
   .header {
     .menu-item-home {
-      &:after {
-        opacity: 1;
-        transition: 0.4s opacity ease-in;
-      }
-      &:before {
-        border: 1px solid #DA8824;
-        transition: 0.4s border ease-in;
-      }
       a {
         color: #DA8824;
         transition: 0.4s color ease-in;
+        &:after {
+          opacity: 1;
+          transition: 0.4s opacity ease-in;
+        }
+        &:before {
+          border: 1px solid #DA8824;
+          transition: 0.4s border ease-in;
+        }
       }
     }
   }

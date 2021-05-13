@@ -1,5 +1,5 @@
-@import "bootstrap-variables-override";
-@import 'bootstrap-override';
+@import "vendor/bootstrap/bootstrap-variables-override";
+@import 'vendor/bootstrap/bootstrap-override';
 
 @import "bootstrap-grid";
 @import "bootstrap-reboot";
@@ -32,5 +32,5 @@
 @import "partials/pages/page";
 
 
-// @import "bootstrap-override";
-// @import "bootstrap-variables-override";
+// @import "vendor/bootstrap/bootstrap-override";
+// @import "vendor/bootstrap/bootstrap-variables-override";

@@ -36,10 +36,9 @@
       </div>
     </section>
 
-    <div class="full-divider"></div>
-
     <!-- Image gallery -->
     <?php if ( count( $gallery ) > 0): ?>
+      <div class="full-divider"></div>
 
       <section class="project-gallery container-fluid py-5 my-3 px-0">
         <div class="row no-gutters">

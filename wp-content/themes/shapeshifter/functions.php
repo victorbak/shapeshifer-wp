@@ -152,11 +152,11 @@ add_filter( 'script_loader_src', 'remove_version_from_style_js');
 
 
 // /* -REMOVE MENU LINKS FROM ADMIN SIDEBAR------------------------------------------------- */
-// function remove_menus(){
-//   remove_menu_page( 'edit.php' ); // POSTS
-//   remove_menu_page( 'edit-comments.php' ); // COMMENTS
-// }
-// add_action( 'admin_menu', 'remove_menus' );
+function remove_menus(){
+  remove_menu_page( 'edit.php' ); // POSTS
+  remove_menu_page( 'edit-comments.php' ); // COMMENTS
+}
+add_action( 'admin_menu', 'remove_menus' );
 
 
 

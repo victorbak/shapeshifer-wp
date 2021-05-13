@@ -9,9 +9,10 @@
         letter-spacing: 0px;
         text-transform: uppercase;
         line-height: 18px;
+        transition: 0.2s background-color ease-in, 0.2s color ease-in;
 
         &:hover {
-            transition: all 0.2s;
+            transition: 0.2s background-color ease-in, 0.2s color ease-in;
             background-color: $white;
             color: #222;
             text-decoration: none;
@@ -25,7 +26,7 @@
         &.active {
             background-color: $white;
             color: #222;    
-            transition: 0s;
+            transition: 0s background-color ease-in;
         }
     
     }

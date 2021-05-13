@@ -15973,6 +15973,24 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.single-project-post .header .menu-item-home:after {
+  opacity: 1;
+  -webkit-transition: 0.4s opacity ease-in;
+  transition: 0.4s opacity ease-in;
+}
+
+.single-project-post .header .menu-item-home:before {
+  border: 1px solid #DA8824;
+  -webkit-transition: 0.4s border ease-in;
+  transition: 0.4s border ease-in;
+}
+
+.single-project-post .header .menu-item-home a {
+  color: #DA8824;
+  -webkit-transition: 0.4s color ease-in;
+  transition: 0.4s color ease-in;
+}
+
 .project .project-container {
   position: relative;
   min-height: 700px;
@@ -16059,6 +16077,15 @@ a.text-dark:focus {
   border: 1px solid #fff;
   border-radius: 4px;
   text-align: center;
+  -webkit-transition: 0.2s background-color, 0.2s color;
+  transition: 0.2s background-color, 0.2s color;
+}
+
+.project .project-release-banner:hover {
+  background-color: #fff;
+  color: #343a40;
+  -webkit-transition: 0.2s background-color, 0.2s color;
+  transition: 0.2s background-color, 0.2s color;
 }
 
 .project .pagination-buttons .row {
@@ -16470,11 +16497,13 @@ input[type="reset"] {
   letter-spacing: 0px;
   text-transform: uppercase;
   line-height: 18px;
+  -webkit-transition: 0.2s background-color ease-in, 0.2s color ease-in;
+  transition: 0.2s background-color ease-in, 0.2s color ease-in;
 }
 
 .filters .filter:hover {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: 0.2s background-color ease-in, 0.2s color ease-in;
+  transition: 0.2s background-color ease-in, 0.2s color ease-in;
   background-color: #fff;
   color: #222;
   text-decoration: none;
@@ -16484,8 +16513,8 @@ input[type="reset"] {
 .filters .filter.active {
   background-color: #fff;
   color: #222;
-  -webkit-transition: 0s;
-  transition: 0s;
+  -webkit-transition: 0s background-color ease-in;
+  transition: 0s background-color ease-in;
 }
 
 .filters .button {
@@ -16905,6 +16934,29 @@ input[type="reset"] {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+  -webkit-transition: 0.2s border ease-in;
+  transition: 0.2s border ease-in;
+}
+
+.job-preview:hover {
+  border: 3px solid #fd7e14;
+  -webkit-transition: 0.2s border ease-in;
+  transition: 0.2s border ease-in;
+}
+
+.job-preview:hover .arrow {
+  background-color: #fd7e14;
+  -webkit-transition: 0.2s background-color ease-in;
+  transition: 0.2s background-color ease-in;
+}
+
+.job-preview:hover .arrow .fa-arrow-right {
+  -webkit-transform: translateX(3px);
+  transform: translateX(3px);
+  -webkit-transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s transform ease-in;
+  transition: 0.2s transform ease-in, 0.2s -webkit-transform ease-in;
 }
 
 .job-preview .header {
@@ -16954,6 +17006,17 @@ input[type="reset"] {
   -ms-flex-align: center;
   align-items: center;
   color: #222222;
+  -webkit-transition: 0.2s background-color ease-in;
+  transition: 0.2s background-color ease-in;
+}
+
+.job-preview .arrow .fa-arrow-right {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s transform ease-in;
+  transition: 0.2s transform ease-in, 0.2s -webkit-transform ease-in;
 }
 
 .team-member {

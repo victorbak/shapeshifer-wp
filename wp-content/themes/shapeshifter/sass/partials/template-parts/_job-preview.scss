@@ -6,11 +6,25 @@
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    transition: 0.2s border ease-in;
     
     .card {
       @include media-breakpoint-up(md) {
         display: flex;
       }
+    }
+
+    &:hover {
+        border: 3px solid $orange;
+        transition: 0.2s border ease-in;
+        .arrow {
+            background-color: $orange;
+            transition: 0.2s background-color ease-in;
+            .fa-arrow-right {
+                transform: translateX(3px);
+                transition: 0.2s transform ease-in;
+            }
+        }
     }
 
     .header {
@@ -87,8 +101,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
         color: $primary_gray;
+        transition: 0.2s background-color ease-in;
+
+        .fa-arrow-right {
+            transform: translateX(0);
+            transition: 0.2s transform ease-in;
+        }
 
         @include media-breakpoint-up(md) {
             flex: 1;

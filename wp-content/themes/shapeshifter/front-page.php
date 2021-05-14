@@ -22,7 +22,7 @@ $featured_project3 = get_field('featured_project_3');
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
-                        <h2 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h2>
+                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
                     <div class="project-release-banner">
                         <i class="far fa-star icon"></i> Newest Release
@@ -55,7 +55,7 @@ $featured_project3 = get_field('featured_project_3');
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
-                        <h2 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h2>
+                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
                 </div>
                 <?php if($featured_project3): ?>
@@ -85,7 +85,7 @@ $featured_project3 = get_field('featured_project_3');
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
-                        <h2 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h2>
+                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
                 </div>
                 <div class="project-num-squares">

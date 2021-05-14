@@ -141,6 +141,7 @@
         border: 1px solid $white;
         opacity: 0.16;
         transition: 0.4s border ease-in;
+        padding: 10px;
       }
     
       &:after {
@@ -151,9 +152,9 @@
         width: 7px;
         height: 7px;
         transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-        background-color: #DA8824;
-        outline: 2px solid #DA8824;
-        outline-offset: 2px;
+        background-color: $primary;
+        outline: 1px solid $primary;
+        outline-offset: 1px;
         opacity: 0;
         transition: 0.4s opacity ease-in;
       }

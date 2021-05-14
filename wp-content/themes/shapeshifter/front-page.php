@@ -6,7 +6,7 @@ $featured_project2 = get_field('featured_project_2');
 $featured_project3 = get_field('featured_project_3');
 $newest = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC&post_status=publish');
 if( ! empty( $newest->posts ) ) {
-    $newest = $newest->posts[0]->guid;
+   $newest_post_id = $newest->posts[0]->ID;
 }
 
 
@@ -30,9 +30,11 @@ if( ! empty( $newest->posts ) ) {
                     <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
-                    <a <?php echo "href='{$newest}'"; ?> class="project-release-banner">
-                        <i class="far fa-star icon"></i> Newest Release
-                    </a>
+                    <?php if( isset($newest_post_id) && $newest_post_id == $featured_project1->ID ): ?>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    <?php endif ?>
                     <?php if($featured_project2): ?>
                         <a href="/#project2" class="project-next-scroll">
                             Next Project <i class="fas fa-arrow-down icon"></i>
@@ -63,6 +65,11 @@ if( ! empty( $newest->posts ) ) {
                     <a href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
                         <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
+                    <?php if( isset($newest_post_id) && $newest_post_id == $featured_project2->ID ): ?>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    <?php endif ?>
                 </div>
                 <?php if($featured_project3): ?>
                     <a href="/#project3" class="project-next-scroll">
@@ -93,6 +100,11 @@ if( ! empty( $newest->posts ) ) {
                     <a href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
                         <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
+                    <?php if( isset($newest_post_id) && $newest_post_id == $featured_project3->ID ): ?>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    <?php endif ?>
                 </div>
                 <div class="project-num-squares">
                     <div class="project-square"></div>

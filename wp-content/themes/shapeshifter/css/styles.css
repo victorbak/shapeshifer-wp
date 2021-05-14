@@ -16053,16 +16053,22 @@ a.text-dark:focus {
   outline: 1px solid #fff;
   outline-offset: 6px;
   opacity: 0.16;
-  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
-  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
 }
 
 .project .project-title:hover:after {
-  background-color: #fd7e14;
-  outline: 1px solid #fd7e14;
-  opacity: 0.5;
-  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
-  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  -webkit-box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
 }
 
 .project .project-release-banner {
@@ -17338,16 +17344,22 @@ input[type="reset"] {
   outline: 1px solid #fff;
   outline-offset: 6px;
   opacity: 0.16;
-  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
-  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
 }
 
 .home .project-title:hover:before {
-  background-color: #fd7e14;
-  outline: 1px solid #fd7e14;
-  opacity: 0.5;
-  -webkit-transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
-  transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+  -webkit-box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
 }
 
 .home .project-release-banner {

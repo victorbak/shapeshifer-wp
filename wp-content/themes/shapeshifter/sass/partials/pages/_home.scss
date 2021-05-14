@@ -52,15 +52,15 @@
             outline: 1px solid $white;
             outline-offset: 6px;
             opacity: 0.16;
-            transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+            box-shadow: none;
+            transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
         }
 
         &:hover {
             &:before {
-                background-color: $orange;
-                outline: 1px solid $orange;
-                opacity: 0.5;
-                transition: 0.4s opacity ease-in, 0.4s outline ease-in,  0.4s background-color ease-in;
+                box-shadow: 0 0 40px 20px rgba($white, 0.8);
+                opacity: 1;
+                transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
             }
         }
     }

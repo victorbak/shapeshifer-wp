@@ -12,7 +12,6 @@
       $prev_post_id = get_previous_post()->ID;
     } else { 
         $last = new WP_Query('posts_per_page=1&post_type=project-post&order=DESC');
-        $last->the_post();
         $prev_post_id = $last->posts[0]->ID;
         wp_reset_query();
     }; 
@@ -20,7 +19,6 @@
       $next_post_id = get_next_post()->ID;
     } else { 
         $first = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC');
-        $first->the_post();
         $next_post_id = $first->posts[0]->ID;
         wp_reset_query();
     }; 

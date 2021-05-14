@@ -4,6 +4,12 @@
 $featured_project1 = get_field('featured_project_1');
 $featured_project2 = get_field('featured_project_2');
 $featured_project3 = get_field('featured_project_3');
+$newest = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC&post_status=publish');
+if( ! empty( $newest->posts ) ) {
+    $newest = $newest->posts[0]->guid;
+}
+
+
 ?>
 <div class="home page">
     <section class="project-section">
@@ -24,9 +30,9 @@ $featured_project3 = get_field('featured_project_3');
                     <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                     </a>
-                    <div class="project-release-banner">
+                    <a <?php echo "href='{$newest}'"; ?> class="project-release-banner">
                         <i class="far fa-star icon"></i> Newest Release
-                    </div>
+                    </a>
                     <?php if($featured_project2): ?>
                         <a href="/#project2" class="project-next-scroll">
                             Next Project <i class="fas fa-arrow-down icon"></i>

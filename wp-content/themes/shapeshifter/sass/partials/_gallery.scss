@@ -53,14 +53,20 @@
   }
 
   .gallery-image-small {
-    height: 320px;
+    height: 185px;
+    @include media-breakpoint-up(md) {
+      height: 320px;
+    }
     @include media-breakpoint-up(lg) {
       height: 237px;
     }
   }
 
   .gallery-image-big {
-    height: 320px;
+    height: 185px;
+    @include media-breakpoint-up(md) {
+      height: 320px;
+    }
     @include media-breakpoint-up(lg) {
       height: 475px;
     }

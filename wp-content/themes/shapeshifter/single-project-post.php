@@ -50,22 +50,25 @@
 <?php $image = get_field('featured_image'); ?>
 
 <div class="project post">
-    <section class="container-fluid px-0 project-container">
-      <div class="parallax-slide">
-        <div class="parallax-clip">
-          <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
-        </div>
+  <section class="container-fluid px-0 project-container">
+    <div class="parallax-slide">
+      <div class="parallax-clip">
+        <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
       </div>
-      <div class="project-bg-color"></div>
-      <div class="project-content">
-        <div class="project-title">
-          <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
-          <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
-        </div>
-        <a href="/" class="project-release-banner">Back to Projects</a>
+    </div>
+    <div class="project-bg-color"></div>
+    <div class="project-content">
+      <div class="project-title">
+        <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
+        <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
       </div>
-    </section>
-
+      <a href="/" class="project-release-banner">Back to Projects</a>
+      <a href="#content" class="project-next-scroll">Learn more <i class="fas fa-arrow-down icon"></i></a>
+    </div>
+  </section>
+  
+  <div class="content-container">
+    <a class="content-anchor" id="content"></a>
     <section class="container px-4 py-5">
       <div class="row">
         <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
@@ -146,7 +149,7 @@
         </div>
       </section>
     <?php endif ?>
-   
+  
     <div class="full-divider"></div>
 
     <section class="pagination-buttons">
@@ -154,6 +157,7 @@
         <div class="row">
           <div class="col-xs-12 d-lg-none current-mobile current project-pagination">
             <div class="image-button" style="background-image: url('<?php echo esc_url( $currently_viewing_img_mdlg ); ?>');" alt="currently viewing" >
+              <div class="arrow"></div>
               <div class="static-overlay">
                 <div class="label">
                   <span class="icon"><em class="far fa-eye"></em></span><p class="ml-3 text">Currently Viewing</p>
@@ -195,7 +199,7 @@
         </div>
       </div>
     </section>
-
+  </div>
 </div>
 
 <!-- Modal -->

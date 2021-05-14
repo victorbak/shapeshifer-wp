@@ -15991,6 +15991,15 @@ a.text-dark:focus {
   transition: 0.4s border ease-in;
 }
 
+.project .content-container {
+  position: relative;
+}
+
+.project .content-anchor {
+  position: absolute;
+  top: -105px;
+}
+
 .project .project-container {
   position: relative;
   min-height: 700px;
@@ -16095,6 +16104,44 @@ a.text-dark:focus {
   transition: 0.2s background-color, 0.2s color;
 }
 
+.project .project-next-scroll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 40px 40px;
+  width: calc(100% - 80px);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  text-align: center;
+  -webkit-transition: 0.1s color ease-in;
+  transition: 0.1s color ease-in;
+  font-size: 18px;
+}
+
+.project .project-next-scroll .icon {
+  padding-left: 10px;
+  -webkit-transition: 0.1s -webkit-transform ease-in;
+  transition: 0.1s -webkit-transform ease-in;
+  transition: 0.1s transform ease-in;
+  transition: 0.1s transform ease-in, 0.1s -webkit-transform ease-in;
+}
+
+.project .project-next-scroll:hover {
+  color: #fd7e14;
+  -webkit-transition: 0.2s color ease-in;
+  transition: 0.2s color ease-in;
+}
+
+.project .project-next-scroll:hover .icon {
+  -webkit-transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s -webkit-transform ease-in;
+  transition: 0.2s transform ease-in;
+  transition: 0.2s transform ease-in, 0.2s -webkit-transform ease-in;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
 .project .project-gallery {
   margin: 2rem 0;
   padding: 3rem 0;
@@ -16153,45 +16200,67 @@ a.text-dark:focus {
   height: 7.25rem;
 }
 
-.project .pagination-buttons .overlay {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-.project .pagination-buttons .overlay:hover {
-  background-color: rgba(34, 34, 34, 0.8);
-}
-
-.project .pagination-buttons .overlay:hover .prev-label .text {
-  -webkit-transform: translate(-0.5rem, 0);
-  transform: translate(-0.5rem, 0);
-}
-
-.project .pagination-buttons .overlay:hover .next-label .text {
-  -webkit-transform: translate(0.5rem, 0);
-  transform: translate(0.5rem, 0);
-}
-
-.project .pagination-buttons .static-overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(34, 34, 34, 0.8);
-}
-
 .project .image-button {
-  max-height: 60px;
-  height: 60px;
+  max-height: 70px;
+  height: 70px;
   border-radius: 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 }
 
-.project .image-button:hover {
-  -webkit-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
+.project .image-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.project .image-button .overlay {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.project .image-button .static-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.6);
+  position: relative;
+  z-index: 1;
+}
+
+.project .image-button:hover:before {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.project .image-button:hover .overlay {
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+.project .image-button:hover .overlay .prev-label .text {
+  -webkit-transform: translateX(-0.5rem);
+  transform: translateX(-0.5rem);
+}
+
+.project .image-button:hover .overlay .next-label .text {
+  -webkit-transform: translateX(0.5rem);
+  transform: translateX(0.5rem);
 }
 
 .image-modal {
@@ -16502,11 +16571,11 @@ input[type="reset"] {
 }
 
 .project-gallery .gallery-image-small {
-  height: 320px;
+  height: 185px;
 }
 
 .project-gallery .gallery-image-big {
-  height: 320px;
+  height: 185px;
 }
 
 .button {
@@ -17087,11 +17156,13 @@ input[type="reset"] {
   display: inline-block;
   padding: 0;
   max-width: 33.1rem;
+  min-height: 100%;
 }
 
 .team-member.selected {
   position: absolute;
   z-index: 4;
+  height: auto;
 }
 
 .team-member .content {
@@ -27812,9 +27883,22 @@ input[type="reset"] {
     text-align: left;
   }
 
+  .project .project-next-scroll {
+    width: auto;
+    text-align: left;
+  }
+
   .project .image-button {
     max-height: 6.5rem;
     height: 6.5rem;
+  }
+
+  .project-gallery .gallery-image-small {
+    height: 320px;
+  }
+
+  .project-gallery .gallery-image-big {
+    height: 320px;
   }
 
   .filters .filter {

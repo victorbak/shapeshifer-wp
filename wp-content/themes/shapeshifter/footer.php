@@ -1,8 +1,6 @@
 <?php wp_footer(); ?>
     <section class="footer">
-        <div class="container-fluid">
-            <div class="full-divider"></div>
-        </div>
+        <div class="full-divider"></div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-content-logo">

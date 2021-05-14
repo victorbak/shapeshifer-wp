@@ -49,8 +49,8 @@
       <div class="project-bg-color"></div>
       <div class="project-content">
         <div class="project-title">
-          <h2 class="title"><span><?php echo $fields['project_name']; ?></span></h2>
-          <h4 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h4>
+          <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
+          <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
         </div>
         <a href="/" class="project-release-banner">Back to Projects</a>
       </div>

@@ -38,6 +38,7 @@
         span {
             position: relative;
             z-index: 1;
+            font-weight: 100;
         }
 
         &:before {
@@ -50,7 +51,7 @@
             height: 50px;
             background-color: $white;
             outline: 1px solid $white;
-            outline-offset: 6px;
+            outline-offset: 8px;
             opacity: 0.16;
             box-shadow: none;
             transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
@@ -58,7 +59,7 @@
 
         &:hover {
             &:before {
-                box-shadow: 0 0 40px 20px rgba($white, 0.8);
+                box-shadow: 0 0 35px 15px rgba($white, 0.8);
                 opacity: 1;
                 transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
             }

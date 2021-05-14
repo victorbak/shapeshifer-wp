@@ -16034,6 +16034,7 @@ a.text-dark:focus {
 .project .project-title .subtitle span {
   position: relative;
   z-index: 1;
+  font-weight: 100;
 }
 
 .project .project-title:before {
@@ -16051,7 +16052,7 @@ a.text-dark:focus {
   height: 50px;
   background-color: #fff;
   outline: 1px solid #fff;
-  outline-offset: 6px;
+  outline-offset: 8px;
   opacity: 0.16;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -16757,6 +16758,7 @@ input[type="reset"] {
   opacity: 0.16;
   -webkit-transition: 0.4s border ease-in;
   transition: 0.4s border ease-in;
+  padding: 10px;
 }
 
 .header .menu-item a:after {
@@ -16769,8 +16771,8 @@ input[type="reset"] {
   -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
   transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
   background-color: #DA8824;
-  outline: 2px solid #DA8824;
-  outline-offset: 2px;
+  outline: 1px solid #DA8824;
+  outline-offset: 1px;
   opacity: 0;
   -webkit-transition: 0.4s opacity ease-in;
   transition: 0.4s opacity ease-in;
@@ -17178,6 +17180,10 @@ input[type="reset"] {
   font-size: 36px;
 }
 
+.contact-us .button:hover {
+  color: #fff;
+}
+
 .map-banner {
   width: 100%;
   height: 28rem;
@@ -17366,6 +17372,7 @@ input[type="reset"] {
 .home .project-title span {
   position: relative;
   z-index: 1;
+  font-weight: 100;
 }
 
 .home .project-title:before {
@@ -17379,7 +17386,7 @@ input[type="reset"] {
   height: 50px;
   background-color: #fff;
   outline: 1px solid #fff;
-  outline-offset: 6px;
+  outline-offset: 8px;
   opacity: 0.16;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -17390,8 +17397,8 @@ input[type="reset"] {
 }
 
 .home .project-title:hover:before {
-  -webkit-box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 35px 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 35px 15px rgba(255, 255, 255, 0.8);
   opacity: 1;
   -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
   transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;

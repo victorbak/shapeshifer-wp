@@ -4,8 +4,39 @@
     $post = get_post();
     $id = ! empty( $post ) ? $post->ID : false;
     $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post id
-    // var_dump($gallery);
+    // var_dump(get_fields($id)['featured_image']['sizes']);
+    $currently_viewing_img_lg = $fields['featured_image']['sizes']['large'];
+    $currently_viewing_img_mdlg = $fields['featured_image']['sizes']['medium_large'];
+
+    if( get_previous_post() ) { 
+      $prev_post_id = get_previous_post()->ID;
+    } else { 
+        $last = new WP_Query('posts_per_page=1&post_type=project-post&order=DESC');
+        $last->the_post();
+        $prev_post_id = $last->posts[0]->ID;
+        wp_reset_query();
+    }; 
+    if( get_next_post() ) { 
+      $next_post_id = get_next_post()->ID;
+    } else { 
+        $first = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC');
+        $first->the_post();
+        $next_post_id = $first->posts[0]->ID;
+        wp_reset_query();
+    }; 
+    $prev_post = get_adjacent_post_data($prev_post_id);
+    $next_post = get_adjacent_post_data($next_post_id);
+
+    function get_adjacent_post_data($post_id) {
+      $data = array();
+      $post_fields = get_fields($post_id);
+      $img = $post_fields['featured_image']['sizes']['medium'];
+      $data['id'] = $post_id;
+      $data['image'] = $img;
+      return $data;
+    }
 ?>
+
 <?php $image = get_field('gallery'); ?>
 
 <div class="project post">
@@ -108,36 +139,53 @@
     <?php endif ?>
    
 
-    <!-- <section class="pagination-buttons">
+    <section class="pagination-buttons">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 d-lg-none current-mobile">
-          <a href="#">
-            <p class="text">Currenly Viewing</p>
-            <img class="image-button" src="<?php bloginfo('template_url'); ?>/assets/projects/current-mobile.png" alt="currently viewing">
-          </a>
+          <div class="col-xs-12 d-lg-none current-mobile current project-pagination">
+            <div class="image-button" style="background-image: url('<?php echo esc_url( $currently_viewing_img_mdlg ); ?>');" alt="currently viewing" >
+              <div class="static-overlay">
+                <div class="label">
+                  <span class="icon"><em class="far fa-eye"></em></span><p class="ml-3 text">Currently Viewing</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-xs-6 col-lg-3 prev">
-            <a href="#">
-              <p class="text">Previous</p>
-              <img class="image-button" src="<?php bloginfo('template_url'); ?>/assets/projects/prev-image.png" alt="previous project">
+          <div class="col-xs-6 col-lg-2 prev project-pagination">
+          <?php echo "<a href='" . esc_url(get_permalink( $prev_post['id'] ) ) . "' />" ?>
+            <div class="image-button" style="background-image: url('<?php echo esc_url( $prev_post['image'] ); ?>');" alt="previous project" >
+              <div class="overlay">
+                <div class="label prev-label">
+                  <span class="icon"><em class="fas fa-chevron-left"></em></span><p class="ml-3 text">Previous</p>
+                </div>
+              </div>
+            </div>
             </a>
           </div>
-          <div class="d-none d-lg-block col-lg-6 current-desktop">
-            <a href="#">
-              <p class="text">Currenly Viewing</p>
-              <img class="image-button" src="<?php bloginfo('template_url'); ?>/assets/projects/current-desktop.png" alt="currently viewing">
-            </a>
+          <div class="d-none d-lg-block col-lg-8 current-desktop current project-pagination">
+            <div class="image-button" style="background-image: url('<?php echo esc_url( $currently_viewing_img_lg ); ?>');" alt="currently viewing" >
+              <div class="static-overlay">
+                <div class="label">
+                  <span class="icon"><em class="far fa-eye"></em></span><p class="ml-3 text">Currently Viewing</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-xs-6 col-lg-3 next">
-            <a href="#">
-              <p class="text">Next</p>
-              <img class="image-button" src="<?php bloginfo('template_url'); ?>/assets/projects/next-image.png" alt="next project">
-            </a>
+          <div class="col-xs-6 col-lg-2 next project-pagination">
+              <?php echo "<a href='" . esc_url(get_permalink( $next_post['id'] ) ) . "' />" ?>
+                <div class="image-button" style="background-image: url('<?php echo esc_url( $next_post['image'] ); ?>');" alt="next project" >
+                  <div class="overlay">
+                    <div class="label next-label">
+                      <p class="mr-3 text">Next</p><span class="icon"><em class="fas fa-chevron-right"></em></span>
+                    </div>
+                  </div>
+                </div>
+              </a>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+
 </div>
 
 <!-- Modal -->

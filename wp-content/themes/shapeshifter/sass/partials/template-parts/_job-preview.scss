@@ -15,10 +15,11 @@
     }
 
     &:hover {
-        border: 3px solid $orange;
+        border: 3px solid $primary;
         transition: 0.2s border ease-in;
         .arrow {
-            background-color: $orange;
+            background-color: $primary;
+            color: white;
             transition: 0.2s background-color ease-in;
             .fa-arrow-right {
                 transform: translateX(3px);

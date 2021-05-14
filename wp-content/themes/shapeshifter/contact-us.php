@@ -8,7 +8,7 @@
     <?php get_header(); ?>
 <!-- TODO: ADD ICONS -->
 
-<?php $contact_us = get_field('contact-button-link'); var_dump($contact_us);?>
+<?php $contact_us = get_field('contact-button-link');?>
 <?php $google_maps = get_field('google-maps-url'); ?>
 
     <!-- Content here -->

@@ -16095,6 +16095,17 @@ a.text-dark:focus {
   transition: 0.2s background-color, 0.2s color;
 }
 
+.project .project-gallery {
+  margin: 2rem 0;
+  padding: 3rem 0;
+}
+
+.project .pagination-buttons {
+  margin: 2rem 0;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
 .project .pagination-buttons .project-pagination {
   position: relative;
   text-align: center;

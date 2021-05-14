@@ -124,7 +124,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       transition: 0.4s color ease-in;
-      padding: 30px 20px 30px 55px;
+      padding: 30px 20px 30px 60px;
   
       &:hover {
         text-decoration: none;
@@ -170,7 +170,7 @@
       }
 
       @include media-breakpoint-up(md) {
-        padding: 30px 20px 30px 55px;
+        padding: 30px 20px 30px 60px;
         &:before {
           left: -5px;
         }

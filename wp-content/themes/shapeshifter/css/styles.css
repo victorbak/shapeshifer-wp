@@ -16818,7 +16818,7 @@ input[type="reset"] {
   letter-spacing: 1px;
   -webkit-transition: 0.4s color ease-in;
   transition: 0.4s color ease-in;
-  padding: 30px 20px 30px 55px;
+  padding: 30px 20px 30px 60px;
 }
 
 .header .menu-item a:hover {
@@ -27914,7 +27914,7 @@ input[type="reset"] {
   }
 
   .header .menu-item a {
-    padding: 30px 20px 30px 55px;
+    padding: 30px 20px 30px 60px;
   }
 
   .header .menu-item a:before {

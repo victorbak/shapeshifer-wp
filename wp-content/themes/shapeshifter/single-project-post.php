@@ -8,20 +8,32 @@
     $currently_viewing_img_lg = $fields['featured_image']['sizes']['large'];
     $currently_viewing_img_mdlg = $fields['featured_image']['sizes']['medium_large'];
 
+    // Gets last post for `previous` button if on the first post
     if( get_previous_post() ) { 
       $prev_post_id = get_previous_post()->ID;
     } else { 
         $last = new WP_Query('posts_per_page=1&post_type=project-post&order=DESC');
-        $prev_post_id = $last->posts[0]->ID;
+        if ( ! empty( $last->posts ) ) {
+          $prev_post_id = $last->posts[0]->ID;
+        } else {
+          $prev_post_id = $id;
+        }
         wp_reset_query();
     }; 
+
+    // Gets first post for `next` button if next if on the last post
     if( get_next_post() ) { 
       $next_post_id = get_next_post()->ID;
     } else { 
         $first = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC');
-        $next_post_id = $first->posts[0]->ID;
+        if ( ! empty( $first->posts ) ) {
+          $next_post_id = $last->posts[0]->ID;
+        } else {
+          $next_post_id = $id;
+        }
         wp_reset_query();
     }; 
+
     $prev_post = get_adjacent_post_data($prev_post_id);
     $next_post = get_adjacent_post_data($next_post_id);
 
@@ -35,7 +47,7 @@
     }
 ?>
 
-<?php $image = get_field('gallery'); ?>
+<?php $image = get_field('featured_image'); ?>
 
 <div class="project post">
     <section class="container-fluid px-0 project-container">
@@ -69,7 +81,7 @@
     <?php if ( count( $gallery ) > 0): ?>
       <div class="full-divider"></div>
 
-      <section class="project-gallery container-fluid py-5 my-3 px-0">
+      <section class="project-gallery container-fluid">
         <div class="row no-gutters">
           <!-- if 5 images -->
           <?php if ( count( $gallery ) == 5): ?>
@@ -135,6 +147,7 @@
       </section>
     <?php endif ?>
    
+    <div class="full-divider"></div>
 
     <section class="pagination-buttons">
       <div class="container">

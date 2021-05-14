@@ -21,7 +21,7 @@
             </div>
         </div>
         <div>
-            <h5 class="contact-info--header">SOCIAL</h5>
+            <h5 class="contact-info--header">SOCIAL MEDIA</h5>
             <div class="divider"></div>
             <div class="row p-2">
             <?php if ( ! empty($fields['twitter_url'] ) ): ?>

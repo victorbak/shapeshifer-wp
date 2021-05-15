@@ -27,7 +27,7 @@
     } else { 
         $first = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC');
         if ( ! empty( $first->posts ) ) {
-          $next_post_id = $last->posts[0]->ID;
+          $next_post_id = $first->posts[0]->ID;
         } else {
           $next_post_id = $id;
         }

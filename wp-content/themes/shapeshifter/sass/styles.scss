@@ -1,8 +1,8 @@
 @import "vendor/bootstrap/bootstrap-variables-override";
 @import 'vendor/bootstrap/bootstrap-override';
 
-@import "bootstrap-grid";
-@import "bootstrap-reboot";
+// @import "bootstrap-grid";
+// @import "bootstrap-reboot";
 @import "bootstrap";
 
 @import "partials/single-posts/project.scss";
@@ -16,21 +16,20 @@
 @import "partials/underline";
 @import "partials/header";
 @import "partials/footer";
-@import "partials/_parallax.scss";
+@import "partials/parallax.scss";
 
 @import "partials/template-parts/category-header";
 @import "partials/template-parts/contact-info";
 @import "partials/template-parts/job-preview";
 @import "partials/template-parts/team-member";
 
-@import "partials/pages/coming-soon";
-@import "partials/pages/contact-us";
-@import "partials/pages/jobs";
-@import "partials/pages/about-us";
-@import "partials/pages/home";
+@import "pages/coming-soon";
+@import "pages/contact-us";
+@import "pages/jobs";
+@import "pages/about-us";
+@import "pages/home";
 
-@import "partials/pages/page";
-
+@import "pages/page";
 
 // @import "vendor/bootstrap/bootstrap-override";
 // @import "vendor/bootstrap/bootstrap-variables-override";

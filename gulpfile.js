@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const minify = require('gulp-minify');
+const cleanCss = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
@@ -50,3 +52,12 @@ gulp.task('compile:sass', () =>
   //  * Default task executed by running `gulp`
   //  */
   // gulp.task('default', ['watch:sass']);
+
+  /**
+   * Minify css
+   */
+  gulp.task('minify-css', () => {
+    return gulp.src('./wp-content/themes/shapeshifter/css/styles.css')
+      .pipe(cleanCss())
+      .pipe(gulp.dest(CSS_DESTINATION));
+  });

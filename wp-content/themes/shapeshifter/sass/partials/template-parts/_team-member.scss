@@ -1,8 +1,31 @@
+.team-member-card-container {
+    height: 100%;
+    min-height: 32rem;
+    display: flex;
+
+    @include media-breakpoint-up(sm) {
+        height: auto;
+        padding-bottom: 20px;
+        min-height: 36rem;
+    }
+    
+    @include media-breakpoint-up(md) {
+        height: auto;
+        padding-bottom: 20px;
+        min-height: 39em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: unset;
+        height: auto;
+        padding-bottom: 40px;
+    }
+}
+
 .team-member {
     display: inline-block;
     padding: 0;
     max-width: 33.1rem;
-    min-height: 100%;
 
     &.selected {
         position: absolute;
@@ -15,7 +38,6 @@
     }
 
     &__photo {
-        height: 16.7rem;
         overflow: hidden;
         img {
             width: 100%;
@@ -36,6 +58,7 @@
     }
 
     &__contact-info {
+        padding-bottom: 20px;
         
         &-item {
             font-size: 1rem;

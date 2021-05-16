@@ -21,6 +21,9 @@
         width: 100%;
         height: 100%;
         transition: background-color 0.3s;
+        .cta {
+            opacity: 1;
+        }
         
         &:hover {
             background-color: rgba(20, 20, 20, 0.4);
@@ -38,9 +41,6 @@
         
         @include media-breakpoint-down(sm) {
             background-color: rgba(20, 20, 20, 0.4);
-            .cta {
-                opacity: 1;
-            }
         }
 
         a {
@@ -56,7 +56,6 @@
                 position: relative;
                 font-weight: 100;
                 color: $white;
-                opacity: 0;
                 transition: opacity 0.3s;
             }
 

@@ -62,7 +62,9 @@
         <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
         <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
       </div>
-      <a href="/" class="project-release-banner">Back to Projects</a>
+      <a href="/" class="project-release-banner">
+        <i class="fas fa-chevron-left icon"></i>Back to Projects
+      </a>
       <a href="#content" class="project-next-scroll">Learn more <i class="fas fa-arrow-down icon"></i></a>
     </div>
   </section>

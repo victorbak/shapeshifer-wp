@@ -9,9 +9,11 @@
     .modal {
       padding-right: 0;
         .modal-dialog {
+          margin-top: 3rem;
+          margin-bottom: 3rem;
           @include media-breakpoint-down(md) {
-            margin-top: 3rem;
-            margin-bottom: 3rem;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
           }
       }
     }

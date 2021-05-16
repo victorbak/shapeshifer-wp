@@ -28,7 +28,7 @@
         }
     }
 
-    .header {
+    .job-header {
         
         background: $white;
         text-decoration: none;
@@ -99,7 +99,7 @@
     }
 
     .arrow {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         color: $primary_gray;
@@ -111,6 +111,7 @@
         }
 
         @include media-breakpoint-up(md) {
+            display: flex;
             flex: 1;
             background: $white;
         }

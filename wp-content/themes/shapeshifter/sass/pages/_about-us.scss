@@ -12,6 +12,14 @@
 }
 
 .team-posts {
+    padding-bottom: 120px;
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 160px;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 120px;
+    }
 
     .overlay {
         display:none;
@@ -24,10 +32,6 @@
         right: 0;
         top: 0;
         z-index: 3;
-    }
-
-    .team-cards {
-        min-height: 30.75rem;
     }
 
     .team-member {

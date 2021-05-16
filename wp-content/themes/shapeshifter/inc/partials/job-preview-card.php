@@ -5,7 +5,7 @@
 
 <a class="job-preview" data-toggle="modal" data-target="<?php echo '#modalCenter-' . $id ?>">
     <div class="content-container row m-0">
-        <div class="header col-xs-12 py-xs-2 py-md-1">
+        <div class="job-header col-xs-12 py-xs-2 py-md-1">
             <?php echo "<h5 class='title'>{$fields['job_title']}</h5>"; ?>
             <?php echo "<p class='date'><span><em class='far fa-clock mr-1'></em></span>Date Posted: {$fields['date_posted']}</p>" ?>
             <em class="fas fa-arrow-right icon"></em>

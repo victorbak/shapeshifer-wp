@@ -9,7 +9,7 @@
             <?php echo "<h5 class='ss-modal__header--title'>{$args['job_title']}</h5>"; ?>
             <?php echo "<p class='ss-modal__header--date'><span><em class='far fa-clock mr-1'></em></span>Date Posted: {$args['date_posted']}</p>"; ?>
         </div>
-        <div class="content py-xs-2 col-xs-10">
+        <div class="content px-lg-4 py-xs-2 col-xs-12">
             <?php echo "<p class='description'>{$args['job_description']}</p>" ?>
         </div>
         <?php echo "<a class='cta py-2 px-4' href='" . esc_url($args['application_link']) . "'target='_blank'>" ?>

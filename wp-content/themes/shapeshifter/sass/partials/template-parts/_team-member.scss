@@ -16,7 +16,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        min-height: unset;
         height: auto;
         padding-bottom: 40px;
     }

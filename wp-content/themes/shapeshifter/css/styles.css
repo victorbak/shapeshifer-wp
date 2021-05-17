@@ -8675,7 +8675,6 @@ input[type="reset"] {
   }
 
   .team-member-card-container {
-    min-height: unset;
     height: auto;
     padding-bottom: 40px;
   }

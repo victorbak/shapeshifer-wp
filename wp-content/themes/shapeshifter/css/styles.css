@@ -3305,6 +3305,11 @@ input[type="reset"] {
   max-width: none;
 }
 
+.filters .card-body {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .filters .card {
   display: -webkit-box;
   display: -ms-flexbox;

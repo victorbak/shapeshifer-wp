@@ -35,6 +35,11 @@
         max-width: none;
     }
 
+    .card-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .card {
         display: flex;
         flex-direction: column;

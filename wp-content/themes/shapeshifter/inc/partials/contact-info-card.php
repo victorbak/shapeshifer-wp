@@ -24,20 +24,20 @@
             <h5 class="contact-info--header">SOCIAL MEDIA</h5>
             <div class="divider"></div>
             <div class="row p-2">
-            <?php if ( ! empty($fields['twitter_url'] ) ): ?>
-                <a href="<?php echo $fields['twitter_url'] ?>" target="blank"><em class="icon col-1 fab fa-twitter"></em></a>
+            <?php if ( get_option('twitter_url') != false ): ?>
+                <a href="<?php echo esc_url( get_option( 'twitter_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-twitter"></em></a>
             <?php endif ?>
-            <?php if ( ! empty($fields['facebook_url'] ) ): ?>
-                <a href="<?php echo $fields['facebook_url'] ?>" target="blank"><em class="icon col-1 fab fa-facebook-f"></em></a>
+            <?php if ( get_option('facebook_url') != false ): ?>
+                <a href="<?php echo esc_url( get_option( 'facebook_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-facebook-f"></em></a>
             <?php endif ?>
-            <?php if ( ! empty($fields['facebook_url'] ) ): ?>
-                <a href="<?php echo $fields['vimeo_url'] ?>" target="blank"><em class="icon col-1 fab fa-vimeo"></em></a>
+            <?php if ( get_option('vimeo_url') != false ): ?>
+                <a href="<?php echo esc_url( get_option( 'vimeo_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-vimeo"></em></a>
             <?php endif ?>
-            <?php if ( ! empty($fields['youtube_url'] ) ): ?>
-                <a href="<?php echo $fields['youtube_url'] ?>" target="blank"><em class="icon col-1 fab fa-youtube"></em></a>
+            <?php if ( get_option('youtube_url') != false ): ?>
+                <a href="<?php echo esc_url( get_option( 'youtube_url' ) )?>" target="blank"><em class="icon col-1 fab fa-youtube"></em></a>
             <?php endif ?>
-            <?php if ( ! empty($fields['linkedin_url'] ) ): ?>
-                <a href="<?php echo $fields['linkedin_url'] ?>" target="blank"><em class="icon col-1 fab fa-linkedin-in"></em></a>
+            <?php if ( get_option('linkedin_url') != false ): ?>
+                <a href="<?php echo esc_url( get_option( 'linkedin_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-linkedin-in"></em></a>
             <?php endif ?>
             </div>
         </div>

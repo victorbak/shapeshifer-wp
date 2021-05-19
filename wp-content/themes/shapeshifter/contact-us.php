@@ -1,12 +1,11 @@
-    <?php
+<?php
 
-    /* 
-    * Template Name: Contact Us
-    */
-    ?>
+/* 
+* Template Name: Contact Us
+*/
+?>
 
-    <?php get_header(); ?>
-<!-- TODO: ADD ICONS -->
+<?php get_header(); ?>
 
 <?php $contact_us = get_field('contact-button-link');?>
 <?php $google_maps = get_field('google-maps-url'); ?>
@@ -26,7 +25,6 @@
                 </div>
             </section>
             <section class="container-fluid py-md-4 py-lg-6 px-0">
-                <?php var_dump(the_field('google-maps-url')); ?>
                 <div class="map-banner">
                     <div class="overlay">
                     <a <?php echo "href='" . esc_url($google_maps) . "'"; ?>"target="_blank" >

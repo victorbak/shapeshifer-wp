@@ -8,7 +8,7 @@
     <?php if ( ! empty($fields['photo'] ) ): ?>
         <img src="<?php echo $fields['photo']['url'] ?>">
     <?php else: ?>
-        <img src="<?php echo '/wp-content/uploads/2021/04/Image-5.jpg' ?>">
+        <img src="<?php echo '/wp-content/uploads/2021/05/Image-5.png' ?>">
     <?php endif ?>
     </div>
     <div class="content">

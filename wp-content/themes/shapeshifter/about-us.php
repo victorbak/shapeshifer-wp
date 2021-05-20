@@ -20,7 +20,6 @@ $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post
 ?>
 
 <?php get_header(); ?>
-
 <?php
 
 if( $terms = get_terms( array(

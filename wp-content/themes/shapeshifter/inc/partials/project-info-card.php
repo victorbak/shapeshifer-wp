@@ -13,17 +13,16 @@
                 <p><?php echo $fields['artists']; ?></p>
             </div>
         </div>
-        <div>
+        <!-- <div>
             <h5 class="contact-info--header">FEATURED WORK ON</h5>
             <div class="divider"></div>
             <div class="row p-2">
-                <!-- Add conditionals -->
                 <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-twitter"></em></a>
                 <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-facebook-f"></em></a>
                 <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-vimeo"></em></a>
                 <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-youtube"></em></a>
                 <a href="https://google.ca" target="blank"><em class="icon col-1 fab fa-linkedin-in"></em></a>
             </div>
-        </div>
+        </div> -->
     </div>
 </main>

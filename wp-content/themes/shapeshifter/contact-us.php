@@ -32,7 +32,7 @@
                             <div class="col-md-4">
                             </div>
                             <div class="col-md-4 text-center">
-                              <h6 class="cta">GET DIRECTIONS</h6>
+                              <h6 class="cta"><i class="fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
                             </div>
                             <div class="col-md-4">
                             </div>

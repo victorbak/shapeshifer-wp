@@ -1,9 +1,9 @@
 .team-member-card-container {
     height: 100%;
-    min-height: 32rem;
+    min-height: 30rem;
     display: flex;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(xs) {
         height: auto;
         padding-bottom: 20px;
         min-height: 36rem;
@@ -12,12 +12,12 @@
     @include media-breakpoint-up(md) {
         height: auto;
         padding-bottom: 20px;
-        min-height: 39em;
     }
 
     @include media-breakpoint-up(lg) {
         height: auto;
         padding-bottom: 40px;
+        min-height: 34rem;
     }
 }
 
@@ -38,8 +38,14 @@
 
     &__photo {
         overflow: hidden;
-        img {
+
+        .photo {
             width: 100%;
+            height: 300px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
         }
     }
 
@@ -57,7 +63,7 @@
     }
 
     &__contact-info {
-        padding-bottom: 20px;
+        padding-bottom: 8px;
         
         &-item {
             font-size: 1rem;
@@ -101,7 +107,7 @@
         height: 1.2rem;
         position: absolute;
         bottom: -.2px;
-        right: 0rem;
+        right: -.2px;
         z-index: 2;
         justify-content: flex-end;
         align-items: center;
@@ -114,6 +120,10 @@
         --notchSize: 16px;
 
         clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
+        .text {
+            font-size: 16px;
+        }
 
         .icon {
             font-size: 14px;

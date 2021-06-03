@@ -6,7 +6,7 @@
 <a class="team-member box" role="button">
     <div class="team-member__photo">
     <?php if ( ! empty($fields['photo'] ) ): ?>
-        <img src="<?php echo $fields['photo']['url'] ?>">
+        <div class="photo" style="background-image: url('<?php echo $fields['photo']['url'] ?>');"></div>
     <?php else: ?>
         <img src="<?php echo get_template_directory_uri() . '/assets/dog.png' ?>">
     <?php endif ?>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <span class="cta py-2 px-2">
-        <span class="mr-2">View Details</span>
+        <span class="text mr-2">View Details</span>
         <em class="icon fas fa-plus"></em>
     </span>
 </a>

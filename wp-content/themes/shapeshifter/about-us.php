@@ -131,7 +131,7 @@ endif;
         <?php foreach ( $terms as $term ) : ?>
         <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
             <?php get_template_part( 'inc/partials/category-header', '', $term->name); ?>
-            <div class="row team-cards mt-5 mb-4 no-gutters">
+            <div class="row team-cards mt-5 mb-2 no-gutters">
 
                     <?php 
                         $q = array('post_type' => 'team-member-post',
@@ -146,7 +146,7 @@ endif;
                     $loop = new WP_Query($q);
                     if ($loop->have_posts()) {
                         while($loop->have_posts()) : $loop->the_post();
-                        echo "<div class='col-xs-12 col-lg-4 team-member-card-container'>";
+                        echo "<div class='col-xs-12 col-lg-6 col-xl-4 team-member-card-container'>";
                             get_template_part( 'inc/partials/team-member-card' );
                         echo "</div>";
                         endwhile;

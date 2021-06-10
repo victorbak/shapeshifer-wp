@@ -11,7 +11,7 @@ function about_scripts() {
     // wp_register_script( 'jobs-js', get_template_directory_uri() . '/js/page/jobs.js' );
     // wp_enqueue_script( 'jobs-js' );
     wp_enqueue_script('about-js', get_template_directory_uri() . '/js/page/about.js', array('jquery'));
-    wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array('jquery'));
+    // wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'about_scripts' );
 
@@ -36,13 +36,15 @@ endif;
 
 <!-- Content here -->
 <div class="about-us page">
-    <section class="container px-4 py-5">
+    <!-- <section class="container px-4 py-5">
         <div class="row">
             <div class="content col-md-12 mb-xs-4 mb-lg-0 py-lg-4 content">
                 <?php the_field('about_intro'); ?>
             </div>
         </div>
-    </section>
+    </section> -->
+
+<!--    
     <?php if ( count( $gallery ) > 0): ?>
       <section class="project-gallery container-fluid py-5 my-3 px-0">
         <div class="row no-gutters">
@@ -108,11 +110,11 @@ endif;
           <?php endif ?>
         </div>
       </section>
-    <?php endif ?>
+    <?php endif ?> -->
     
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="full-divider"></div>
-    </div>
+    </div> -->
 
     <section class="container px-4 py-5">
         <div class="row">
@@ -122,9 +124,9 @@ endif;
         </div>
     </section>
 
-    <section class="container py-2 mt-2 mb-4">
+    <!-- <section class="container py-2 mt-2 mb-4">
         <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
-    </section> 
+    </section>  -->
 
     <section class="container team-posts">
         <div class="overlay"></div>

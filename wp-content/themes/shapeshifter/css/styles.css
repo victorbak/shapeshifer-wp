@@ -3912,7 +3912,7 @@ input[type="reset"] {
   min-width: 9.2rem;
   height: 1.2rem;
   position: absolute;
-  bottom: -.2px;
+  bottom: -.4px;
   right: -.2px;
   z-index: 2;
   -webkit-box-pack: end;
@@ -4030,6 +4030,10 @@ input[type="reset"] {
 
 .jobs .posts {
   min-height: 35rem;
+}
+
+.jobs .no-posts {
+  text-align: center;
 }
 
 .jobs .hidden {
@@ -5307,7 +5311,7 @@ input[type="reset"] {
   .team-member-card-container {
     height: auto;
     padding-bottom: 20px;
-    min-height: 36rem;
+    min-height: 33rem;
   }
 }
 
@@ -7548,6 +7552,7 @@ input[type="reset"] {
   .team-member-card-container {
     height: auto;
     padding-bottom: 20px;
+    min-height: 30rem;
   }
 
   .map-banner .overlay {
@@ -8697,7 +8702,7 @@ input[type="reset"] {
   .team-member-card-container {
     height: auto;
     padding-bottom: 40px;
-    min-height: 34rem;
+    min-height: 37rem;
   }
 
   .team-posts {

@@ -6,18 +6,19 @@
     @include media-breakpoint-up(xs) {
         height: auto;
         padding-bottom: 20px;
-        min-height: 36rem;
+        min-height: 33rem;
     }
     
     @include media-breakpoint-up(md) {
         height: auto;
         padding-bottom: 20px;
+        min-height: 30rem;
     }
 
     @include media-breakpoint-up(lg) {
         height: auto;
         padding-bottom: 40px;
-        min-height: 34rem;
+        min-height: 37rem;
     }
 }
 
@@ -106,7 +107,7 @@
         min-width: 9.2rem;
         height: 1.2rem;
         position: absolute;
-        bottom: -.2px;
+        bottom: -.4px;
         right: -.2px;
         z-index: 2;
         justify-content: flex-end;

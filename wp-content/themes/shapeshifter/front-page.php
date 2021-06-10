@@ -30,7 +30,10 @@ if( ! empty( $newest->posts ) ) {
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
-                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                        <div class="project-title-container">
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
+                        </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project1->ID ): ?>
                         <div class="project-release-banner">
@@ -67,7 +70,10 @@ if( ! empty( $newest->posts ) ) {
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
-                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                        <div class="project-title-container">
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
+                        </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project2->ID ): ?>
                         <div class="project-release-banner">
@@ -104,7 +110,10 @@ if( ! empty( $newest->posts ) ) {
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
-                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                        <div class="project-title-container">
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
+                        </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project3->ID ): ?>
                         <div class="project-release-banner">
@@ -136,7 +145,10 @@ if( ! empty( $newest->posts ) ) {
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
-                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                        <div class="project-title-container">
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
+                        </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project4->ID ): ?>
                         <div class="project-release-banner">
@@ -168,7 +180,10 @@ if( ! empty( $newest->posts ) ) {
                 <div class="project-bg-color"></div>
                 <div class="project-content">
                     <a href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
-                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                        <div class="project-title-container">
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
+                        </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project5->ID ): ?>
                         <div class="project-release-banner">

@@ -60,7 +60,13 @@
     <div class="project-content">
       <div class="project-title">
         <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
-        <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
+        <?php if($fields['project_subtitle_link']) { ?>
+          <a href="<?php echo $fields['project_subtitle_link']; ?>">
+            <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
+          </a>
+        <?php } else { ?>
+          <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
+        <?php } ?>
       </div>
       <a href="/" class="project-release-banner">
         <i class="fas fa-chevron-left icon"></i>Back to Projects

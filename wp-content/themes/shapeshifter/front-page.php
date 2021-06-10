@@ -4,6 +4,8 @@
 $featured_project1 = get_field('featured_project_1');
 $featured_project2 = get_field('featured_project_2');
 $featured_project3 = get_field('featured_project_3');
+$featured_project4 = get_field('featured_project_4');
+$featured_project5 = get_field('featured_project_5');
 $newest = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC&post_status=publish');
 if( ! empty( $newest->posts ) ) {
    $newest_post_id = $newest->posts[0]->ID;
@@ -44,6 +46,8 @@ if( ! empty( $newest->posts ) ) {
                         <div class="project-square active"></div>
                         <div class="project-square"></div>
                         <div class="project-square"></div>
+                        <div class="project-square"></div>
+                        <div class="project-square"></div>
                     </div>
                 </div>
             </div>
@@ -80,6 +84,8 @@ if( ! empty( $newest->posts ) ) {
                     <div class="project-square"></div>
                     <div class="project-square active"></div>
                     <div class="project-square"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
                 </div>
             </div>
         <?php endif; ?>
@@ -107,6 +113,72 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif ?>
                 </div>
                 <div class="project-num-squares">
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square active"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if($featured_project4): ?>
+            <?php
+                $projectName = get_field( 'project_name', $featured_project4->ID );
+                $projectImage = get_field( 'featured_image', $featured_project4->ID );
+            ?>
+            <div class="container-fluid px-0 project-container">
+                <a class="project-anchor" id="project4"></a>
+                <div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                    </div>
+                </div>
+                <div class="project-bg-color"></div>
+                <div class="project-content">
+                    <a href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
+                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                    </a>
+                    <?php if( isset($newest_post_id) && $newest_post_id == $featured_project4->ID ): ?>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    <?php endif ?>
+                </div>
+                <div class="project-num-squares">
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
+                    <div class="project-square active"></div>
+                    <div class="project-square"></div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if($featured_project5): ?>
+            <?php
+                $projectName = get_field( 'project_name', $featured_project5->ID );
+                $projectImage = get_field( 'featured_image', $featured_project5->ID );
+            ?>
+            <div class="container-fluid px-0 project-container">
+                <a class="project-anchor" id="project5"></a>
+                <div class="parallax-slide">
+					<div class="parallax-clip">
+						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                    </div>
+                </div>
+                <div class="project-bg-color"></div>
+                <div class="project-content">
+                    <a href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
+                        <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                    </a>
+                    <?php if( isset($newest_post_id) && $newest_post_id == $featured_project5->ID ): ?>
+                        <div class="project-release-banner">
+                            <i class="far fa-star icon"></i> Newest Release
+                        </div>
+                    <?php endif ?>
+                </div>
+                <div class="project-num-squares">
+                    <div class="project-square"></div>
+                    <div class="project-square"></div>
                     <div class="project-square"></div>
                     <div class="project-square"></div>
                     <div class="project-square active"></div>

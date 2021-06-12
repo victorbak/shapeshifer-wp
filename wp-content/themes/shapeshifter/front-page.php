@@ -23,26 +23,25 @@ if( ! empty( $newest->posts ) ) {
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project1"></a>
                 <div class="parallax-slide">
-					<div class="parallax-clip">
-						
-                        <!-- Old image -->
-                        <!-- <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div> -->
-
-                        <!-- Vimeo player -->
-                        <div class="fixed-parallax" style="padding:56.25% 0 0 0;position:relative;">
-                            <iframe src="https://player.vimeo.com/video/559811880?background=1&autopause=0&loop=1" 
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                <div class="parallax-clip">
+						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                        <div class="fixed-parallax">
+                            <!-- Vimeo player -->
+                            <iframe 
+                                class="video-el"
+                                src="https://player.vimeo.com/video/559811880?background=1&autopause=0&loop=1" 
+                                style="top:0;left:0;width:100%;height:100%;" 
                                 frameborder="0" 
                                 allow="autoplay; fullscreen; picture-in-picture" 
                                 allowfullscreen>
                             </iframe>
+                            <script src="https://player.vimeo.com/api/player.js"></script>    
                         </div>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
 
-                        <!-- wordpress upload -->
                         <!-- <div class="fixed-parallax">
-                            <video class="autoplay-video__video" autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
+                            <video class="autoplay-video__video" loop autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
                         </div> -->
+                    </div>
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
@@ -79,21 +78,23 @@ if( ! empty( $newest->posts ) ) {
             ?>
              <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project2"></a>
-                <div class="parallax-slide">
                 
+
+                <div class="parallax-slide">
 					<div class="parallax-clip">
-						<!-- <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div> -->
-                                                
-                        <!-- Vimeo player -->
-                        <div class="fixed-parallax" style="padding:56.25% 0 0 0;position:relative;">
-                            <iframe src="https://player.vimeo.com/video/559811880?background=1&autopause=0&loop=1" 
-                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                        <div class="fixed-parallax">
+                            <!-- Vimeo player -->
+                            <iframe 
+                                class="video-el"
+                                src="https://player.vimeo.com/video/545096480?background=1&autopause=0&loop=1" 
+                                style="top:0;left:0;width:100%;height:100%;" 
                                 frameborder="0" 
                                 allow="autoplay; fullscreen; picture-in-picture" 
                                 allowfullscreen>
                             </iframe>
+                            <script src="https://player.vimeo.com/api/player.js"></script>    
                         </div>
-                        <script src="https://player.vimeo.com/api/player.js"></script>
 
                         <!-- <div class="fixed-parallax">
                             <video class="autoplay-video__video" loop autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
@@ -137,7 +138,7 @@ if( ! empty( $newest->posts ) ) {
                 <a class="project-anchor" id="project3"></a>
                 <div class="parallax-slide">
 					<div class="parallax-clip">
-						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                     </div>
                 </div>
                 <div class="project-bg-color"></div>
@@ -172,7 +173,7 @@ if( ! empty( $newest->posts ) ) {
                 <a class="project-anchor" id="project4"></a>
                 <div class="parallax-slide">
 					<div class="parallax-clip">
-						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                     </div>
                 </div>
                 <div class="project-bg-color"></div>
@@ -207,7 +208,7 @@ if( ! empty( $newest->posts ) ) {
                 <a class="project-anchor" id="project5"></a>
                 <div class="parallax-slide">
 					<div class="parallax-clip">
-						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                     </div>
                 </div>
                 <div class="project-bg-color"></div>

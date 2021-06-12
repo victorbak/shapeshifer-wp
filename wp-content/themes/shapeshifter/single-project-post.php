@@ -47,13 +47,29 @@
     }
 ?>
 
-<?php $image = get_field('featured_image'); ?>
+<?php 
+  $image = get_field('featured_image');
+  $video = get_field( 'vimeo_code');
+?>
 
 <div class="project post">
   <section class="container-fluid px-0 project-container">
     <div class="parallax-slide">
       <div class="parallax-clip">
-        <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
+        <div class="poster-image" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
+        <?php if($video): ?>
+          <!-- Vimeo player -->
+          <div class="fixed-parallax">
+            <div class="video-el vimeo-video" 
+                data-vimeo-url="https://player.vimeo.com/video/<?php echo $video ?>"
+                data-vimeo-background="true"
+                data-vimeo-autopause="false"
+                data-vimeo-loop="true"
+                data-vimeo-responsive="true"
+                id="video1">
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
     <div class="project-bg-color"></div>

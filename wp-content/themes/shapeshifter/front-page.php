@@ -42,6 +42,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     id="video1">
                                 </div>
                             </div>
@@ -109,6 +110,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                                     id="video2">
                                 </div>
@@ -177,6 +179,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                                     id="video3">
                                 </div> 
@@ -244,6 +247,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                                     id="video4">
                                 </div>
@@ -311,6 +315,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                                     id="video5">
                                 </div>

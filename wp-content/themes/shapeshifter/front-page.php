@@ -13,7 +13,7 @@ $featured_project2 = get_field('featured_project_2');
 $featured_project3 = get_field('featured_project_3');
 $featured_project4 = get_field('featured_project_4');
 $featured_project5 = get_field('featured_project_5');
-$newest = new WP_Query('posts_per_page=1&post_type=project-post&order=ASC&post_status=publish');
+$newest = new WP_Query('posts_per_page=1&post_type=project-post&order=DESC&post_status=publish');
 if( ! empty( $newest->posts ) ) {
    $newest_post_id = $newest->posts[0]->ID;
 }

@@ -14,7 +14,6 @@ function script_styles_setup() {
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css', array(), '1.0.0.10' );
 	wp_enqueue_script('scripts-js', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
     wp_enqueue_script('header-js', get_template_directory_uri() . '/js/header.js', array('jquery'));
-    // wp_enqueue_script('splash-js', get_template_directory_uri() . '/js/splash.js', array('jquery'));
 	
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-all.js', array('jquery'), '1.0.0.1', true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.min.js', array('jquery') );
@@ -192,32 +191,32 @@ class Walker_Category_Find_Parents extends Walker_Category {
 			$link .= '>';
 			$link .= $cat_name . '</a>';
 	
-		if ( !empty($show_count) )
+		if ( !empty($show_count) ) 
 			$link .= ' (' . intval($category->count) . ')';
 	
 				if ( 'list' == $args['style'] ) {
-						$output .= "\t<li";
-						$class = 'cat-item cat-item-' . $category->term_id;
-						$togglebutton = "";
-	
-						$termchildren = get_term_children( $category->term_id, $category->taxonomy );
-						if(count($termchildren)>0){
-							$class .=  ' has-children';
-							$togglebutton = "<button type='button'></button>";
-						}
-	
-						if ( !empty($current_category) ) {
-								$_current_category = get_term( $current_category, $category->taxonomy );
-								if ( $category->term_id == $current_category )
-										$class .=  ' current-cat';
-								elseif ( $category->term_id == $_current_category->parent )
-										$class .=  ' current-cat-parent';
-						}
-						$output .=  ' class="' . $class . '"';
-						$output .= ">$link".$togglebutton."\n";
-				} else {
-						$output .= "\t$link<br />\n";
-				}
+					$output .= "\t<li";
+					$class = 'cat-item cat-item-' . $category->term_id;
+					$togglebutton = "";
+
+					$termchildren = get_term_children( $category->term_id, $category->taxonomy );
+					if(count($termchildren)>0){
+						$class .=  ' has-children';
+						$togglebutton = "<button type='button'></button>";
+					}
+
+					if ( !empty($current_category) ) {
+							$_current_category = get_term( $current_category, $category->taxonomy );
+							if ( $category->term_id == $current_category )
+									$class .=  ' current-cat';
+							elseif ( $category->term_id == $_current_category->parent )
+									$class .=  ' current-cat-parent';
+					}
+					$output .=  ' class="' . $class . '"';
+					$output .= ">$link".$togglebutton."\n";
+			} else {
+					$output .= "\t$link<br />\n";
+			}
 	}
 }
 

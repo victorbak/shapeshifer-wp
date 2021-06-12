@@ -1,4 +1,11 @@
+<?php 
+function home_scripts() {
+    wp_enqueue_script('front-page-js', get_template_directory_uri() . '/js/page/front-page.js', array('jquery'));
+}
+add_action( 'wp_enqueue_scripts', 'home_scripts' );
+?>
 <?php get_header();?>
+
 <?php $fields = get_fields(); ?>
 <?php
 $featured_project1 = get_field('featured_project_1');
@@ -13,6 +20,7 @@ if( ! empty( $newest->posts ) ) {
 
 
 ?>
+<script src="https://player.vimeo.com/api/player.js"></script>
 <div class="home page">
     <section class="project-section">
         <?php if($featured_project1): ?>
@@ -22,19 +30,27 @@ if( ! empty( $newest->posts ) ) {
             ?>
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project1"></a>
-                <div class="parallax-slide">
+                <div class="parallax-slide" id="slide1">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <div class="fixed-parallax">
                             <!-- Vimeo player -->
-                            <iframe 
+                            <div class="video-el vimeo-video" 
+                                data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project1->ID ) ?>""
+                                data-vimeo-background="true"
+                                data-vimeo-autopause="false"
+                                data-vimeo-loop="true"
+                                data-vimeo-responsive="true"
+                                id="video1">
+                            </div>
+                            <!-- <iframe 
                                 class="video-el"
                                 src="https://player.vimeo.com/video/559811880?background=1&autopause=0&loop=1" 
                                 style="top:0;left:0;width:100%;height:100%;" 
                                 frameborder="0" 
                                 allow="autoplay; fullscreen; picture-in-picture" 
                                 allowfullscreen>
-                            </iframe>
+                            </iframe> -->
                             <script src="https://player.vimeo.com/api/player.js"></script>    
                         </div>
 
@@ -80,19 +96,28 @@ if( ! empty( $newest->posts ) ) {
                 <a class="project-anchor" id="project2"></a>
                 
 
-                <div class="parallax-slide">
+                <div class="parallax-slide" id="slide2">
 					<div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
-                        <div class="fixed-parallax">
+                            <div class="fixed-parallax">
                             <!-- Vimeo player -->
-                            <iframe 
+                            <div class="video-el vimeo-video" 
+                                data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>""
+                                data-vimeo-background="true"
+                                data-vimeo-autopause="false"
+                                data-vimeo-loop="true"
+                                data-vimeo-responsive="true"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                id="video2">
+                            </div>
+                            <!-- <iframe 
                                 class="video-el"
-                                src="https://player.vimeo.com/video/545096480?background=1&autopause=0&loop=1" 
+                                src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
                                 style="top:0;left:0;width:100%;height:100%;" 
                                 frameborder="0" 
                                 allow="autoplay; fullscreen; picture-in-picture" 
                                 allowfullscreen>
-                            </iframe>
+                            </iframe> -->
                             <script src="https://player.vimeo.com/api/player.js"></script>    
                         </div>
 
@@ -136,9 +161,34 @@ if( ! empty( $newest->posts ) ) {
             ?>
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project3"></a>
-                <div class="parallax-slide">
+                <div class="parallax-slide" id="slide3">
 					<div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                            <div class="fixed-parallax">
+                            <!-- Vimeo player -->
+                            <div class="video-el vimeo-video" 
+                                data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project3->ID ) ?>""
+                                data-vimeo-background="true"
+                                data-vimeo-autopause="false"
+                                data-vimeo-loop="true"
+                                data-vimeo-responsive="true"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                id="video3">
+                            </div>
+                            <!-- <iframe 
+                                class="video-el"
+                                src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
+                                style="top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe> -->
+                            <!-- <script src="https://player.vimeo.com/api/player.js"></script>     -->
+                        </div>
+
+                        <!-- <div class="fixed-parallax">
+                            <video class="autoplay-video__video" loop autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
+                        </div> -->
                     </div>
                 </div>
                 <div class="project-bg-color"></div>
@@ -172,8 +222,33 @@ if( ! empty( $newest->posts ) ) {
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project4"></a>
                 <div class="parallax-slide">
-					<div class="parallax-clip">
+                <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                            <div class="fixed-parallax">
+                            <!-- Vimeo player -->
+                            <div class="video-el vimeo-video" 
+                                data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project4->ID ) ?>""
+                                data-vimeo-background="true"
+                                data-vimeo-autopause="false"
+                                data-vimeo-loop="true"
+                                data-vimeo-responsive="true"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                id="video2">
+                            </div>
+                            <!-- <iframe 
+                                class="video-el"
+                                src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
+                                style="top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe> -->
+                            <!-- <script src="https://player.vimeo.com/api/player.js"></script>     -->
+                        </div>
+
+                        <!-- <div class="fixed-parallax">
+                            <video class="autoplay-video__video" loop autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
+                        </div> -->
                     </div>
                 </div>
                 <div class="project-bg-color"></div>
@@ -207,8 +282,33 @@ if( ! empty( $newest->posts ) ) {
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project5"></a>
                 <div class="parallax-slide">
-					<div class="parallax-clip">
+                <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+                            <div class="fixed-parallax">
+                            <!-- Vimeo player -->
+                            <div class="video-el vimeo-video" 
+                                data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project5->ID ) ?>""
+                                data-vimeo-background="true"
+                                data-vimeo-autopause="false"
+                                data-vimeo-loop="true"
+                                data-vimeo-responsive="true"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                id="video2">
+                            </div>
+                            <!-- <iframe 
+                                class="video-el"
+                                src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
+                                style="top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe> -->
+                            <!-- <script src="https://player.vimeo.com/api/player.js"></script>     -->
+                        </div>
+
+                        <!-- <div class="fixed-parallax">
+                            <video class="autoplay-video__video" loop autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
+                        </div> -->
                     </div>
                 </div>
                 <div class="project-bg-color"></div>

@@ -184,10 +184,8 @@ endif;
                         echo "</div>";
                         endwhile;
                     } ?>
-                
-            </div>
-
         <?php endforeach; ?>
+        </div>
       </div>
     </section>
 

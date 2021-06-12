@@ -29,12 +29,20 @@ if( ! empty( $newest->posts ) ) {
                         <!-- <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div> -->
 
                         <!-- Vimeo player -->
-                        <!-- <div class="fixed-parallax" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/559811880?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
+                        <div class="fixed-parallax" style="padding:56.25% 0 0 0;position:relative;">
+                            <iframe src="https://player.vimeo.com/video/559811880?background=1&autopause=0" 
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
 
                         <!-- wordpress upload -->
-                        <div class="fixed-parallax">
+                        <!-- <div class="fixed-parallax">
                             <video class="autoplay-video__video" autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
-                        </div>
+                        </div> -->
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
@@ -73,7 +81,22 @@ if( ! empty( $newest->posts ) ) {
                 <a class="project-anchor" id="project2"></a>
                 <div class="parallax-slide">
 					<div class="parallax-clip">
-						<div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
+						<!-- <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div> -->
+                                                
+                        <!-- Vimeo player -->
+                        <!-- <div class="fixed-parallax" style="padding:56.25% 0 0 0;position:relative;">
+                            <iframe src="https://player.vimeo.com/video/545096480?background=1&autopause=1" 
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js"></script> -->
+
+                        <div class="fixed-parallax">
+                            <video class="autoplay-video__video" autoplay="" playsinline="" muted="" aria-hidden="true"><source src="/wp-content/uploads/2021/06/Hello-World_project1-video.mp4" type="video/mp4"></video>
+                        </div>
                     </div>
                 </div>
                 <div class="project-bg-color"></div>

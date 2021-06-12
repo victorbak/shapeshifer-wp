@@ -8723,7 +8723,7 @@ input[type="reset"] {
   }
 
   .home .project-container {
-    min-height: 80vh;
+    padding-top: 56.25%;
   }
 }
 

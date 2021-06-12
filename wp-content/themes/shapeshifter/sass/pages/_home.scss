@@ -23,7 +23,8 @@
             min-height: 70vh;
         }
         @include media-breakpoint-up(lg) {
-            min-height: 80vh;
+            // min-height: 80vh;
+            padding-top: 56.25%;
         }
     }
 

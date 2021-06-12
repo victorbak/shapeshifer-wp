@@ -65,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
         <div class="poster-image" style="background-image: url('<?php echo esc_url($image['url']); ?>');"></div>
         <?php if($video): ?>
           <!-- Vimeo player -->
-          <div class="fixed-parallax">
+          <div class="fixed-parallax d-none d-lg-block">
             <div class="video-el vimeo-video" 
                 data-vimeo-url="https://player.vimeo.com/video/<?php echo $video ?>"
                 data-vimeo-background="true"

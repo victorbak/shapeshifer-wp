@@ -34,7 +34,7 @@ if( ! empty( $newest->posts ) ) {
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
-                            <div class="fixed-parallax">
+                            <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
@@ -93,7 +93,7 @@ if( ! empty( $newest->posts ) ) {
 					<div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
-                            <div class="fixed-parallax">
+                            <div class="fixed-parallax  d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
@@ -153,7 +153,7 @@ if( ! empty( $newest->posts ) ) {
 					<div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
-                            <div class="fixed-parallax">
+                            <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project3->ID ) ?>"
@@ -212,7 +212,7 @@ if( ! empty( $newest->posts ) ) {
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
-                            <div class="fixed-parallax">
+                            <div class="fixed-parallax  d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project4->ID ) ?>"
@@ -271,7 +271,7 @@ if( ! empty( $newest->posts ) ) {
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
-                            <div class="fixed-parallax">
+                            <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project5->ID ) ?>"

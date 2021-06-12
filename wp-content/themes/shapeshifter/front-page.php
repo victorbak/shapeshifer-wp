@@ -20,7 +20,6 @@ if( ! empty( $newest->posts ) ) {
 
 
 ?>
-<script src="https://player.vimeo.com/api/player.js"></script>
 <div class="home page">
     <section class="project-section">
         <?php if($featured_project1): ?>
@@ -45,15 +44,6 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-responsive="true"
                                     id="video1">
                                 </div>
-                                <!-- <iframe 
-                                    class="video-el"
-                                    src="https://player.vimeo.com/video/559811880?background=1&autopause=0&loop=1" 
-                                    style="top:0;left:0;width:100%;height:100%;" 
-                                    frameborder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe> -->
-                                <script src="https://player.vimeo.com/api/player.js"></script>    
                             </div>
                         <?php endif ?>
                         <!-- <div class="fixed-parallax">
@@ -114,15 +104,6 @@ if( ! empty( $newest->posts ) ) {
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
                                     id="video2">
                                 </div>
-                                <!-- <iframe 
-                                    class="video-el"
-                                    src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
-                                    style="top:0;left:0;width:100%;height:100%;" 
-                                    frameborder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe> -->
-                                <script src="https://player.vimeo.com/api/player.js"></script>    
                             </div>
                         <?php endif; ?>
                         <!-- <div class="fixed-parallax">
@@ -166,6 +147,8 @@ if( ! empty( $newest->posts ) ) {
             ?>
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project3"></a>
+
+
                 <div class="parallax-slide" id="slide3">
 					<div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -173,23 +156,14 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project3->ID ) ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                                    id="video2">
-                                </div>
-                                <!-- <iframe 
-                                    class="video-el"
-                                    src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
-                                    style="top:0;left:0;width:100%;height:100%;" 
-                                    frameborder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe> -->
-                                <script src="https://player.vimeo.com/api/player.js"></script>    
+                                    id="video3">
+                                </div> 
                             </div>
                         <?php endif; ?>
 
@@ -212,6 +186,11 @@ if( ! empty( $newest->posts ) ) {
                         </div>
                     <?php endif ?>
                 </div>
+                <?php if($featured_project4): ?>
+                    <a href="/#project4" class="project-next-scroll">
+                        Next Project <i class="fas fa-arrow-down icon"></i>
+                    </a>
+                <?php endif; ?>
                 <div class="project-num-squares">
                     <div class="project-square"></div>
                     <div class="project-square"></div>
@@ -229,30 +208,21 @@ if( ! empty( $newest->posts ) ) {
             ?>
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project4"></a>
-                <div class="parallax-slide">
+                <div class="parallax-slide" id="slide4">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project4->ID ) ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                                    id="video2">
+                                    id="video4">
                                 </div>
-                                <!-- <iframe 
-                                    class="video-el"
-                                    src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
-                                    style="top:0;left:0;width:100%;height:100%;" 
-                                    frameborder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe> -->
-                                <script src="https://player.vimeo.com/api/player.js"></script>    
                             </div>
                         <?php endif; ?>
 
@@ -275,6 +245,11 @@ if( ! empty( $newest->posts ) ) {
                         </div>
                     <?php endif ?>
                 </div>
+                <?php if($featured_project5): ?>
+                    <a href="/#project5" class="project-next-scroll">
+                        Next Project <i class="fas fa-arrow-down icon"></i>
+                    </a>
+                <?php endif; ?>
                 <div class="project-num-squares">
                     <div class="project-square"></div>
                     <div class="project-square"></div>
@@ -292,30 +267,21 @@ if( ! empty( $newest->posts ) ) {
             ?>
             <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project5"></a>
-                <div class="parallax-slide">
+                <div class="parallax-slide" id="slide5">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project5->ID ) ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
                                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                                    id="video2">
+                                    id="video5">
                                 </div>
-                                <!-- <iframe 
-                                    class="video-el"
-                                    src="https://player.vimeo.com/video/398874206?background=1&autopause=0&loop=1" 
-                                    style="top:0;left:0;width:100%;height:100%;" 
-                                    frameborder="0" 
-                                    allow="autoplay; fullscreen; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe> -->
-                                <script src="https://player.vimeo.com/api/player.js"></script>    
                             </div>
                         <?php endif; ?>
 
@@ -338,6 +304,11 @@ if( ! empty( $newest->posts ) ) {
                         </div>
                     <?php endif ?>
                 </div>
+                <?php if($featured_project6): ?>
+                    <a href="/#project6" class="project-next-scroll">
+                        Next Project <i class="fas fa-arrow-down icon"></i>
+                    </a>
+                <?php endif; ?>
                 <div class="project-num-squares">
                     <div class="project-square"></div>
                     <div class="project-square"></div>

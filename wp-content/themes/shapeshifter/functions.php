@@ -29,6 +29,11 @@ register_nav_menus( array(
 	'footer' => 'Footer menu' 
 ) );
 
+function vimeo_player() {
+	wp_enqueue_script('player-js', 'https://player.vimeo.com/api/player.js', array('jquery'));
+}
+add_action( 'wp_enqueue_scripts', 'vimeo_player' );
+
 
 /* -Fonts ----------------------------------------------------- */
 add_action( 'wp_enqueue_scripts', 'tu_load_font_awesome' );

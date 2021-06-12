@@ -21,6 +21,7 @@ $terms = get_terms( array(
     'orderby' => 'name'
 ));
 
+// var_dump($terms);
 ?>
 
 <!-- Content here -->
@@ -62,8 +63,9 @@ $terms = get_terms( array(
             <?php endforeach; ?>
         </section>
     <?php else: ?>
-        <section class="container py-5 my-5">
-            <h2><?php the_field('no_postings_message'); ?></h2>
+        <section class="container py-4 my-3">
+            <?php get_template_part( 'inc/partials/category-header', '', "Job Postings"); ?>
+            <h2 class="my-4"><?php the_field('no_postings_message'); ?></h2>
         </section>
     <?php endif; ?>
 </div>

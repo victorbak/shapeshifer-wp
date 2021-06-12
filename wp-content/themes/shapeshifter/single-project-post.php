@@ -1,3 +1,9 @@
+<?php 
+function project_scripts() {
+    wp_enqueue_script('project-js', get_template_directory_uri() . '/js/single/project.js', array('jquery'));
+}
+add_action( 'wp_enqueue_scripts', 'project_scripts' );
+?>
 <?php get_header();?>
 <?php $fields = get_fields(); ?>
 <?php
@@ -48,8 +54,8 @@
 ?>
 
 <?php 
-  $image = get_field('featured_image');
-  $video = get_field( 'vimeo_code');
+  $image = get_field( 'featured_image' );
+  $video = get_field( 'vimeo_code' );
 ?>
 
 <div class="project post">
@@ -66,7 +72,7 @@
                 data-vimeo-autopause="false"
                 data-vimeo-loop="true"
                 data-vimeo-responsive="true"
-                id="video1">
+                id="project-video">
             </div>
           </div>
         <?php endif; ?>

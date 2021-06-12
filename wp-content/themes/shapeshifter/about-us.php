@@ -164,9 +164,8 @@ endif;
         <div class="overlay"></div>
         <div class="postings is-animated my-4 py-2">
         <?php get_template_part( 'inc/partials/category-header', '', 'Team Members'); ?>
+        <div class="row team-cards mt-5 mb-2 no-gutters"> 
         <?php foreach ( $terms as $term ) : ?>
-            <div class="row team-cards mt-5 mb-2 no-gutters">
-
                     <?php 
                         $q = array('post_type' => 'team-member-post',
                             'tax_query' => array(
@@ -188,8 +187,8 @@ endif;
                 
             </div>
 
-        </div>
         <?php endforeach; ?>
+      </div>
     </section>
 
 </div>

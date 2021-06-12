@@ -71,10 +71,18 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif; ?>
                     <div class="project-num-squares">
                         <div class="project-square active"></div>
-                        <div class="project-square"></div>
-                        <div class="project-square"></div>
-                        <div class="project-square"></div>
-                        <div class="project-square"></div>
+                        <?php if($featured_project2): ?>
+                            <div class="project-square"></div>
+                        <?php endif; ?>
+                        <?php if($featured_project3): ?>
+                            <div class="project-square"></div>
+                        <?php endif; ?>
+                        <?php if($featured_project4): ?>
+                            <div class="project-square"></div>
+                        <?php endif; ?>
+                        <?php if($featured_project5): ?>
+                            <div class="project-square"></div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -131,11 +139,19 @@ if( ! empty( $newest->posts ) ) {
                     </a>
                 <?php endif; ?>
                 <div class="project-num-squares">
-                    <div class="project-square"></div>
+                    <?php if($featured_project1): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                     <div class="project-square active"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project3): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project4): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project5): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -156,11 +172,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-<<<<<<< HEAD
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
-=======
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project3->ID ) ?>"
->>>>>>> 7347cf0def6deed80b921fa41cbdf2927bf34dca
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -196,11 +208,19 @@ if( ! empty( $newest->posts ) ) {
                     </a>
                 <?php endif; ?>
                 <div class="project-num-squares">
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project1): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project2): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                     <div class="project-square active"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project4): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project5): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -219,11 +239,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax  d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-<<<<<<< HEAD
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
-=======
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project4->ID ) ?>"
->>>>>>> 7347cf0def6deed80b921fa41cbdf2927bf34dca
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -259,11 +275,19 @@ if( ! empty( $newest->posts ) ) {
                     </a>
                 <?php endif; ?>
                 <div class="project-num-squares">
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project1): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project2): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project3): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                     <div class="project-square active"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project5): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -282,11 +306,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-<<<<<<< HEAD
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
-=======
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project5->ID ) ?>"
->>>>>>> 7347cf0def6deed80b921fa41cbdf2927bf34dca
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -322,10 +342,18 @@ if( ! empty( $newest->posts ) ) {
                     </a>
                 <?php endif; ?>
                 <div class="project-num-squares">
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
-                    <div class="project-square"></div>
+                    <?php if($featured_project1): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project2): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project3): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
+                    <?php if($featured_project4): ?>
+                        <div class="project-square"></div>
+                    <?php endif; ?>
                     <div class="project-square active"></div>
                 </div>
             </div>

@@ -106,7 +106,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -173,7 +173,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -236,7 +236,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
@@ -299,7 +299,7 @@ if( ! empty( $newest->posts ) ) {
                             <div class="fixed-parallax">
                                 <!-- Vimeo player -->
                                 <div class="video-el vimeo-video" 
-                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo get_field( 'vimeo_code', $featured_project2->ID ) ?>"
+                                    data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"

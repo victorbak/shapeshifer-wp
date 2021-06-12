@@ -80,6 +80,7 @@ if( ! empty( $newest->posts ) ) {
              <div class="container-fluid px-0 project-container">
                 <a class="project-anchor" id="project2"></a>
                 <div class="parallax-slide">
+                
 					<div class="parallax-clip">
 						<!-- <div class="fixed-parallax" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div> -->
                                                 

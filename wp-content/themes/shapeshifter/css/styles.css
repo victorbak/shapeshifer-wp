@@ -4124,7 +4124,6 @@ input[type="reset"] {
 
 .home .project-container {
   position: relative;
-  min-height: 80vh;
   background-size: cover;
   background-position: center;
 }
@@ -7570,10 +7569,6 @@ input[type="reset"] {
 
   .map-banner .overlay .cta {
     opacity: 0;
-  }
-
-  .home .project-container {
-    min-height: 70vh;
   }
 
   .home .project-release-banner {

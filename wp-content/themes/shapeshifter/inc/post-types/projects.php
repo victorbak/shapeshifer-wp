@@ -32,10 +32,9 @@ function create_custom_post_type_projects() {
         'menu_icon'     => 'dashicons-art',
         'menu_position' => 20,
 		'has_archive'   => false, // turn of archive page 
-		'supports'      => array( 'title', 'editor' ),
+		'supports'      => array( 'title', 'editor', 'page-attributes' ),
 		'rewrite'     	=> array('slug' => '/projects'),
 		'hierarchical' 	=> true,
-		'supports'      => array( 'page-attributes' ),
 	);
 	register_post_type( 'project-post', $args );
 

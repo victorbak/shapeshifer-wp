@@ -3664,7 +3664,7 @@ input[type="reset"] {
 
 .parallax-slide {
   position: relative;
-  height: 80vh;
+  padding-top: 56.25%;
 }
 
 .parallax-clip {
@@ -4124,6 +4124,7 @@ input[type="reset"] {
 
 .home .project-container {
   position: relative;
+  min-height: 80vh;
   background-size: cover;
   background-position: center;
 }
@@ -7517,10 +7518,6 @@ input[type="reset"] {
     opacity: 1;
   }
 
-  .parallax-slide {
-    height: 70vh;
-  }
-
   .job-preview .card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7569,6 +7566,10 @@ input[type="reset"] {
 
   .map-banner .overlay .cta {
     opacity: 0;
+  }
+
+  .home .project-container {
+    min-height: 70vh;
   }
 
   .home .project-release-banner {
@@ -8693,10 +8694,6 @@ input[type="reset"] {
     padding: 1rem;
   }
 
-  .parallax-slide {
-    height: 80vh;
-  }
-
   .job-preview .job-header {
     -webkit-box-flex: 7;
     -ms-flex: 7;
@@ -8718,7 +8715,7 @@ input[type="reset"] {
   }
 
   .home .project-container {
-    padding-top: 56.25%;
+    min-height: 80vh;
   }
 }
 

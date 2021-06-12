@@ -8,8 +8,6 @@
 
 <?php 
 function about_scripts() {
-    // wp_register_script( 'jobs-js', get_template_directory_uri() . '/js/page/jobs.js' );
-    // wp_enqueue_script( 'jobs-js' );
     wp_enqueue_script('about-js', get_template_directory_uri() . '/js/page/about.js', array('jquery'));
     // wp_enqueue_script('filters-js', get_template_directory_uri() . '/js/filters.js', array('jquery'));
 }
@@ -21,7 +19,6 @@ $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post
 
 <?php get_header(); ?>
 <?php
-
 if( $terms = get_terms( array(
     'taxonomy' => 'departments',
     'orderby' => 'name'
@@ -124,11 +121,13 @@ endif;
         </div>
     </section>
 
+    <!-- Commenting out until departments are enabled -->
     <!-- <section class="container py-2 mt-2 mb-4">
         <?php get_template_part( 'inc/partials/filters', '', $terms ); ?>
     </section>  -->
 
-    <section class="container team-posts">
+    <!-- Commenting out until departments are enabled  -->
+    <!-- <section class="container team-posts">
         <div class="overlay"></div>
         <?php foreach ( $terms as $term ) : ?>
         <div data-category="<?php echo $term->slug ?>" class="postings is-animated my-4 py-2">
@@ -158,7 +157,41 @@ endif;
 
         </div>
         <?php endforeach; ?>
+    </section> -->
+
+    <!-- Using this until departments are enabled -->
+    <section class="container team-posts">
+        <div class="overlay"></div>
+        <div class="postings is-animated my-4 py-2">
+        <?php get_template_part( 'inc/partials/category-header', '', 'Team Members'); ?>
+        <?php foreach ( $terms as $term ) : ?>
+            <div class="row team-cards mt-5 mb-2 no-gutters">
+
+                    <?php 
+                        $q = array('post_type' => 'team-member-post',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'departments',
+                                    'field' => 'slug',
+                                    'terms' => $term->slug,
+                                ),
+                            ),
+                        );
+                    $loop = new WP_Query($q);
+                    if ($loop->have_posts()) {
+                        while($loop->have_posts()) : $loop->the_post();
+                        echo "<div class='col-xs-12 col-lg-6 col-xl-4 team-member-card-container'>";
+                            get_template_part( 'inc/partials/team-member-card' );
+                        echo "</div>";
+                        endwhile;
+                    } ?>
+                
+            </div>
+
+        </div>
+        <?php endforeach; ?>
     </section>
+
 </div>
 
 <!-- Modal -->

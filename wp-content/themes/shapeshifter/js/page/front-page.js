@@ -45,26 +45,8 @@ jQuery(document).ready(function ($) {
     }
   });
     
-
-  videoPlayer1.on('play', function() {
-      console.log('played Video 1!');
-  });
-
-  videoPlayer2.on('play', function() {
-      console.log('played the 2.0 video!');
-  });
-
-  videoPlayer1.on('pause', function() {
-    console.log('paused Video 1!');
-  });
-
-  videoPlayer2.on('pause', function() {
-    console.log('paused the 2.0 video!');
-  });
-
   $.fn.isOnScreen = function(){
     var win = $(window);
-    console.log(this);
     var viewport = {
         top : win.scrollTop(),
         left : win.scrollLeft()

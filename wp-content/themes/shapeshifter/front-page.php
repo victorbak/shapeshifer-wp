@@ -359,7 +359,7 @@ if( ! empty( $newest->posts ) ) {
             </div>
         <?php endif; ?>
     <section>
-    <section class="container px-4 py-5">
+    <!-- <section class="container px-4 py-5">
         <div class="row">
             <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
                 <?php echo $fields['home_content'] ?>
@@ -368,6 +368,6 @@ if( ! empty( $newest->posts ) ) {
                 <?php get_template_part( 'inc/partials/contact-info-card' ); ?>
             </div>
         </div>
-    </section>
+    </section> -->
 </div>
 <?php get_footer();?>

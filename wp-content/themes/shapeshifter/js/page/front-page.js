@@ -1,55 +1,14 @@
+projectLimit = 5;
+players = {};
 jQuery(document).ready(function ($) {
-  if( $('#video1').length ) {
-    var videoPlayer1 = new Vimeo.Player('video1');
-  } 
-  if( $('#video2').length ) {
-    var videoPlayer2 = new Vimeo.Player('video2');
-  } 
-  if( $('#video3').length ) {
-    var videoPlayer3 = new Vimeo.Player('video3');
-  } 
-  if( $('#video4').length ) {
-    var videoPlayer4 = new Vimeo.Player('video4');
-  } 
-  if( $('#video5').length ) {
-    var videoPlayer5 = new Vimeo.Player('video5');
-  } 
+  setVideoPlayers();
+  setScrollListeners();
 
-  $(window).scroll(function(){ 
-    if( $('#slide1').length ) {
-      playPause('slide1',videoPlayer1); 
-    }
-  });
-    
-  $(window).scroll(function(){ 
-    if( $('#slide2').length ) {
-      playPause('slide2',videoPlayer2); 
-    }
-  });
-    
-  $(window).scroll(function(){ 
-    if( $('#slide3').length ) {
-      playPause('slide3',videoPlayer3); 
-    }
-  });
-    
-  $(window).scroll(function(){ 
-    if( $('#slide4').length ) {
-      playPause('slide4',videoPlayer4); 
-    }
-  });
-    
-  $(window).scroll(function(){ 
-    if( $('#slide5').length ) {
-      playPause('slide5',videoPlayer5); 
-    }
-  });
-    
-  $.fn.isOnScreen = function(){
+  $.fn.isOnScreen = function () {
     var win = $(window);
     var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
+      top: win.scrollTop(),
+      left: win.scrollLeft()
     };
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
@@ -58,16 +17,37 @@ jQuery(document).ready(function ($) {
     bounds.right = bounds.left + this.outerWidth();
     bounds.bottom = bounds.top + this.outerHeight();
 
-    return (!(viewport.bottom < bounds.top  + ( (this.outerHeight() / 2) ) || viewport.top + (this.outerHeight() / 2) + 200 > bounds.bottom ));
+    return (!(viewport.bottom < bounds.top + ((this.outerHeight() / 2)) || viewport.top + (this.outerHeight() / 2) + 200 > bounds.bottom));
   };
 
   //Play if element is in the viewport
-  function playPause(divID, player){
-    if ($('#'+divID).isOnScreen()) {
+  function playPause(divID, player) {
+    if ($(`#${divID}`).isOnScreen()) {
       player.play();
     } else {
-      player.pause();
+      const isVideoPlaying = player => !!(player.currentTime > 0 && !player.paused && !player.ended && player.readyState > 2);
+      return isVideoPlaying ? player.pause() : '';
     }
   }
-
+  function setVideoPlayers() {
+    for (let i = 1; i < projectLimit + 1; i++) {
+      if ($(`#video${i}`).length) {
+        players[`player${i}`] = new Vimeo.Player(`video${i}`);
+      }
+      if (i == 1) {
+        players[`player${i}`].on('loaded', function (data) {
+          $('.video-el').css('background-color', 'black');
+        });
+      }
+    }
+  }
+  function setScrollListeners() {
+    for (let i = 1; i < projectLimit + 1; i++) {
+      $(window).scroll(function () {
+        if ($(`#slide${i}`).length) {
+          playPause(`slide${i}`, players[`player${i}`]);
+        }
+      });
+    }
+  }
 })

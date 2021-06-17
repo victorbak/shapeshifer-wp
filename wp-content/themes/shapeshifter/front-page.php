@@ -42,6 +42,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
+                                    data-vimeo-dnt="true"
                                     id="video1">
                                 </div>
                             </div>
@@ -109,7 +110,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video2">
                                 </div>
                             </div>
@@ -177,7 +178,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video3">
                                 </div> 
                             </div>
@@ -244,7 +245,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video4">
                                 </div>
                             </div>
@@ -311,7 +312,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video5">
                                 </div>
                             </div>

@@ -271,6 +271,12 @@ function hasSocialMedia($input) {
   return false;
 }
 
+add_action('get_header', 'my_filter_head');
+
+function my_filter_head() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
 
 /* -Add layout titles to flex content------------------------------------------------- */
 // function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {

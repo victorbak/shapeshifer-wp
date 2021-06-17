@@ -3,13 +3,7 @@
 //==============================
 .parallax-slide {
     position: relative;
-    height: 80vh;
-    @include media-breakpoint-up(md) {
-        height: 70vh;
-    }
-    @include media-breakpoint-up(lg) {
-        height: 80vh;
-    }
+    height: 90vh;
 }
 
 .parallax-clip {

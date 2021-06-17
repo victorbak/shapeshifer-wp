@@ -262,6 +262,15 @@ function reset_editor()
 
 add_action("init","reset_editor");
 
+function hasSocialMedia($input) {
+  for($i = 0; $i < count($input); $i++) {
+    if($input[$i] != false) {
+      return true;
+    }
+  }
+  return false;
+}
+
 
 /* -Add layout titles to flex content------------------------------------------------- */
 // function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {

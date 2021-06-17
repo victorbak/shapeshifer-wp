@@ -27,7 +27,7 @@
             <section class="container-fluid py-md-4 py-lg-6 px-0">
                 <div class="map-banner">
                     <div class="overlay">
-                    <a <?php echo "href='" . esc_url($google_maps) . "'"; ?>"target="_blank" >
+                    <a <?php echo "href='" . esc_url($google_maps) . "'"; ?> target="_blank" rel="noopener noreferrer">
                         <div class="row mx-0">
                             <div class="col-md-4">
                             </div>

@@ -25,3 +25,5 @@ $fields = get_fields();
         </div>
     </div>
 </div>
+
+<?php get_footer();?>

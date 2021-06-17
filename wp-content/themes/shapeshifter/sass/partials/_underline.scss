@@ -16,14 +16,14 @@
     &:after {
         content: '';
         position: absolute;
-        top: -5px;
+        top: -4px;
         height: 8px;
         width: 8px;
         background-color: $white;
         transform: rotate(45deg);
         opacity: 0.3;
-        outline: 2px solid $white;
-        outline-offset: 2px;
+        outline: 1px solid $white;
+        outline-offset: 1px;
         transition: 0.8s transform ease-in;
 
         

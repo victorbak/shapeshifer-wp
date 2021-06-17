@@ -83,7 +83,7 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
       <div class="project-title">
         <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
         <?php if($fields['project_subtitle_link']) { ?>
-          <a href="<?php echo $fields['project_subtitle_link']; ?>" target="_blank">
+          <a href="<?php echo $fields['project_subtitle_link']; ?>" target="_blank" rel="noopener noreferrer">
             <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
           </a>
         <?php } else { ?>

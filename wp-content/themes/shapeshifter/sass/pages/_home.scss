@@ -1,15 +1,15 @@
 .home {
     .project-container {
         position: relative;
-        min-height: 80vh;
+        min-height: 90vh;
         background-size: cover;
         background-position: center;
 
         .project-anchor {
             position: absolute;
-            top: -105px;
+            top: -100px;
         }
-
+        
         .project-bg-color {
             background-color: rgba(0,0,0,0.6);
             position: absolute;
@@ -19,12 +19,6 @@
             width: 100%;
         }
 
-        @include media-breakpoint-up(md) {
-            min-height: 70vh;
-        }
-        @include media-breakpoint-up(lg) {
-            min-height: 80vh;
-        }
     }
 
     .project-title-container {
@@ -101,11 +95,10 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin: 40px 40px;
+        margin: 40px 40px 50px 24px;
         width: calc(100% - 80px);
         color: $white;
         text-transform: uppercase;
-        padding: 12px 20px;
         text-align: center;
         transition: 0.1s color ease-in;
         font-size: 18px;
@@ -117,6 +110,10 @@
         @include media-breakpoint-up(md) {
             width: auto;
             text-align: left;
+        }
+
+        @include media-breakpoint-up(xxxxl) {
+          margin-right: 8em;
         }
 
         &:hover {
@@ -134,16 +131,16 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        margin: 40px 40px;
+        margin: 40px 24px 50px 40px;
         display: none;
         
         .project-square {
             display: inline-block;
             background-color: transparent;
             border: 2px solid $white;
-            border-radius: 4px;
-            width: 25px;
-            height: 25px;
+            border-radius: 3px;
+            width: 22px;
+            height: 22px;
             margin-right: 5px;
 
             &.active {
@@ -153,5 +150,35 @@
         @include media-breakpoint-up(md) {
             display: block;
         }
+
+        @include media-breakpoint-up(xxxxl) {
+          margin-left: 8em;
+        }
+    }
+
+    .video-el {
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      div:first-of-type {
+        padding: 0 !important;
+        position: static !important;
+      }
+      iframe {
+        height: 56.25vw !important;
+        left: 50% !important;
+        min-height: 100% !important;
+        min-width: 100% !important;
+        transform: translate(-50%, -50%) !important;
+        position: absolute !important;
+        top: 50% !important;
+        width: 177.77777778vh !important;
+      }
+    }
+
+    .player {
+      max-width: 100% !important;
+      height: 100% !important;
     }
 }

@@ -23,7 +23,7 @@
   }
   .content-anchor {
     position: absolute;
-    top: -105px;
+    top: -100px;
   }
   .project-container {
     position: relative;
@@ -284,6 +284,30 @@
     }
 
   }
+
+  .video-el {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+    div:first-of-type {
+      padding: 0 !important;
+      position: static !important;
+    }
+
+    iframe {
+      height: 56.25vw !important;
+      left: 50% !important;
+      min-height: 100% !important;
+      min-width: 100% !important;
+      transform: translate(-50%, -50%) !important;
+      position: absolute !important;
+      top: 50% !important;
+      width: 177.77777778vh !important;
+    }
+  }
+
 }
 
 .image-modal {

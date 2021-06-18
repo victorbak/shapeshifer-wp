@@ -29,7 +29,6 @@
     max-width: 220px;
   }
   @include media-breakpoint-up(lg) {
-    padding: 20px;
     max-width: 240px;
     display: block;
   }
@@ -163,9 +162,25 @@
         opacity: 0;
         transition: 0.4s opacity ease-in;
       }
+
+      @include media-breakpoint-down(lg) {
+        padding-right: 5px;
+        font-size: 14px;
+        &:before {
+          width: 30px;
+          height: 30px;
+          left: 0;
+        }
+        &:after {
+          width: 6px;
+          height: 6px;
+          left: 35px;
+        }
+      }
+
     
       @include media-breakpoint-only(md) {
-        padding: 30px 20px 30px;
+        padding: 30px 10px;
         &:after {
           content: none;
         }
@@ -229,7 +244,7 @@
   text-align: left;
   position: absolute;
   top: 0;
-  height: 100vw;
+  height: 100vh;
   left: 0;
   z-index: 1;
   width: 100%;

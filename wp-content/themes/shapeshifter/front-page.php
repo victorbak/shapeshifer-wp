@@ -110,8 +110,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    data-vimeo-dnt="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video2">
                                 </div>
                             </div>
@@ -179,8 +178,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    data-vimeo-dnt="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video3">
                                 </div> 
                             </div>
@@ -247,8 +245,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    data-vimeo-dnt="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video4">
                                 </div>
                             </div>
@@ -315,8 +312,7 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
-                                    data-vimeo-dnt="true"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    data-vimeo-dnt="true" 
                                     id="video5">
                                 </div>
                             </div>
@@ -364,7 +360,7 @@ if( ! empty( $newest->posts ) ) {
             </div>
         <?php endif; ?>
     <section>
-    <section class="container px-4 py-5">
+    <!-- <section class="container px-4 py-5">
         <div class="row">
             <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
                 <?php echo $fields['home_content'] ?>
@@ -373,6 +369,6 @@ if( ! empty( $newest->posts ) ) {
                 <?php get_template_part( 'inc/partials/contact-info-card' ); ?>
             </div>
         </div>
-    </section>
+    </section> -->
 </div>
 <?php get_footer();?>

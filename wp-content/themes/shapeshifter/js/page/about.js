@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
 
     var $cards = $('.team-member');
+
+    $('.team-member__contact-info-item').on('click', function (event) {
+      event.stopPropagation();
+    });
   
     $cards.on('click', function (e) {
         e.preventDefault();

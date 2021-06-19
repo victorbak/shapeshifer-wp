@@ -46,25 +46,25 @@
         <div class="team-member__contact-info">
           <!-- <div class="divider"></div> -->
           <?php if ( ! empty( $email ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( 'mailto:' . $email ) ?>"><em class="icon far fa-envelope"></em><?php echo $email ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( 'mailto:' . $email ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon far fa-envelope"></em><?php echo $email ?></a>
           <?php endif ?>
           <?php if ( ! empty( $linkedin ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( $linkedin ) ?>"><em class="icon fab fa-linkedin-in"></em><?php echo $linkedin ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( $linkedin ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-linkedin-in"></em><?php echo $linkedin ?></a>
           <?php endif ?>
           <?php if ( ! empty( $phone ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( 'tel:' . $phone ) ?>"><em class="icon fas fa-phone"></em><?php echo $phone ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( 'tel:' . $phone ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-phone"></em><?php echo $phone ?></a>
           <?php endif ?>
           <?php if ( ! empty( $artstation ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( $artstation ) ?>"><i class="icon fab fa-artstation"></i><?php echo $artstation ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( $artstation ) ?>" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-artstation"></i><?php echo $artstation ?></a>
           <?php endif ?>
           <?php if ( ! empty( $youtube ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( $youtube ) ?>"><em class="icon fab fa-youtube"></em><?php echo $youtube ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( $youtube ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-youtube"></em><?php echo $youtube ?></a>
           <?php endif ?>
           <?php if ( ! empty( $demo_reel ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( $demo_reel ) ?>"><em class="icon fas fa-film"></em><?php echo $demo_reel ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( $demo_reel ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-film"></em><?php echo $demo_reel ?></a>
           <?php endif ?>
           <?php if ( ! empty( $imdb ) ): ?>
-            <a class="team-member__contact-info-item" href="<?php echo esc_url( $imdb ) ?>"><em class="icon fab fa-imdb"></em><?php echo $imdb ?></a>
+            <a class="team-member__contact-info-item" href="<?php echo esc_url( $imdb ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-imdb"></em><?php echo $imdb ?></a>
           <?php endif ?>
         </div>
         <!-- <div class="divider"></div>  -->

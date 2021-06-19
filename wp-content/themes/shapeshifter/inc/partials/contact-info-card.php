@@ -41,19 +41,19 @@
             <div class="divider"></div>
             <div class="row p-2">
               <?php if ( $twitter != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'twitter_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-twitter"></em></a>
+                <a href="<?php echo esc_url( get_option( 'twitter_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-twitter"></em></a>
               <?php endif ?>
               <?php if ( $facebook != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'facebook_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-facebook-f"></em></a>
+                <a href="<?php echo esc_url( get_option( 'facebook_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-facebook-f"></em></a>
               <?php endif ?>
               <?php if ( $vimeo != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'vimeo_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-vimeo"></em></a>
+                <a href="<?php echo esc_url( get_option( 'vimeo_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-vimeo"></em></a>
               <?php endif ?>
               <?php if ( $youtube != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'youtube_url' ) )?>" target="blank"><em class="icon col-1 fab fa-youtube"></em></a>
+                <a href="<?php echo esc_url( get_option( 'youtube_url' ) )?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-youtube"></em></a>
               <?php endif ?>
               <?php if ( $linkedin != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'linkedin_url' ) ) ?>" target="blank"><em class="icon col-1 fab fa-linkedin-in"></em></a>
+                <a href="<?php echo esc_url( get_option( 'linkedin_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-linkedin-in"></em></a>
               <?php endif ?>
             </div>
           </div>

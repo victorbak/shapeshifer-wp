@@ -1,6 +1,6 @@
 .coming-soon.page {
     .content {
-        margin: 10% 0;
+        margin: 2% 0;
         text-align: center;
     }
     .logo {
@@ -10,5 +10,13 @@
 
     p {
         font-size: 36px;
+    }
+
+    .banner {
+        height: 50rem;
+        
+        @include media-breakpoint-down {
+            height: 28rem;
+        }
     }
 }

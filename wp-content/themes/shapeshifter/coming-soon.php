@@ -22,6 +22,12 @@ $fields = get_fields();
             <div class="col-md-12">
                 <p><?php echo $fields['coming_soon_text']; ?></p>
             </div>
+            <div class="col-md-12">
+                <!-- <p><?php echo $fields['image']; ?></p> -->
+                <div class="container-fluid py-5 px-0">
+                    <div class="banner" style="background:url(<?php echo $fields['image']; ?>)"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

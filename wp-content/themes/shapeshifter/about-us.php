@@ -19,16 +19,23 @@ $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post
 
 <?php get_header(); ?>
 <?php
-if( $terms = get_terms( array(
-    'taxonomy' => 'departments',
-    'orderby' => 'name'
-) ) ) : 
-    foreach ( $terms as $term ) : 
-      // var_dump($term);
-	endforeach;
+// Commenting out until departments are enabled 
+// if( $terms = get_terms( array(
+//     'taxonomy' => 'departments',
+//     'orderby' => 'name'
+// ) ) ) : 
+//     foreach ( $terms as $term ) : 
+//       // var_dump($term);
+// 	endforeach;
 
-endif;
+// endif;
 
+$args = array(
+  'post_type' => 'team-member-post',
+  // 'orderby'   => 'menu_order',
+  // 'order'     => 'ASC',
+  'posts_per_page' => -1
+)
 ?>
 
 <!-- Content here -->
@@ -165,26 +172,19 @@ endif;
         <div class="postings is-animated my-4 py-2">
         <?php get_template_part( 'inc/partials/category-header', '', 'Team Members'); ?>
         <div class="row team-cards mt-5 mb-2 no-gutters"> 
-        <?php foreach ( $terms as $term ) : ?>
-                    <?php 
-                        $q = array('post_type' => 'team-member-post',
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'departments',
-                                    'field' => 'slug',
-                                    'terms' => $term->slug,
-                                ),
-                            ),
-                        );
-                    $loop = new WP_Query($q);
-                    if ($loop->have_posts()) {
-                        while($loop->have_posts()) : $loop->the_post();
-                        echo "<div class='col-xs-12 col-lg-6 col-xl-4 team-member-card-container'>";
-                            get_template_part( 'inc/partials/team-member-card' );
-                        echo "</div>";
-                        endwhile;
-                    } ?>
-        <?php endforeach; ?>
+          <?php 
+            $loop = new WP_Query($args);
+            if ($loop->have_posts() ) : 
+                // echo '<select>';
+                while ( $loop->have_posts() ) : $loop->the_post();
+                  echo "<div class='col-xs-12 col-lg-6 col-xl-4 team-member-card-container'>";
+                    get_template_part( 'inc/partials/team-member-card' );
+                  echo "</div>";
+                endwhile;
+                // echo '</select>';
+                wp_reset_postdata();
+            endif;
+          ?>
         </div>
       </div>
     </section>

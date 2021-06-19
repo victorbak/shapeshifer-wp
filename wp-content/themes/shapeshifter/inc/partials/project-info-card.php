@@ -3,7 +3,8 @@
     $fields = get_fields();
 
     $software_header = $fields['software_section_heading'];
-    $software_used = $fields['software_used'];
+    $software_used   = $fields['software_used'];
+    $artists         = $fields['artists'];
 
     $software_icons = array(
       'unreal_engine' => '',
@@ -16,6 +17,7 @@
     );
 ?>
 <main class="contact-info">
+  <?php if ( ! empty( $software_used ) || ! empty( $artists ) ) : ?>
     <div class="box">
         <div class="triangle"></div>
         <div>

@@ -1,135 +1,136 @@
 .team-member-card-container {
-    height: 100%;
+  height: 100%;
+  min-height: 30rem;
+  display: flex;
+
+  @include media-breakpoint-up(xs) {
+    height: auto;
+    padding-bottom: 20px;
+    min-height: 33rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: auto;
+    padding-bottom: 20px;
     min-height: 30rem;
-    display: flex;
+  }
 
-    @include media-breakpoint-up(xs) {
-        height: auto;
-        padding-bottom: 20px;
-        min-height: 33rem;
-    }
-    
-    @include media-breakpoint-up(md) {
-        height: auto;
-        padding-bottom: 20px;
-        min-height: 30rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        height: auto;
-        padding-bottom: 40px;
-        min-height: 37rem;
-    }
+  @include media-breakpoint-up(lg) {
+    height: auto;
+    padding-bottom: 40px;
+    min-height: 37rem;
+  }
 }
 
 .team-member {
-    display: inline-block;
-    padding: 0;
-    max-width: 33.1rem;
+  display: inline-block;
+  padding: 0;
+  max-width: 33.1rem;
 
-    &.selected {
-        position: absolute;
-        z-index: 4;
-        height: auto;
+  &.selected {
+    position: absolute;
+    z-index: 4;
+    height: auto;
+  }
+
+  .content {
+    padding: 1rem 1rem .6rem 1rem;
+  }
+
+  &__photo {
+    overflow: hidden;
+
+    .photo {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+  }
+
+  &__identity {
+
+    .full-name {
+      margin-bottom: .25rem;
+      font-size: 1.1rem;
     }
 
-    .content {
-        padding: 1rem 1rem .6rem 1rem;
+    .job-title {
+      color: $light_gray;
+      font-weight: 300;
     }
+  }
 
-    &__photo {
-        overflow: hidden;
+  &__contact-info {
+    padding-bottom: 8px;
 
-        .photo {
-            width: 100%;
-            height: 300px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            overflow: hidden;
-        }
-    }
+    &-item {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: .5rem;
 
-    &__identity {
-
-        .full-name {
-            margin-bottom: .25rem;
-            font-size: 1.1rem;
-        }
-
-        .job-title {
-            color: $light_gray;
-            font-weight: 300;
-        }
-    }
-
-    &__contact-info {
-        padding-bottom: 8px;
-        
-        &-item {
-            font-size: 1rem;
-            margin-bottom: .5rem;
-            
-            .icon {
-                margin-right: .5rem;
-            }
-
-        }
-
-    }
-
-    &__bio {
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: .5rem;
-        }
-        
-        height: 0;
-        overflow: hidden;
-        max-height: 0;
-        transition: 0.3s max-height ease-in;
-
-        &-content {
-            font-size: 14px;
-            line-height: 20px;
-        }
-
-        &.expanded {
-            height: min-content;
-            max-height: 1000px;
-            transition: 0.3s max-height ease-in;
-        }
+      .icon {
+        margin-right: .5rem;
+      }
 
     }
 
-    .cta {
-        display: flex;
-        min-width: 9.2rem;
-        height: 1.2rem;
-        position: absolute;
-        bottom: -.4px;
-        right: -.2px;
-        z-index: 2;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: $white;
-        color: #222;
-        text-decoration: none;
-        cursor: pointer;
-        
+  }
 
-        --notchSize: 16px;
+  &__bio {
 
-        clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
-
-        .text {
-            font-size: 16px;
-        }
-
-        .icon {
-            font-size: 14px;
-        }
-
+    @include media-breakpoint-down(md) {
+      margin-bottom: .5rem;
     }
+
+    height: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s max-height ease-in;
+
+    &-content {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &.expanded {
+      height: min-content;
+      max-height: 1000px;
+      transition: 0.3s max-height ease-in;
+    }
+
+  }
+
+  .cta {
+    display: flex;
+    min-width: 9.2rem;
+    height: 1.2rem;
+    position: absolute;
+    bottom: -.4px;
+    right: -.2px;
+    z-index: 2;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $white;
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+
+
+    --notchSize: 16px;
+
+    clip-path: polygon(var(--notchSize) 0, 100% 0, 100% 100%, 0 100%);
+
+    .text {
+      font-size: 16px;
+    }
+
+    .icon {
+      font-size: 14px;
+    }
+
+  }
 
 }

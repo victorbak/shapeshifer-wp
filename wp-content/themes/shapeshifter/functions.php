@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', 'tu_load_font_awesome' );
  * Enqueue Font Awesome.
  */
 function tu_load_font_awesome() {
-    wp_enqueue_style( 'font-awesome', '//use.fontawesome.com/releases/v5.3.1/css/all.css', array(), '5.3.1' );
+    wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.10.0/css/all.css', array(), '5.10.0' );
 }
 
 /* -BASIC SETUP------------------------------------------------- */

@@ -3930,6 +3930,7 @@ input[type="reset"] {
 }
 
 .team-member__contact-info-item {
+  display: block;
   font-size: 1rem;
   margin-bottom: .5rem;
 }

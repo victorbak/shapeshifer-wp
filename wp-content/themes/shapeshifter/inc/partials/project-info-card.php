@@ -31,11 +31,11 @@
               <div class="divider"></div>
               <div class="software-container row p-2">
                 <?php foreach( $software_used as $software ) : ?>
-                  <?php if ( array_key_exists( $software, $software_icons ) && ! empty( $software_icons[$software] ) ): ?>
+                  <?php if ( array_key_exists( $software['value'], $software_icons ) && ! empty( $software_icons[$software['value']] ) ): ?>
                     <img class="software-icon" 
-                      src="<?php echo esc_url( $software_icons[$software] ); ?>" 
-                      alt="<?php echo esc_attr( $software ) . ' ' . 'software icon' ?>"
-                      title="<?php echo esc_attr( str_replace(' ', '_', ucfirst( $software ) ) ) ?>" />
+                      src="<?php echo esc_url( $software_icons[$software['value']] ); ?>" 
+                      alt="<?php echo esc_attr( $software['label'] ) . ' ' . 'software icon' ?>"
+                      title="<?php echo esc_attr( $software['label'] ) ?>" />
                   <?php endif ?>
                 <?php endforeach ?>
               </div>

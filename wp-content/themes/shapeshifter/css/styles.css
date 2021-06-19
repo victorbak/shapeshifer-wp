@@ -2950,6 +2950,19 @@ template {
   width: 177.77777778vh !important;
 }
 
+.project .software-container {
+  margin: 0;
+}
+
+.project .software-container .software-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: .5rem;
+  padding: 3px;
+  border-radius: 5px;
+  background: #666;
+}
+
 .image-modal {
   -webkit-box-shadow: 2px 4px 7px #00000026;
   box-shadow: 2px 4px 7px #00000026;
@@ -3769,6 +3782,7 @@ input[type="reset"] {
   font-size: 16px;
   color: #6c757d;
   margin-bottom: .3rem;
+  text-transform: uppercase;
 }
 
 .contact-info--contact,

@@ -308,6 +308,20 @@
     }
   }
 
+  .software-container {
+    margin: 0;
+
+    .software-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: .5rem;
+      padding: 3px;
+      border-radius: 5px;
+      background: #666;
+    }
+  }
+
+
 }
 
 .image-modal {

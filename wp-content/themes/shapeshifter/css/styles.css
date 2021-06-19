@@ -3746,6 +3746,18 @@ input[type="reset"] {
   }
 }
 
+.banner {
+  width: 100%;
+  height: 28rem;
+  margin-left: -50%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 .category-header .name {
   color: #777;
   letter-spacing: 0;
@@ -3982,7 +3994,7 @@ input[type="reset"] {
 }
 
 .coming-soon.page .content {
-  margin: 10% 0;
+  margin: 2% 0;
   text-align: center;
 }
 
@@ -3993,6 +4005,11 @@ input[type="reset"] {
 
 .coming-soon.page p {
   font-size: 36px;
+}
+
+.coming-soon.page .banner {
+  height: 35rem;
+  background-size: contain !important;
 }
 
 .contact-us .button:hover {
@@ -13109,6 +13126,10 @@ input[type="reset"] {
 
   .team-member__bio {
     margin-bottom: .5rem;
+  }
+
+  .coming-soon.page .banner {
+    height: 20rem;
   }
 
   .jobs .modal .modal-dialog {

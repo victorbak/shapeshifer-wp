@@ -72,6 +72,7 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
                 data-vimeo-autopause="false"
                 data-vimeo-loop="true"
                 data-vimeo-responsive="true"
+                data-vimeo-dnt="true"
                 id="project-video">
             </div>
           </div>

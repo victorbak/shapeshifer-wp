@@ -2957,7 +2957,7 @@ template {
 .project .software-container .software-icon {
   width: 32px;
   height: 32px;
-  margin-right: .5rem;
+  margin-right: 1rem;
   padding: 3px;
   border-radius: 5px;
   background: #666;

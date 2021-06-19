@@ -262,7 +262,7 @@ function reset_editor()
 
 add_action("init","reset_editor");
 
-function hasSocialMedia($input) {
+function hasContent($input) {
   for($i = 0; $i < count($input); $i++) {
     if($input[$i] != false) {
       return true;

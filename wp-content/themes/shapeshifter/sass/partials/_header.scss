@@ -29,8 +29,7 @@
     max-width: 220px;
   }
   @include media-breakpoint-up(lg) {
-    max-width: 240px;
-    display: block;
+    display: inline-block;
   }
   @include media-breakpoint-up(xl) {
     padding: 10px 20px 0;
@@ -274,3 +273,15 @@
   }
 }
 
+.header-subtitle {
+  color: $white;
+  background:  #111111;
+  position: absolute;
+  bottom: -40px;
+  min-height: 40px;
+  padding: 10px 20px;
+  z-index: 0;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}

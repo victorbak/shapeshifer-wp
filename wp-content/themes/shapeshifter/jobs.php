@@ -25,9 +25,9 @@ $terms = get_terms( array(
 
 <!-- Content here -->
 <div class="jobs page">
-    <section class="container py-2 mt-4 mb-3">
+    <section class="container px-4 py-5">
         <div class="row">
-            <div class="content col-12">
+            <div class="content col-md-12 py-lg-4">
                 <?php the_field('jobs_intro'); ?>
             </div>
         </div>

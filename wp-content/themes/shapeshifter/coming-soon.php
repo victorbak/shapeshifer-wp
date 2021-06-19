@@ -5,7 +5,7 @@
  */
  
 $fields = get_fields();
-var_dump($fields['image']);
+// var_dump($fields['image']);
 ?>
 
 <?php get_header(); ?>

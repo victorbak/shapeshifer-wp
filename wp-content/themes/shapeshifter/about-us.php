@@ -52,7 +52,6 @@ $args = array(
     <?php if ( count( $gallery ) > 0): ?>
       <section class="project-gallery container-fluid py-5 my-3 px-0">
         <div class="row no-gutters">
-          <!-- if 5 images -->
           <?php if ( count( $gallery ) == 5): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
@@ -68,7 +67,6 @@ $args = array(
               <div data-toggle="modal" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
-          <!-- if 4 images -->
           <?php if ( count( $gallery ) == 4): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
@@ -83,7 +81,6 @@ $args = array(
               <div data-toggle="modal" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
-          <!-- If 3 images -->
           <?php if ( count( $gallery ) == 3): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
@@ -97,7 +94,6 @@ $args = array(
               <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
-          <!-- If 2 images -->
           <?php if ( count( $gallery ) == 2): ?>
             <div class="row col-lg-12 no-gutters">  
               <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
@@ -106,7 +102,6 @@ $args = array(
               <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
             </div>
           <?php endif ?>
-          <!-- If 1 image -->
           <?php if ( count( $gallery ) == 1): ?>
             <div class="row col-lg-12 no-gutters">  
               <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>

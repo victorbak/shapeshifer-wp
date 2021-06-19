@@ -13,10 +13,11 @@
     }
 
     .banner {
-        height: 50rem;
+        height: 35rem;
+        background-size: contain !important;
         
-        @include media-breakpoint-down {
-            height: 28rem;
+        @include media-breakpoint-down(md) {
+            height: 20rem;
         }
     }
 }

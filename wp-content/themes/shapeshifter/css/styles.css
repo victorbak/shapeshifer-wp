@@ -4008,7 +4008,8 @@ input[type="reset"] {
 }
 
 .coming-soon.page .banner {
-  height: 50rem;
+  height: 35rem;
+  background-size: contain !important;
 }
 
 .contact-us .button:hover {
@@ -13125,6 +13126,10 @@ input[type="reset"] {
 
   .team-member__bio {
     margin-bottom: .5rem;
+  }
+
+  .coming-soon.page .banner {
+    height: 20rem;
   }
 
   .jobs .modal .modal-dialog {

@@ -21,7 +21,6 @@ $terms = get_terms( array(
     'orderby' => 'name'
 ));
 
-// var_dump($terms);
 ?>
 
 <!-- Content here -->

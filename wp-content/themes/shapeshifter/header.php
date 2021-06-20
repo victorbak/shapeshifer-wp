@@ -50,7 +50,7 @@
     ?>
     <section class="header py-2">
       <div class="container-fluid header-container">
-        <div class="row">
+        <div class="row header-row">
           <div class="col-md-2 col-lg-4 logo-col">
             <div class="header-logo">
               <a href="/">

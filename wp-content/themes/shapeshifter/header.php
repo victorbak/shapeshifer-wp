@@ -54,7 +54,7 @@
           <div class="col-md-2 col-lg-4 logo-col">
             <div class="header-logo">
               <a href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup.svg" alt="Shapeshifter">
+                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v2.svg" alt="Shapeshifter">
               </a>
             </div>
             <button class="mobile-menu-btn">
@@ -67,9 +67,6 @@
               <?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
             </nav>
           </div>
-        </div>
-        <div class="header-subtitle">
-            Real Time Production / Rigging & TD Services
         </div>
       </div>
     </section>

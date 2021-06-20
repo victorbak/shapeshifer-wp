@@ -7607,7 +7607,7 @@ input[type="reset"] {
   }
 
   .header .menu-item a {
-    padding: 30px 20px 30px 60px;
+    padding: 30px 15px 30px 55px;
   }
 
   .header .menu-item a:before {
@@ -9884,7 +9884,11 @@ input[type="reset"] {
   }
 
   .header-logo img {
-    max-width: 290px;
+    max-width: 100%;
+  }
+
+  .header .menu-item a {
+    padding: 30px 20px 30px 60px;
   }
 
   .job-preview .job-header {

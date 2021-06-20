@@ -3919,6 +3919,28 @@ input[type="reset"] {
   max-width: 33.1rem;
 }
 
+.team-member:hover {
+  background-color: #2A2A2A;
+  -webkit-transition: background-color .05s ease-in;
+  transition: background-color .05s ease-in;
+}
+
+.team-member:hover .cta {
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.team-member:hover .cta .icon {
+  -webkit-transform: translateX(3px);
+  transform: translateX(3px);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
 .team-member.selected {
   position: absolute;
   z-index: 4;
@@ -3926,7 +3948,7 @@ input[type="reset"] {
 }
 
 .team-member .content {
-  margin: 1rem 1rem 2.5rem 1rem;
+  margin: 1rem 1rem 1.5rem 1rem;
 }
 
 .team-member__photo {
@@ -3952,14 +3974,10 @@ input[type="reset"] {
   font-weight: 300;
 }
 
-.team-member__contact-info {
-  padding-bottom: 8px;
-}
-
 .team-member__contact-info-item {
   display: inline-block;
   font-size: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
 }
 
 .team-member__contact-info-item .icon {
@@ -3979,13 +3997,17 @@ input[type="reset"] {
   line-height: 20px;
 }
 
+.team-member__bio-content p {
+  margin: 0;
+}
+
 .team-member__bio.expanded {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   max-height: 1000px;
-  -webkit-transition: 0.3s max-height ease-in;
-  transition: 0.3s max-height ease-in;
+  -webkit-transition: 0.4s max-height ease-in;
+  transition: 0.4s max-height ease-in;
 }
 
 .team-member .cta {

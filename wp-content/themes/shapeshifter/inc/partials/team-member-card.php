@@ -43,7 +43,7 @@
       <?php endif ?>
       </div>
       <?php if ( $hasContactInfo ) : ?>
-        <div class="team-member__contact-info">
+        <div class="team-member__contact-info py-1">
           <!-- <div class="divider"></div> -->
           <?php if ( ! empty( $email ) ): ?>
             <a class="team-member__contact-info-item" href="<?php echo esc_url( 'mailto:' . $email ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon far fa-envelope"></em><?php echo $email ?></a>

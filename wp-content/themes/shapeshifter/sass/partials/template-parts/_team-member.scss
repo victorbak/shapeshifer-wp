@@ -1,24 +1,10 @@
 .team-member-card-container {
   height: 100%;
-  min-height: 30rem;
   display: flex;
-
-  @include media-breakpoint-up(xs) {
-    height: auto;
-    padding-bottom: 20px;
-    min-height: 33rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    height: auto;
-    padding-bottom: 20px;
-    min-height: 30rem;
-  }
+  margin-bottom: 20px;
 
   @include media-breakpoint-up(lg) {
-    height: auto;
-    padding-bottom: 40px;
-    min-height: 37rem;
+    margin-bottom: 40px;
   }
 }
 
@@ -27,6 +13,22 @@
   padding: 0;
   max-width: 33.1rem;
 
+  @include media-breakpoint-up(lg) {
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background-color: #2A2A2A;
+    transition: background-color .05s ease-in;
+    .cta {
+      transition: transform .3s ease-out;
+      .icon {
+        transform: translateX(3px);
+        transition: transform .3s ease-out;
+      }
+    }
+  }
+
   &.selected {
     position: absolute;
     z-index: 4;
@@ -34,7 +36,7 @@
   }
 
   .content {
-    padding: 1rem 1rem .6rem 1rem;
+    margin: 1rem 1rem 1.5rem 1rem;
   }
 
   &__photo {
@@ -64,12 +66,11 @@
   }
 
   &__contact-info {
-    padding-bottom: 8px;
 
     &-item {
-      display: block;
+      display: inline-block;
       font-size: 1rem;
-      margin-bottom: .5rem;
+      margin-bottom: .4rem;
 
       .icon {
         margin-right: .5rem;
@@ -92,13 +93,18 @@
 
     &-content {
       font-size: 14px;
-      line-height: 20px;
-    }
+      line-height: 20px; 
+      
+      p {
+        margin: 0;
+      }
+
+    } 
 
     &.expanded {
       height: min-content;
       max-height: 1000px;
-      transition: 0.3s max-height ease-in;
+      transition: 0.4s max-height ease-in;
     }
 
   }

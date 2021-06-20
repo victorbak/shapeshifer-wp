@@ -34,13 +34,4 @@
         z-index: 3;
     }
 
-    .team-member {
-        @include media-breakpoint-up(lg) {
-            margin-right: 1rem;
-        }
-        @include media-breakpoint-down(md) {
-            margin-bottom: 2.25rem;
-        }
-    }
-
 }

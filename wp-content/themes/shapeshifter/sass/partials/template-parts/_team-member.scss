@@ -1,24 +1,10 @@
 .team-member-card-container {
   height: 100%;
-  min-height: 30rem;
   display: flex;
-
-  @include media-breakpoint-up(xs) {
-    height: auto;
-    padding-bottom: 20px;
-    min-height: 33rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    height: auto;
-    padding-bottom: 20px;
-    min-height: 30rem;
-  }
+  margin-bottom: 20px;
 
   @include media-breakpoint-up(lg) {
-    height: auto;
-    padding-bottom: 40px;
-    min-height: 37rem;
+    margin-bottom: 40px;
   }
 }
 
@@ -27,6 +13,10 @@
   padding: 0;
   max-width: 33.1rem;
 
+  @include media-breakpoint-up(lg) {
+    margin-right: 1rem;
+  }
+
   &.selected {
     position: absolute;
     z-index: 4;
@@ -34,7 +24,7 @@
   }
 
   .content {
-    padding: 1rem 1rem .6rem 1rem;
+    margin: 1rem 1rem 2.5rem 1rem;
   }
 
   &__photo {
@@ -67,7 +57,7 @@
     padding-bottom: 8px;
 
     &-item {
-      display: block;
+      display: inline-block;
       font-size: 1rem;
       margin-bottom: .5rem;
 

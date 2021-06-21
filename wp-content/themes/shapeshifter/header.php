@@ -54,7 +54,7 @@
           <div class="col-md-2 col-lg-4 logo-col">
             <div class="header-logo">
               <a href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v2.svg" alt="Shapeshifter">
+                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v3.svg" alt="Shapeshifter">
               </a>
             </div>
             <button class="mobile-menu-btn">

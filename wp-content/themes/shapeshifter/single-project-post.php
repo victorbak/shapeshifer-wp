@@ -101,11 +101,11 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
   <div class="content-container">
     <a class="content-anchor" id="content"></a>
     <section class="container px-4 py-5">
-      <div class="row">
-        <div class="col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4 content">
+      <div class="content-row row">
+        <div class="project-description col-md-12 col-lg-7 mb-xs-4 mb-lg-0 content">
           <p><?php echo $fields['project_description']; ?></p>
         </div>
-        <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4 content">
+        <div class="project-specs col-md-12 col-lg-5 content">
           <?php get_template_part( 'inc/partials/project-info-card' ); ?>
         </div>
       </div>

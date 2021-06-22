@@ -51,6 +51,34 @@
       min-height: 600px;
     }
   }
+
+  .content-row {
+    justify-content: space-between;
+  }
+
+  .project-description {
+    padding: 1.5rem 1rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 4rem;
+    }
+  }
+
+  .project-specs {
+    padding: 1.5rem 1rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-left: 4rem;
+    }
+  }
+
   .project-title {
     position: absolute;
     left: 50%;
@@ -311,17 +339,19 @@
   .software-container {
     margin: 0;
 
-    .software-icon {
-      width: 32px;
-      height: 32px;
-      margin-right: 1rem;
-      padding: 3px;
-      border-radius: 5px;
-      background: #666;
+    .icon-wrapper {
+      margin-top: 0.5rem;
+      
+      .software-icon {
+        width: 42px;
+        height: 42px;
+        margin-right: 1rem;
+        padding: 3px;
+        border-radius: 5px;
+        background: #666;
+      }
     }
   }
-
-
 }
 
 .image-modal {

@@ -2679,6 +2679,20 @@ template {
   width: 100%;
 }
 
+.project .content-row {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.project .project-description {
+  padding: 1.5rem 1rem;
+}
+
+.project .project-specs {
+  padding: 1.5rem 1rem;
+}
+
 .project .project-title {
   position: absolute;
   left: 50%;
@@ -2954,9 +2968,13 @@ template {
   margin: 0;
 }
 
-.project .software-container .software-icon {
-  width: 32px;
-  height: 32px;
+.project .software-container .icon-wrapper {
+  margin-top: 0.5rem;
+}
+
+.project .software-container .icon-wrapper .software-icon {
+  width: 42px;
+  height: 42px;
   margin-right: 1rem;
   padding: 3px;
   border-radius: 5px;
@@ -8772,6 +8790,14 @@ input[type="reset"] {
     min-height: 600px;
   }
 
+  .project .project-description {
+    padding-right: 2rem;
+  }
+
+  .project .project-specs {
+    padding-left: 2rem;
+  }
+
   .ss-modal .ss-modal-content {
     display: inline;
   }
@@ -9891,6 +9917,14 @@ input[type="reset"] {
 
   .modal-xl {
     max-width: 1140px;
+  }
+
+  .project .project-description {
+    padding-right: 4rem;
+  }
+
+  .project .project-specs {
+    padding-left: 4rem;
   }
 
   .header-logo {

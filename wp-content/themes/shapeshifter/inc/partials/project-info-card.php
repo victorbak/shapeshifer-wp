@@ -1,7 +1,11 @@
 <?php 
     $post = get_page_by_title('Contact Info', OBJECT, 'projects'); 
     $fields = get_fields();
-    $creds = $fields['credits'];
+    $hasCredits;
+    
+    if( $fields['credits'] ) {
+      $hasCredits = hasContent($fields['credits']);
+    }
 
     $software_header = $fields['software_section_heading'];
     $software_used   = $fields['software_used'];
@@ -17,7 +21,7 @@
     );
 ?>
 <main class="contact-info">
-  <?php if ( ! empty( $software_used ) || have_rows( 'credits' ) ) : ?>
+  <?php if ( ! empty( $software_used ) || $hasCredits ) : ?>
     <div class="box">
         <div class="triangle"></div>
         <?php if ( have_rows( 'credits' ) ) : ?>
@@ -25,6 +29,7 @@
             <?php $credits = get_row(); ?>
             <?php foreach($credits as $key => $item): ?>
               <?php $credit = get_sub_field_object( $key ); ?>
+              <?php if ( ! empty( $credit['value'] ) ): ?>
               <div class="credits">
                   <h5 class="contact-info--header"><?php echo $credit['label']; ?></h5>
                   <div class="divider"></div>
@@ -32,6 +37,7 @@
                       <p class="contact-info--text"><?php echo $credit['value']; ?></p>
                   </div>
               </div>
+              <?php endif ?>
             <?php endforeach ?>
           <?php endwhile ?>
         <?php endif ?>

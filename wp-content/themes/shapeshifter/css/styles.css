@@ -4103,6 +4103,7 @@ input[type="reset"] {
 }
 
 form .nf-before-form-content {
+  color: white;
   padding: 20px 0 10px;
 }
 

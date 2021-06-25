@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4">
                         <?php the_field('contact-intro');?>
-                        <a <?php echo "href='" . esc_url($contact_us) . "'"; ?> class="button mt-5">Contact Us <span class="icon"><em class="fas fa-chevron-right"></em></span></a>
+                        <!-- <a <?php echo "href='" . esc_url($contact_us) . "'"; ?> class="button mt-5">Contact Us <span class="icon"><em class="fas fa-chevron-right"></em></span></a> -->
                     </div>
                     <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4">
                         <?php get_template_part( 'inc/partials/contact-info-card' ); ?>

@@ -2738,20 +2738,20 @@ template {
   opacity: 0.16;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.3s opacity ease-in, 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
 }
 
 .project .project-title:hover:after {
   -webkit-box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.8);
   opacity: 1;
-  -webkit-transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s -webkit-box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out;
-  transition: 0.3s opacity ease-in,  0.2s box-shadow ease-in-out,  0.2s -webkit-box-shadow ease-in-out;
+  -webkit-transition: 0.3s opacity ease-in, 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s -webkit-box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s box-shadow ease-in-out;
+  transition: 0.3s opacity ease-in, 0.2s box-shadow ease-in-out, 0.2s -webkit-box-shadow ease-in-out;
 }
 
 .project .project-release-banner {
@@ -2964,15 +2964,23 @@ template {
   width: 177.77777778vh !important;
 }
 
-.project .software-container {
+.project .divider {
+  margin: .4rem 0;
+}
+
+.project .software-section {
+  margin-top: .5rem;
+}
+
+.project .software-section .software-container {
   margin: 0;
 }
 
-.project .software-container .icon-wrapper {
+.project .software-section .software-container .icon-wrapper {
   margin-top: 0.5rem;
 }
 
-.project .software-container .icon-wrapper .software-icon {
+.project .software-section .software-container .icon-wrapper .software-icon {
   width: 42px;
   height: 42px;
   margin-right: 1rem;
@@ -3820,6 +3828,10 @@ input[type="reset"] {
   color: #6c757d;
   margin-bottom: .3rem;
   text-transform: uppercase;
+}
+
+.contact-info--text {
+  margin-bottom: .3rem;
 }
 
 .contact-info--contact,

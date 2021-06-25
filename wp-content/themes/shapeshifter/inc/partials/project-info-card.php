@@ -1,8 +1,8 @@
 <?php 
     $post = get_page_by_title('Contact Info', OBJECT, 'projects'); 
     $fields = get_fields();
+    $creds = $fields['credits'];
 
-    $artists         = $fields['artists'];
     $software_header = $fields['software_section_heading'];
     $software_used   = $fields['software_used'];
 
@@ -17,18 +17,26 @@
     );
 ?>
 <main class="contact-info">
-  <?php if ( ! empty( $software_used ) || ! empty( $artists ) ) : ?>
+  <?php if ( ! empty( $software_used ) || have_rows( 'credits' ) ) : ?>
     <div class="box">
         <div class="triangle"></div>
-        <div>
-            <h5 class="contact-info--header">ARTISTS</h5>
-            <div class="divider"></div>
-            <div class="p-2">
-                <p><?php echo $fields['artists']; ?></p>
-            </div>
-        </div>
+        <?php if ( have_rows( 'credits' ) ) : ?>
+          <?php while( have_rows( 'credits' ) ) : the_row(); ?>
+            <?php $credits = get_row(); ?>
+            <?php foreach($credits as $key => $item): ?>
+              <?php $credit = get_sub_field_object( $key ); ?>
+              <div class="credits">
+                  <h5 class="contact-info--header"><?php echo $credit['label']; ?></h5>
+                  <div class="divider"></div>
+                  <div class="p-1">
+                      <p class="contact-info--text"><?php echo $credit['value']; ?></p>
+                  </div>
+              </div>
+            <?php endforeach ?>
+          <?php endwhile ?>
+        <?php endif ?>
         <?php if ( ! empty( $software_used ) ) : ?>
-          <div>
+          <div class="software-section">
               <h5 class="contact-info--header"><?php echo $software_header; ?></h5>
               <div class="divider"></div>
               <div class="software-container row p-2">

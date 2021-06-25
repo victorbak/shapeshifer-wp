@@ -7,7 +7,13 @@
 }
 
 form {
-    color: white;
+    .nf-before-form-content {
+        padding: 20px 0 10px;
+    }
+    .nf-form-content {
+        color: white;
+        padding: 0;
+    }
 }
 .map-banner {
     width: 100%;

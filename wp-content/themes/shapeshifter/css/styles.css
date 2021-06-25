@@ -4102,8 +4102,13 @@ input[type="reset"] {
   color: #fff;
 }
 
-form {
+form .nf-before-form-content {
+  padding: 20px 0 10px;
+}
+
+form .nf-form-content {
   color: white;
+  padding: 0;
 }
 
 .map-banner {

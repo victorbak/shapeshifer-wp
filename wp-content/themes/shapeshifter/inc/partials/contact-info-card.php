@@ -1,14 +1,15 @@
 <?php 
   $phone    = get_option('phone_number');
   $email    = get_option('email');
-  $address  = get_option('street_address');
+  $address1 = get_option('street_address');
+  $address2 = get_option('street_address_2');
   $twitter  = get_option('twitter_url');
   $facebook = get_option('facebook_url');
   $vimeo    = get_option('vimeo_url');
   $youtube  = get_option('youtube_url');
   $linkedin = get_option('linkedin_url');
 
-  $contact = array($phone, $email, $address);
+  $contact  = array($phone, $email, $address1, $address2);
   $socials  = array($twitter, $facebook, $vimeo, $youtube, $linkedin);
 
   $hasContactInfo = hasContent( $contact );
@@ -29,8 +30,11 @@
               <?php if ( ! empty( $email ) ): ?>
                 <p><em class="icon far fa-envelope mr-3"></em><?php echo $email; ?></p>
               <?php endif ?>
-              <?php if ( ! empty( $address ) ): ?>
-                <p><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address; ?></p>
+              <?php if ( ! empty( $address1 ) ): ?>
+                <p><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address1; ?></p>
+              <?php endif ?>
+              <?php if ( ! empty( $address2 ) ): ?>
+                <p><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address2; ?></p>
               <?php endif ?>
             </div>
           </div>

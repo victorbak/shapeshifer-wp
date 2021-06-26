@@ -3816,6 +3816,78 @@ input[type="reset"] {
   background-position: center !important;
 }
 
+.nf-form-cont .nf-before-form-content {
+  display: none;
+}
+
+.nf-form-cont .nf-form-content {
+  color: white;
+  padding: 0;
+}
+
+.nf-form-cont .nf-form-content .label-above .nf-field-label,
+.nf-form-cont .nf-form-content .label-below .nf-field-label,
+.nf-form-cont .nf-form-content .label-hidden .nf-field-label {
+  margin-bottom: 5px;
+}
+
+.nf-form-cont .nf-form-content label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nf-form-cont .nf-form-content .list-select-wrap .nf-field-element > div,
+.nf-form-cont .nf-form-content input:not([type=button]),
+.nf-form-cont .nf-form-content textarea {
+  height: 36px;
+  border-radius: 3px;
+}
+
+.nf-form-cont .nf-error.field-wrap .nf-field-element:after {
+  display: none;
+}
+
+.nf-form-cont #ninja_forms_required_items,
+.nf-form-cont .nf-field-container {
+  margin-bottom: 1rem;
+}
+
+.nf-form-cont .nf-error .nf-error-msg {
+  font-size: 16px;
+}
+
+.nf-form-cont .nf-form-content button,
+.nf-form-cont .nf-form-content input[type=button],
+.nf-form-cont .nf-form-content input[type=submit] {
+  padding: 0 16px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: #DA8824;
+  text-align: left;
+  font-weight: 400;
+  -webkit-box-shadow: 0px 3px 16px #0000001A;
+  box-shadow: 0px 3px 16px #0000001A;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.nf-form-cont .nf-form-content button:hover,
+.nf-form-cont .nf-form-content input[type=button]:hover,
+.nf-form-cont .nf-form-content input[type=submit]:hover {
+  background-color: #C37A21;
+}
+
 .category-header .name {
   color: #777;
   letter-spacing: 0;
@@ -4102,14 +4174,8 @@ input[type="reset"] {
   color: #fff;
 }
 
-form .nf-before-form-content {
-  color: white;
-  padding: 20px 0 10px;
-}
-
-form .nf-form-content {
-  color: white;
-  padding: 0;
+.form-divider {
+  margin: 2rem 0;
 }
 
 .map-banner {
@@ -13223,6 +13289,16 @@ form .nf-form-content {
 
   .footer .nav-menu .menu-item a {
     font-size: 12px;
+  }
+
+  .nf-form-cont .nf-form-content button,
+  .nf-form-cont .nf-form-content input[type=button],
+  .nf-form-cont .nf-form-content input[type=submit] {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .team-member__bio {

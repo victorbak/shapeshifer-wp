@@ -36,7 +36,6 @@
   .nf-form-content button,
   .nf-form-content input[type=button],
   .nf-form-content input[type=submit] {
-    // max-width: 22rem;
     padding: 0 16px;
     border: none;
     border-radius: 5px;
@@ -53,6 +52,7 @@
 
     &:hover {
       background-color: #C37A21;
+      color: #BBB;
     }
 
     @include media-breakpoint-down(md) {

@@ -3886,6 +3886,7 @@ input[type="reset"] {
 .nf-form-cont .nf-form-content input[type=button]:hover,
 .nf-form-cont .nf-form-content input[type=submit]:hover {
   background-color: #C37A21;
+  color: #BBB;
 }
 
 .category-header .name {

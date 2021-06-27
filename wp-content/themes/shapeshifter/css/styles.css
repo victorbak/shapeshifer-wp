@@ -3816,6 +3816,13 @@ input[type="reset"] {
   background-position: center !important;
 }
 
+.column-banner {
+  height: 28rem;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 .nf-form-cont .nf-before-form-content {
   display: none;
 }
@@ -3854,6 +3861,10 @@ input[type="reset"] {
 
 .nf-form-cont .nf-error .nf-error-msg {
   font-size: 16px;
+}
+
+.nf-form-cont .nf-form-content textarea.ninja-forms-field {
+  height: 125px;
 }
 
 .nf-form-cont .nf-form-content button,
@@ -4179,7 +4190,27 @@ input[type="reset"] {
   margin: 2rem 0;
 }
 
-.map-banner {
+.map-row {
+  margin-right: 0;
+}
+
+.map-row .map-column {
+  padding: 0;
+}
+
+.map-row .map-column .map-bg {
+  background: url(../assets/map.png);
+}
+
+.map-row .map-column .column-map-banner {
+  height: 28rem;
+  background: url(../assets/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.map-row .map-column .map-banner {
   width: 100%;
   height: 28rem;
   margin-left: -50%;
@@ -4192,43 +4223,52 @@ input[type="reset"] {
   background-position: center;
 }
 
-.map-banner .overlay {
+.map-row .map-column .overlay {
   width: 100%;
   height: 100%;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
-.map-banner .overlay .cta {
+.map-row .map-column .overlay .cta {
   opacity: 1;
 }
 
-.map-banner .overlay:hover {
+.map-row .map-column .overlay:hover {
   background-color: rgba(20, 20, 20, 0.4);
 }
 
-.map-banner .overlay:hover .cta {
+.map-row .map-column .overlay:hover .cta {
   opacity: 1;
 }
 
-.map-banner .overlay a {
+.map-row .map-column .overlay a {
   width: 100%;
   text-decoration: none;
 }
 
-.map-banner .overlay a .row {
+.map-row .map-column .overlay a .row {
   height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.map-banner .overlay a .cta {
+.map-row .map-column .overlay a .cta {
   position: relative;
   font-weight: 100;
   color: #fff;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+.city {
+  position: relative;
+  top: 40%;
+}
+
+.city-text {
+  font-weight: 100;
 }
 
 .jobs .filters {
@@ -7799,11 +7839,11 @@ input[type="reset"] {
     background: #fff;
   }
 
-  .map-banner .overlay {
+  .map-row .map-column .overlay {
     background-color: rgba(20, 20, 20, 0);
   }
 
-  .map-banner .overlay .cta {
+  .map-row .map-column .overlay .cta {
     opacity: 0;
   }
 
@@ -13333,7 +13373,7 @@ input[type="reset"] {
     transition: 0.2s opacity ease-in;
   }
 
-  .map-banner .overlay {
+  .map-row .map-column .overlay {
     background-color: rgba(20, 20, 20, 0.4);
   }
 }

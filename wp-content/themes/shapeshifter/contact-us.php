@@ -7,57 +7,82 @@
 
 <?php get_header(); ?>
 
-<?php $contact_us = get_field('contact-button-link');?>
-<?php $google_maps = get_field('google-maps-url'); ?>
+<?php 
+  $contact_us     = get_field('contact-button-link');
+  $google_maps1   = get_field('google-maps-url'); 
+  $google_maps2   = get_field('google-maps-url-2'); 
+  $location1_text = get_field('location_1_text');
+  $location2_text = get_field('location_2_text');
 
-    <!-- Content here -->
-        <div class="contact-us page">
-            <section class="container px-4 py-5">
-                <div class="row">
-                    <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4">
-                        <?php the_field('contact-intro');?>
-                        <!-- <a <?php echo "href='" . esc_url($contact_us) . "'"; ?> class="button mt-5">Contact Us <span class="icon"><em class="fas fa-chevron-right"></em></span></a> -->
-                    </div>
-                    <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4">
-                        <?php get_template_part( 'inc/partials/contact-info-card' ); ?>
-                        
-                    </div>
-                </div>
-            </section>
-            <section class="container-fluid py-md-4 py-lg-4 px-0">
-                <div class="map-banner">
-                    <div class="overlay">
-                    <a <?php echo "href='" . esc_url($google_maps) . "'"; ?> target="_blank" rel="noopener noreferrer">
-                        <div class="row mx-0">
-                            <div class="col-md-4">
-                            </div>
-                            <div class="col-md-4 text-center">
-                              <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
-                            </div>
-                            <div class="col-md-4">
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                </div>
-            </section>
+  $address1       = get_option('street_address');
+  $address2       = get_option('street_address_2');
+?>
+
+<!-- Content here -->
+<div class="contact-us page">
+    <section class="container px-4 py-5">
+        <div class="row">
+            <div class="content col-md-12 col-lg-7 mb-xs-4 mb-lg-0 py-lg-4">
+                <?php the_field('contact-intro');?>
+                <!-- <a <?php echo "href='" . esc_url($contact_us) . "'"; ?> class="button mt-5">Contact Us <span class="icon"><em class="fas fa-chevron-right"></em></span></a> -->
+            </div>
+            <div class="col-md-12 col-lg-5 col-xl-4 offset-xl-1 py-4">
+                <?php get_template_part( 'inc/partials/contact-info-card' ); ?>
+                
+            </div>
         </div>
+    </section>
+    <section class="container-fluid py-md-4 py-lg-4 px-0">
+      <div class="map-row row">
+        <div class="map-column col-lg-6">
+          <div class="column-map-banner">
+              <div class="overlay">
+              <a href="<?php echo esc_url($google_maps); ?>" target="_blank" rel="noopener noreferrer">
+                <div class="city d-flex flex-column align-items-center">
+                  <h1 class="city-text"><?php echo $location1_text ?></h1>
+                </div>
+                  <div class="row mx-0">
+                      <div class="col-md-3">
+                      </div>
+                      <div class="col-md-6 text-center">
+                        <?php if( $address1 ): ?>
+                          <p class="cta"><?php echo $address1 ?></p>
+                        <?php endif ?>
+                        <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
+                      </div>
+                      <div class="col-md-3">
+                      </div>
+                  </div>
+              </a>
+              </div>
+          </div>
+        </div>
+        <div class="map-column col-lg-6">
+          <div class="map-banner">
+              <div class="overlay">
+              <a href="<?php echo esc_url($google_maps); ?>" target="_blank" rel="noopener noreferrer">
+                <div class="city d-flex justify-content-center">
+                  <h1 class="city-text"><?php echo $location2_text ?></h1>
+                </div>
+                <div class="row mx-0">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <?php if( $address2 ): ?>
+                        <p class="cta"><?php echo $address2 ?></p>
+                      <?php endif ?>
+                      <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+              </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
         
     
-    <?php get_footer(); ?>
-
-
-    <!-- array(11) 
-        { 
-            ["phone_number"]=> string(7) "5555555" 
-            ["email"]=> string(13) "jane@test.com" 
-            ["street_address"]=> string(0) "" 
-            ["city"]=> string(0) "" 
-            ["province-state"]=> string(0) "" 
-            ["postal_code"]=> string(0) "" 
-            ["twitter_url"]=> string(0) "" 
-            ["facebook_url"]=> string(0) "" 
-            ["vimeo_url"]=> string(0) ""
-            ["youtube_url"]=> string(0) "" 
-            ["instagram_url"]=> string(0) "" 
-        }  -->
+<?php get_footer(); ?>

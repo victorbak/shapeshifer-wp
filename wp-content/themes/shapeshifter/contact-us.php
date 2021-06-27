@@ -37,34 +37,38 @@
         <div class="map-column col-lg-6">
           <div class="column-map-banner">
               <div class="overlay">
-              <a href="<?php echo esc_url($google_maps); ?>" target="_blank" rel="noopener noreferrer">
-                <div class="city d-flex flex-column align-items-center">
-                  <h1 class="city-text"><?php echo $location1_text ?></h1>
-                </div>
+                <a href="<?php echo esc_url($google_maps1); ?>" target="_blank" rel="noopener noreferrer">
+                  <?php if ( $location1_text ): ?>
+                    <div class="city d-flex flex-column align-items-center">
+                      <h1 class="city-text"><?php echo $location1_text ?></h1>
+                    </div>
+                  <?php endif ?>
                   <div class="row mx-0">
-                      <div class="col-md-3">
-                      </div>
-                      <div class="col-md-6 text-center">
-                        <?php if( $address1 ): ?>
-                          <p class="cta"><?php echo $address1 ?></p>
-                        <?php endif ?>
-                        <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
-                      </div>
-                      <div class="col-md-3">
-                      </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <?php if( $address1 ): ?>
+                        <p class="cta"><?php echo $address1 ?></p>
+                      <?php endif ?>
+                      <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
                   </div>
-              </a>
+                </a>
               </div>
           </div>
         </div>
         <div class="map-column col-lg-6">
           <div class="map-banner">
               <div class="overlay">
-              <a href="<?php echo esc_url($google_maps); ?>" target="_blank" rel="noopener noreferrer">
-                <div class="city d-flex justify-content-center">
-                  <h1 class="city-text"><?php echo $location2_text ?></h1>
-                </div>
-                <div class="row mx-0">
+                <a href="<?php echo esc_url($google_maps2); ?>" target="_blank" rel="noopener noreferrer">
+                  <?php if ( $location1_text ): ?>
+                    <div class="city d-flex justify-content-center">
+                      <h1 class="city-text"><?php echo $location2_text ?></h1>
+                    </div>
+                  <?php endif ?>
+                  <div class="row mx-0">
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-6 text-center">
@@ -75,8 +79,8 @@
                     </div>
                     <div class="col-md-3">
                     </div>
-                </div>
-              </a>
+                  </div>
+                </a>
               </div>
           </div>
         </div>

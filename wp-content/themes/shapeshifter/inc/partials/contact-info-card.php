@@ -25,16 +25,16 @@
             <div class="divider"></div>
             <div class="p-2">
               <?php if ( ! empty( $phone ) ): ?>
-                <p><em class="icon fas fa-phone mr-3"></em><?php echo $phone; ?></p>
+                <a class="contact-info--item" href="tel:<?php echo $phone ?>"><em class="icon fas fa-phone mr-3"></em><?php echo $phone ?></a>
               <?php endif ?>
               <?php if ( ! empty( $email ) ): ?>
-                <p><em class="icon far fa-envelope mr-3"></em><?php echo $email; ?></p>
+                <a class="contact-info--item" href="mailto:<?php echo $email ?>"><em class="icon far fa-envelope mr-3"></em><?php echo $email ?></a>
               <?php endif ?>
               <?php if ( ! empty( $address1 ) ): ?>
-                <p><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address1; ?></p>
+                <p class="contact-info--item"><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address1; ?></p>
               <?php endif ?>
               <?php if ( ! empty( $address2 ) ): ?>
-                <p><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address2; ?></p>
+                <p class="contact-info--item"><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address2; ?></p>
               <?php endif ?>
             </div>
           </div>

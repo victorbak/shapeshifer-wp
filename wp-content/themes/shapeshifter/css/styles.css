@@ -3918,6 +3918,12 @@ input[type="reset"] {
   margin-bottom: .3rem;
 }
 
+.contact-info--item {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
 .contact-info--contact,
 .contact-info--social {
   padding: .5rem;

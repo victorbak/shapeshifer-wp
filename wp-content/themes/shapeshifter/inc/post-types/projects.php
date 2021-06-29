@@ -30,7 +30,7 @@ function create_custom_post_type_projects() {
 		'description'   => __( 'Project postings' ),
 		'public'        => true,
         'menu_icon'     => 'dashicons-art',
-        'menu_position' => 20,
+        'menu_position' => 22,
 		'has_archive'   => false, // turn of archive page 
 		'supports'      => array( 'title', 'editor', 'page-attributes' ),
 		'rewrite'     	=> array('slug' => '/projects'),

@@ -315,5 +315,6 @@ add_action('get_header', 'my_filter_head');
 include get_template_directory() . '/inc/post-types/jobs.php';
 include get_template_directory() . '/inc/post-types/projects.php';
 include get_template_directory() . '/inc/post-types/team_members.php';
+include get_template_directory() . '/inc/post-types/blogs.php';
 
 ?>

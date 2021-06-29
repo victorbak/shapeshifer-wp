@@ -14,9 +14,7 @@ function script_styles_setup() {
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css', array(), '1.0.0.10' );
 	wp_enqueue_script('scripts-js', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
     wp_enqueue_script('header-js', get_template_directory_uri() . '/js/header.js', array('jquery'));
-	
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts-all.js', array('jquery'), '1.0.0.1', true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.min.js', array('jquery') );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.min.js', array('jquery') );
 }
 add_action( 'wp_enqueue_scripts', 'script_styles_setup' );
 
@@ -29,7 +27,9 @@ register_nav_menus( array(
 ) );
 
 function vimeo_player() {
-	wp_enqueue_script('player-js', 'https://player.vimeo.com/api/player.js', array('jquery'));
+  if ( ! wp_is_mobile() ) {
+	  wp_enqueue_script('player-js', 'https://player.vimeo.com/api/player.js', array('jquery'));
+  }
 }
 add_action( 'wp_enqueue_scripts', 'vimeo_player' );
 

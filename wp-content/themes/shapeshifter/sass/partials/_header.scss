@@ -11,6 +11,24 @@
   }
 }
 
+.loading-container {
+  .text {
+    opacity: 0;
+    font-weight: 100;
+    transition: opacity 0.2s ease-in;
+  }
+  .text-load {
+    opacity: 1;
+  }
+  .logo {
+    min-width: 197px;
+    min-height: 206px;
+  }
+  .image {
+    opacity: 0;
+    transition: all 0.2s ease-in;
+  }
+}
 .header-container{
   max-width: 1700px;
 

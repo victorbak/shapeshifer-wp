@@ -9,7 +9,9 @@
     function fadePreloader() {
       let preloaderFadeOutTime = 600;
       var preloader = $('.loading');
-      preloader.show().delay(600).fadeOut(preloaderFadeOutTime);
+      var text = $('.loading-content .text');
+      preloader.show().delay(700).fadeOut(preloaderFadeOutTime);
+      text.addClass("text-load");
   }
   fadePreloader();
   });
@@ -26,7 +28,7 @@
         bottom: 0;
         background-color: #111;
         z-index: 999999;">
-    <div class="container" 
+    <div class="loading-container container" 
     style="height: 100%;
         display: flex;
         justify-content: center;">
@@ -36,7 +38,7 @@
             flex-direction: column;
             justify-content: center;">
             <div class="logo" style="text-align: center;">
-            <img class="mr-2" src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
+              <img class="image mr-2" onload="this.style.opacity=1"  src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
             </div>
             <div class="container-fluid">
                 <div class="full-divider"></div>

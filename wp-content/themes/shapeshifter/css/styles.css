@@ -3467,6 +3467,28 @@ input[type="reset"] {
   list-style: none;
 }
 
+.loading-container .text {
+  opacity: 0;
+  font-weight: 100;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+.loading-container .text-load {
+  opacity: 1;
+}
+
+.loading-container .logo {
+  min-width: 197px;
+  min-height: 206px;
+}
+
+.loading-container .image {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
 .header-container {
   max-width: 1700px;
 }

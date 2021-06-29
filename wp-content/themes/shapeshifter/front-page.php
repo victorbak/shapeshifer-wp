@@ -1,6 +1,8 @@
 <?php 
 function home_scripts() {
+  if( ! wp_is_mobile() ) {
     wp_enqueue_script('front-page-js', get_template_directory_uri() . '/js/page/front-page.js', array('jquery'));
+  }
 }
 add_action( 'wp_enqueue_scripts', 'home_scripts' );
 ?>

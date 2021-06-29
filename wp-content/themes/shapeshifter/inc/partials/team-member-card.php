@@ -24,7 +24,13 @@
   
 ?>
 
-<button class="team-member box" aria-label="Team member accordian card">
+<button
+  class="team-member box" 
+  aria-label="Team member expanding card" 
+  aria-controls="content-<?php echo $id; ?>" 
+  aria-expanded="false" 
+  id="card-control-<?php echo $id; ?>"
+>
   <div class="team-member__photo">
   <?php if ( ! empty( $photo ) ): ?>
     <div class="photo" style="background-image: url('<?php echo $photo['url'] ?>');"></div>
@@ -69,7 +75,7 @@
       </div>
       <!-- <div class="divider"></div>  -->
     <?php endif ?>
-    <div class="team-member__bio">
+    <div class="team-member__bio" aria-hidden="true" id="content-<?php echo $id; ?>">
       <div class="divider"></div>
       <div class="team-member__bio-content">
       <?php if ( ! empty($bio ) ): ?>

@@ -22,12 +22,16 @@ jQuery(document).ready(function ($) {
         if($this.hasClass('selected')) {
             $('.overlay').fadeIn(100);
             cardParent.height(originalHeight);
+            $this.attr('aria-expanded', 'true');
+            bio.attr('aria-hidden', 'false');
             bio.addClass( 'expanded' );
             cta.text('Close Details')
             cta_icon.removeClass('fas fa-plus')
             cta_icon.addClass('fas fa-times')
         } else {
-            $('.overlay').fadeOut(100);
+            $('.overlay').fadeOut(0);
+            $this.attr('aria-expanded', 'false');
+            bio.attr('aria-hidden', 'true');
             bio.removeClass('expanded');
             cardParent.height('100%');
             $this.find('.cta span').text('View Details')
@@ -45,7 +49,7 @@ jQuery(document).ready(function ($) {
         cta.text('View Details')
         cta_icon.removeClass('fas fa-times')
         cta_icon.addClass('fas fa-plus')
-        $this.fadeOut(100);
+        $this.fadeOut(0);
     });
   
   })

@@ -3041,6 +3041,7 @@ body {
   min-height: 100vh;
   height: auto;
   background: transparent linear-gradient(181deg, #222222 0%, #111111 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
   opacity: 1;
 }
 
@@ -3102,6 +3103,7 @@ ul li:before {
 
 a {
   text-decoration: none;
+  background: rgba(0, 0, 0, 0);
   color: #fff;
 }
 
@@ -4042,6 +4044,7 @@ input[type="reset"] {
   display: inline-block;
   padding: 0;
   max-width: 33.1rem;
+  text-align: left;
 }
 
 .team-member:hover {

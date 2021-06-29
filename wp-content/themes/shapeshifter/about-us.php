@@ -187,7 +187,7 @@ $args = array(
 </div>
 
 <!-- Modal -->
-<div class="modal fade" 
+<!-- <div class="modal fade" 
     id="" 
     tabindex="-1" 
     role="dialog" 
@@ -204,6 +204,6 @@ $args = array(
           </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php get_footer(); ?>

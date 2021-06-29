@@ -238,7 +238,6 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
     id="" 
     tabindex="-1" 
     role="dialog" 
-    aria-labelledby="exampleModalCenterTitle" 
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content"> 

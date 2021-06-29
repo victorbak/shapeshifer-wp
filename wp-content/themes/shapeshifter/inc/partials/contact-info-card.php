@@ -15,7 +15,7 @@
   $hasContactInfo = hasContent( $contact );
   $hasSocialMedia = hasContent( $socials );
 ?>
-<main class="contact-info">
+<div class="contact-info">
   <?php if( $hasContactInfo || $hasSocialMedia ): ?>
     <div class="box">
         <div class="triangle"></div>
@@ -64,4 +64,4 @@
         <?php endif ?>
     </div>
   <?php endif; ?>
-</main>
+</div>

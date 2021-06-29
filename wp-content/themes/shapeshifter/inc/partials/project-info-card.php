@@ -20,7 +20,7 @@
       'autodesk'      => get_theme_file_uri( '/assets/icons/autodesk.png' ),
     );
 ?>
-<main class="contact-info">
+<div class="contact-info">
   <?php if ( ! empty( $software_used ) || $hasCredits ) : ?>
     <div class="box">
         <div class="triangle"></div>
@@ -61,4 +61,4 @@
         <?php endif; ?>
     </div>
   <?php endif; ?>
-</main>
+</div>

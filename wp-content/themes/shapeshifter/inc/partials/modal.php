@@ -12,8 +12,8 @@
         <div class="content px-lg-4 py-xs-2 col-xs-12">
             <?php echo "<p class='description'>{$args['job_description']}</p>" ?>
         </div>
-        <a class="cta py-2 px-4" href="<?php echo esc_url($args['application_link']) ?>" target="_blank" rel="noopener noreferrer">
-            <span>Apply Now</span>
+        <a class="application-cta cta py-2 px-4" href="<?php echo esc_url($args['application_link']) ?>" target="_blank" rel="noopener noreferrer">
+            <span class="application-text">Apply Now</span>
             <em class="icon fas fa-chevron-right"></em>
         </a>
     </div>

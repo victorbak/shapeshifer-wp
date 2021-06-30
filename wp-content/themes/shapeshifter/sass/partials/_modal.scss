@@ -68,7 +68,7 @@
         }
     }
 
-    .cta {
+    .application-cta {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -82,7 +82,12 @@
         color: #222;
         text-decoration: none;
         cursor: pointer;
-        
+
+        &:focus{
+            .application-text {
+                box-shadow: 0px 0px 0px 2px #000,0px 0px 0px 5px $orange;
+            }
+        }
 
         @include media-breakpoint-up(lg) {
             width: 11.5rem;
@@ -110,6 +115,10 @@
         color: $white;
         font-size: 20px;
         cursor: pointer;
+
+        &:focus {
+            box-shadow: 0px 0px 0px 2px #000,0px 0px 0px 5px $orange;
+        }
 
         @include media-breakpoint-down(md) {
             top: 10px;

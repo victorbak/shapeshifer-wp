@@ -32,14 +32,15 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project1->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a class="project-anchor" id="project1"></a>
+                <a role="link" class="project-anchor" id="project1"></a>
                 <div class="parallax-slide" id="slide1">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
-                                <div class="video-el vimeo-video" 
+                                <div class="video-el vimeo-video"
+                                    aria-hidden="true"
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
@@ -57,7 +58,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -69,7 +70,7 @@ if( ! empty( $newest->posts ) ) {
                         </div>
                     <?php endif ?>
                     <?php if($featured_project2): ?>
-                        <a href="/#project2" class="project-next-scroll">
+                        <a role="link" href="/#project2" role="link" class="project-next-scroll">
                             Next Project <i class="fas fa-arrow-down icon"></i>
                         </a>
                     <?php endif; ?>
@@ -98,7 +99,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project2->ID )
             ?>
              <div class="container-fluid px-0 project-container">
-                <a class="project-anchor" id="project2"></a>
+                <a role="link" class="project-anchor" id="project2"></a>
                 
 
                 <div class="parallax-slide" id="slide2">
@@ -107,7 +108,8 @@ if( ! empty( $newest->posts ) ) {
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax  d-none d-lg-block">
                                 <!-- Vimeo player -->
-                                <div class="video-el vimeo-video" 
+                                <div class="video-el vimeo-video"
+                                    aria-hidden="true"
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
@@ -125,7 +127,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -138,7 +140,7 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif ?>
                 </div>
                 <?php if($featured_project3): ?>
-                    <a href="/#project3" class="project-next-scroll">
+                    <a role="link" href="/#project3" role="link" class="project-next-scroll">
                         Next Project <i class="fas fa-arrow-down icon"></i>
                     </a>
                 <?php endif; ?>
@@ -166,7 +168,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project3->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a class="project-anchor" id="project3"></a>
+                <a role="link" class="project-anchor" id="project3"></a>
 
 
                 <div class="parallax-slide" id="slide3">
@@ -175,7 +177,8 @@ if( ! empty( $newest->posts ) ) {
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
-                                <div class="video-el vimeo-video" 
+                                <div class="video-el vimeo-video"
+                                    aria-hidden="true"
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
@@ -194,7 +197,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -207,7 +210,7 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif ?>
                 </div>
                 <?php if($featured_project4): ?>
-                    <a href="/#project4" class="project-next-scroll">
+                    <a role="link" href="/#project4" role="link" class="project-next-scroll">
                         Next Project <i class="fas fa-arrow-down icon"></i>
                     </a>
                 <?php endif; ?>
@@ -235,21 +238,24 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project4->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a class="project-anchor" id="project4"></a>
+                <a role="link" class="project-anchor" id="project4"></a>
                 <div class="parallax-slide" id="slide4">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax  d-none d-lg-block">
                                 <!-- Vimeo player -->
-                                <div class="video-el vimeo-video" 
+                                <div class="video-el vimeo-video"
+                                    aria-hidden="true"
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
                                     data-vimeo-loop="true"
                                     data-vimeo-responsive="true"
                                     data-vimeo-dnt="true" 
-                                    id="video4">
+                                    id="video4"
+                                    aria-hidden="true"
+                                    >
                                 </div>
                             </div>
                         <?php endif; ?>
@@ -261,7 +267,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -274,7 +280,7 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif ?>
                 </div>
                 <?php if($featured_project5): ?>
-                    <a href="/#project5" class="project-next-scroll">
+                    <a role="link" href="/#project5" role="link" class="project-next-scroll">
                         Next Project <i class="fas fa-arrow-down icon"></i>
                     </a>
                 <?php endif; ?>
@@ -302,14 +308,15 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project5->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a class="project-anchor" id="project5"></a>
+                <a role="link" class="project-anchor" id="project5"></a>
                 <div class="parallax-slide" id="slide5">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
                         <?php if($projectVideo): ?>
                             <div class="fixed-parallax d-none d-lg-block">
                                 <!-- Vimeo player -->
-                                <div class="video-el vimeo-video" 
+                                <div class="video-el vimeo-video"
+                                    aria-hidden="true"
                                     data-vimeo-url="https://player.vimeo.com/video/<?php echo $projectVideo ?>"
                                     data-vimeo-background="true"
                                     data-vimeo-autopause="false"
@@ -328,7 +335,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -341,7 +348,7 @@ if( ! empty( $newest->posts ) ) {
                     <?php endif ?>
                 </div>
                 <?php if($featured_project6): ?>
-                    <a href="/#project6" class="project-next-scroll">
+                    <a role="link" href="/#project6" role="link" class="project-next-scroll">
                         Next Project <i class="fas fa-arrow-down icon"></i>
                     </a>
                 <?php endif; ?>

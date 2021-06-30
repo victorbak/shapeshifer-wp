@@ -191,7 +191,7 @@ class Walker_Category_Find_Parents extends Walker_Category {
 	
 		$cat_name = esc_attr( $category->name );
 		$cat_name = apply_filters( 'list_cats', $cat_name, $category );
-		$link = '<a href="' . esc_url( get_term_link($category) ) . '" ';
+		$link = '<a role="link" href="' . esc_url( get_term_link($category) ) . '" ';
 		if ( $use_desc_for_title == 0 || empty($category->description) )
 			$link .= 'title="' . esc_attr( sprintf(__( 'View all posts filed under %s' ), $cat_name) ) . '"';
 		else

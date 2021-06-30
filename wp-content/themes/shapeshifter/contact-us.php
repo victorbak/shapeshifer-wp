@@ -37,7 +37,7 @@
         <div class="map-column col-lg-6">
           <div class="column-map-banner">
               <div class="overlay">
-                <a href="<?php echo esc_url($google_maps1); ?>" target="_blank" rel="noopener noreferrer">
+                <a role="link" href="<?php echo esc_url($google_maps1); ?>" target="_blank" rel="noopener noreferrer">
                   <?php if ( $location1_text ): ?>
                     <div class="city d-flex flex-column align-items-center">
                       <h1 class="city-text"><?php echo $location1_text ?></h1>
@@ -62,7 +62,7 @@
         <div class="map-column col-lg-6">
           <div class="map-banner">
               <div class="overlay">
-                <a href="<?php echo esc_url($google_maps2); ?>" target="_blank" rel="noopener noreferrer">
+                <a role="link" href="<?php echo esc_url($google_maps2); ?>" target="_blank" rel="noopener noreferrer">
                   <?php if ( $location1_text ): ?>
                     <div class="city d-flex justify-content-center">
                       <h1 class="city-text"><?php echo $location2_text ?></h1>

@@ -15,7 +15,7 @@ $fields = get_fields();
         <div class="row">
             <div class="col-md-12">    
                 <div class="logo">
-                    <a href="/">
+                    <a role="link" href="/">
                         <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
                     </a>
                 </div>

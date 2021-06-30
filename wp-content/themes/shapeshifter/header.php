@@ -55,11 +55,11 @@
         <div class="row header-row">
           <div class="col-md-2 col-lg-4 logo-col">
             <div class="header-logo">
-              <a href="/">
+              <a role="link" href="/">
                 <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v3.svg" alt="Shapeshifter">
               </a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Mobile menu button">
+            <button role="button" class="mobile-menu-btn" aria-label="Mobile menu button">
               <i class="fas fa-bars"></i>
               <i class="fas fa-times"></i>
             </button>

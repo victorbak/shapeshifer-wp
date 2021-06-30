@@ -25,10 +25,10 @@
             <div class="divider"></div>
             <div class="p-2">
               <?php if ( ! empty( $phone ) ): ?>
-                <a class="contact-info--item" href="tel:<?php echo $phone ?>"><em class="icon fas fa-phone mr-3"></em><?php echo $phone ?></a>
+                <a role="link" class="contact-info--item" href="tel:<?php echo $phone ?>"><em class="icon fas fa-phone mr-3"></em><?php echo $phone ?></a>
               <?php endif ?>
               <?php if ( ! empty( $email ) ): ?>
-                <a class="contact-info--item" href="mailto:<?php echo $email ?>"><em class="icon far fa-envelope mr-3"></em><?php echo $email ?></a>
+                <a role="link" class="contact-info--item" href="mailto:<?php echo $email ?>"><em class="icon far fa-envelope mr-3"></em><?php echo $email ?></a>
               <?php endif ?>
               <?php if ( ! empty( $address1 ) ): ?>
                 <p class="contact-info--item"><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address1; ?></p>
@@ -45,19 +45,19 @@
             <div class="divider"></div>
             <div class="row p-2">
               <?php if ( $twitter != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'twitter_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-twitter"></em></a>
+                <a role="link" href="<?php echo esc_url( get_option( 'twitter_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-twitter"></em></a>
               <?php endif ?>
               <?php if ( $facebook != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'facebook_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-facebook-f"></em></a>
+                <a role="link" href="<?php echo esc_url( get_option( 'facebook_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-facebook-f"></em></a>
               <?php endif ?>
               <?php if ( $vimeo != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'vimeo_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-vimeo"></em></a>
+                <a role="link" href="<?php echo esc_url( get_option( 'vimeo_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-vimeo"></em></a>
               <?php endif ?>
               <?php if ( $youtube != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'youtube_url' ) )?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-youtube"></em></a>
+                <a role="link" href="<?php echo esc_url( get_option( 'youtube_url' ) )?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-youtube"></em></a>
               <?php endif ?>
               <?php if ( $linkedin != false ): ?>
-                <a href="<?php echo esc_url( get_option( 'linkedin_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-linkedin-in"></em></a>
+                <a role="link" href="<?php echo esc_url( get_option( 'linkedin_url' ) ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon col-1 fab fa-linkedin-in"></em></a>
               <?php endif ?>
             </div>
           </div>

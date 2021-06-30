@@ -386,7 +386,7 @@
   .image-modal-close {
     display: flex;
     min-width: 8rem;
-    height: 1.4rem;
+    height: 2rem;
     padding: 0.6rem;
     position: absolute;
     top: -0.2px;
@@ -403,6 +403,12 @@
     --notchSize: 10px;
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, var(--notchSize) 100%);
+
+    &:focus {
+      .close-text {
+        box-shadow: 0px 0px 0px 2px #000,0px 0px 0px 5px $orange;
+      }
+    }
 
     .icon {
       font-size: 14px;

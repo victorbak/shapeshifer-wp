@@ -84,22 +84,22 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
       <div class="project-title">
         <h1 class="title"><span><?php echo $fields['project_name']; ?></span></h1>
         <?php if($fields['project_subtitle_link']) { ?>
-          <a href="<?php echo $fields['project_subtitle_link']; ?>" target="_blank" rel="noopener noreferrer">
+          <a role="link" href="<?php echo $fields['project_subtitle_link']; ?>" target="_blank" rel="noopener noreferrer">
             <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
           </a>
         <?php } else { ?>
           <h5 class="subtitle"><span><?php echo $fields['project_subtitle']; ?></span></h5>
         <?php } ?>
       </div>
-      <a href="/" class="project-release-banner">
+      <a role="link" href="/" class="project-release-banner">
         <i class="fas fa-chevron-left icon"></i>Back to Projects
       </a>
-      <a href="#content" class="project-next-scroll">Learn more <i class="fas fa-arrow-down icon"></i></a>
+      <a role="link" href="#content" class="project-next-scroll">Learn more <i class="fas fa-arrow-down icon"></i></a>
     </div>
   </section>
   
   <div class="content-container">
-    <a class="content-anchor" id="content"></a>
+    <a role="link" class="content-anchor" id="content"></a>
     <section class="container px-4 py-5">
       <div class="content-row row">
         <div class="project-description col-md-12 col-lg-7 mb-xs-4 mb-lg-0 content">
@@ -121,60 +121,60 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
           <?php if ( count( $gallery ) == 5): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
-                <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
-                <div data-toggle="modal" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <div data-toggle="modal" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- if 4 images -->
           <?php if ( count( $gallery ) == 4): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
-                <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <div data-toggle="modal" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 3 images -->
           <?php if ( count( $gallery ) == 3): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <div data-toggle="modal" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 2 images -->
           <?php if ( count( $gallery ) == 2): ?>
             <div class="row col-lg-12 no-gutters">  
-              <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
             </div>
             <div class="row col-lg-12 no-gutters">              
-              <div data-toggle="modal" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 1 image -->
           <?php if ( count( $gallery ) == 1): ?>
             <div class="row col-lg-12 no-gutters">  
-              <div data-toggle="modal" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></div>
+              <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
         </div>
@@ -197,7 +197,7 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
             </div>
           </div>
           <div class="col-xs-6 col-lg-2 prev project-pagination">
-          <?php echo "<a href='" . esc_url(get_permalink( $prev_post['id'] ) ) . "' />" ?>
+          <?php echo "<a role='link' href='" . esc_url(get_permalink( $prev_post['id'] ) ) . "' />" ?>
             <div class="image-button" style="background-image: url('<?php echo esc_url( $prev_post['image'] ); ?>');" alt="previous project" >
               <div class="overlay">
                 <div class="label prev-label">
@@ -217,7 +217,7 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
             </div>
           </div>
           <div class="col-xs-6 col-lg-2 next project-pagination">
-              <?php echo "<a href='" . esc_url(get_permalink( $next_post['id'] ) ) . "' />" ?>
+              <?php echo "<a role='link' href='" . esc_url(get_permalink( $next_post['id'] ) ) . "' />" ?>
                 <div class="image-button" style="background-image: url('<?php echo esc_url( $next_post['image'] ); ?>');" alt="next project" >
                   <div class="overlay">
                     <div class="label next-label">
@@ -242,10 +242,10 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
     <div class="modal-dialog modal-dialog-centered container" role="document">
         <div class="modal-content"> 
           <div class="image-modal">
-            <span data-dismiss="modal" class="image-modal-close">
-              <span class="mr-2">Close Image</span>
+            <button data-dismiss="modal" class="image-modal-close">
+              <span class="mr-2 close-text">Close Image</span>
               <em class="icon fas fa-times"></em>
-            </span>
+          </button>
             <img class="image-modal-content" src="">
           </div>
         </div>

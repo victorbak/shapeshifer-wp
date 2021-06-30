@@ -64,15 +64,15 @@
         <h1 class="title"><span><?php echo $blog_title ?></span></h1>
         <h5 class="subtitle"><span><?php echo $blog_subtitle ?></span></h5>
       </div>
-      <!-- <a href="/" class="project-release-banner">
+      <!-- <a role="link" href="/" class="project-release-banner">
         <i class="fas fa-chevron-left icon"></i>Back to Projects
       </a> -->
-      <a href="#content" class="project-next-scroll">Read more <i class="fas fa-arrow-down icon"></i></a>
+      <a role="link" href="#content" class="project-next-scroll">Read more <i class="fas fa-arrow-down icon"></i></a>
     </div>
   </section>
   
   <div class="content-container">
-    <a class="content-anchor" id="content"></a>
+    <a role="link" class="content-anchor" id="content"></a>
     <section class="container px-4 py-5">
       <div class="content-row row">
         <div class="project-description col-xs-12 mb-xs-4 mb-lg-0 content">
@@ -97,7 +97,7 @@
             </div>
           </div>
           <div class="col-xs-6 col-lg-2 prev project-pagination">
-          <?php echo "<a href='" . esc_url(get_permalink( $prev_post['id'] ) ) . "' />" ?>
+          <?php echo "<a role='link' href='" . esc_url(get_permalink( $prev_post['id'] ) ) . "' />" ?>
             <div class="image-button" style="background-image: url('<?php echo esc_url( $prev_post['image'] ); ?>');" alt="previous project" >
               <div class="overlay">
                 <div class="label prev-label">
@@ -117,7 +117,7 @@
             </div>
           </div>
           <div class="col-xs-6 col-lg-2 next project-pagination">
-              <?php echo "<a href='" . esc_url(get_permalink( $next_post['id'] ) ) . "' />" ?>
+              <?php echo "<a role='link' href='" . esc_url(get_permalink( $next_post['id'] ) ) . "' />" ?>
                 <div class="image-button" style="background-image: url('<?php echo esc_url( $next_post['image'] ); ?>');" alt="next project" >
                   <div class="overlay">
                     <div class="label next-label">

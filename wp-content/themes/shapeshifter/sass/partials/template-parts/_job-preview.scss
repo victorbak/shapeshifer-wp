@@ -7,11 +7,16 @@
     cursor: pointer;
     text-decoration: none;
     transition: 0.2s border ease-in;
+    text-align: left;
     
     .card {
       @include media-breakpoint-up(md) {
         display: flex;
       }
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 0px 2px #000,0px 0px 0px 5px $orange;
     }
 
     &:hover {

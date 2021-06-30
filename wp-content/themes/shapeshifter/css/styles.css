@@ -4095,7 +4095,6 @@ input[type="reset"] {
   position: absolute;
   z-index: 4;
   height: auto;
-  width: calc(100% - 1rem);
 }
 
 .team-member .content {
@@ -4166,7 +4165,7 @@ input[type="reset"] {
   display: -ms-flexbox;
   display: flex;
   min-width: 9.2rem;
-  height: 1.2rem;
+  height: 1.3rem;
   position: absolute;
   bottom: -.4px;
   right: -.2px;

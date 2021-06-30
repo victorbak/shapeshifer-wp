@@ -24,13 +24,7 @@
   
 ?>
 
-<button
-  class="team-member box" 
-  aria-label="Team member expanding card" 
-  aria-controls="content-<?php echo $id; ?>" 
-  aria-expanded="false" 
-  id="card-control-<?php echo $id; ?>"
->
+<div class="team-member box" >
   <div class="team-member__photo">
   <?php if ( ! empty( $photo ) ): ?>
     <div class="photo" style="background-image: url('<?php echo $photo['url'] ?>');"></div>
@@ -84,8 +78,14 @@
       </div>
     </div>
   </div>
-  <span class="cta py-2 px-2">
+  <button 
+    class="cta expander px-2"
+    aria-label="Team member expanding card" 
+    aria-controls="content-<?php echo $id; ?>" 
+    aria-expanded="false" 
+    id="card-control-<?php echo $id; ?>"
+  >
     <span class="text mr-2">View Details</span>
     <em class="icon fas fa-plus"></em>
-  </span>
-</button>
+  </button>
+</div>

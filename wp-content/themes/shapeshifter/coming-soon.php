@@ -5,7 +5,6 @@
  */
  
 $fields = get_fields();
-// var_dump($fields['image']);
 ?>
 
 <?php get_header(); ?>
@@ -16,7 +15,7 @@ $fields = get_fields();
             <div class="col-md-12">    
                 <div class="logo">
                     <a role="link" href="/">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
+                        <img class="skip-lazy" src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shape Shifters Creative">
                     </a>
                 </div>
             </div>

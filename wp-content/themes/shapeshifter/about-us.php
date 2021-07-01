@@ -13,8 +13,8 @@ function about_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'about_scripts' );
 
-$id = ! empty( $post ) ? $post->ID : false;
-$gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post id
+// $id = ! empty( $post ) ? $post->ID : false;
+// $gallery = acf_photo_gallery('image_gallery', $id);  // params: field name, post id
 ?>
 
 <?php get_header(); ?>

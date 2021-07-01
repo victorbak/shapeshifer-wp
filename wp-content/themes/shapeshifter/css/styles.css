@@ -4249,6 +4249,8 @@ input[type="reset"] {
 .coming-soon.page .logo {
   margin: 0 auto 20px;
   max-width: 120px;
+  width: 120px;
+  height: 126px;
 }
 
 .coming-soon.page p {

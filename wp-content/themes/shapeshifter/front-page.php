@@ -32,7 +32,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project1->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a role="link" class="project-anchor" id="project1"></a>
+                <a role="link" class="project-anchor" aria-label="Project 1 anchor" id="project1"></a>
                 <div class="parallax-slide" id="slide1">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -58,7 +58,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
+                    <a role="link" class="project-title-link" aria-label="Navigate to project" href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -99,7 +99,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project2->ID )
             ?>
              <div class="container-fluid px-0 project-container">
-                <a role="link" class="project-anchor" id="project2"></a>
+                <a role="link" class="project-anchor" aria-label="Project 2 anchor" id="project2"></a>
                 
 
                 <div class="parallax-slide" id="slide2">
@@ -127,7 +127,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
+                    <a role="link" class="project-title-link" aria-label="Navigate to project" href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -168,7 +168,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project3->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a role="link" class="project-anchor" id="project3"></a>
+                <a role="link" class="project-anchor" aria-label="Project 3 anchor" id="project3"></a>
 
 
                 <div class="parallax-slide" id="slide3">
@@ -197,7 +197,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
+                    <a role="link" class="project-title-link" aria-label="Navigate to project" href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -238,7 +238,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project4->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a role="link" class="project-anchor" id="project4"></a>
+                <a role="link" class="project-anchor" aria-label="Project 4 anchor" id="project4"></a>
                 <div class="parallax-slide" id="slide4">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -267,7 +267,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
+                    <a role="link" class="project-title-link" aria-label="Navigate to project" href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>
@@ -308,7 +308,7 @@ if( ! empty( $newest->posts ) ) {
                 $projectVideo = get_field( 'vimeo_code', $featured_project5->ID )
             ?>
             <div class="container-fluid px-0 project-container">
-                <a role="link" class="project-anchor" id="project5"></a>
+                <a role="link" class="project-anchor" aria-label="Project 5 anchor" id="project5"></a>
                 <div class="parallax-slide" id="slide5">
                 <div class="parallax-clip">
 						<div class="poster-image" style="background-image: url('<?php echo esc_url($projectImage['url']); ?>');"></div>
@@ -335,7 +335,7 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
+                    <a role="link" class="project-title-link" aria-label="Navigate to project" href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
                         <div class="project-title-container">
                             <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle">Click for more info</span></h6>

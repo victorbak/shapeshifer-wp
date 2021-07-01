@@ -121,60 +121,60 @@ add_action( 'wp_enqueue_scripts', 'project_scripts' );
           <?php if ( count( $gallery ) == 5): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-5'?>" data-image="<?php echo esc_url($gallery[4]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[4]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- if 4 images -->
           <?php if ( count( $gallery ) == 4): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-6 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-4'?>" data-image="<?php echo esc_url($gallery[3]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[3]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 3 images -->
           <?php if ( count( $gallery ) == 3): ?>
             <div class="col-lg-6">
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
               </div>
               <div class="row no-gutters">
-                <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
+                <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-small" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
               </div>
             </div>
             <div class="row col-lg-6 no-gutters">              
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-3'?>" data-image="<?php echo esc_url($gallery[2]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[2]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 2 images -->
           <?php if ( count( $gallery ) == 2): ?>
             <div class="row col-lg-12 no-gutters">  
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
             </div>
             <div class="row col-lg-12 no-gutters">              
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-2'?>" data-image="<?php echo esc_url($gallery[1]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[1]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
           <!-- If 1 image -->
           <?php if ( count( $gallery ) == 1): ?>
             <div class="row col-lg-12 no-gutters">  
-              <button data-toggle="modal" role="button" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
+              <button data-toggle="modal" role="button" aria-label="View Image" data-target="<?php echo '#image-1'?>" data-image="<?php echo esc_url($gallery[0]['full_image_url']); ?>" class="col-lg-12 project-gallery-image gallery-image gallery-image-big" style="background-image: url('<?php echo esc_url($gallery[0]['full_image_url']); ?>');"></button>
             </div>
           <?php endif ?>
         </div>

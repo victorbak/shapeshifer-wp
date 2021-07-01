@@ -58,9 +58,9 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" aria-labelledby="project-1-subtitle" href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project1->ID )); ?>">
                         <div class="project-title-container">
-                            <h1 class="project-title"><span aria-hidden="true"><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
                             <h6 class="project-subtitle" id="project-1-subtitle">Click for more info</span></h6>
                         </div>
                     </a>
@@ -127,10 +127,10 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" aria-labelledby="project-2-subtitle" href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project2->ID )); ?>">
                         <div class="project-title-container">
-                            <h1 class="project-title"><span aria-hidden="true"><?php echo esc_html( $projectName ); ?><span></h1>
-                            <h6 class="project-subtitle" id="project-2-subtitle">Click for more info</span></h6>
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
                         </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project2->ID ): ?>
@@ -197,10 +197,10 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" aria-labelledby="project-3-subtitle" href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project3->ID )); ?>">
                         <div class="project-title-container">
-                            <h1 class="project-title"><span aria-hidden="true"><?php echo esc_html( $projectName ); ?><span></h1>
-                            <h6 class="project-subtitle" id="project-3-subtitle">Click for more info</span></h6>
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
                         </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project3->ID ): ?>
@@ -254,7 +254,6 @@ if( ! empty( $newest->posts ) ) {
                                     data-vimeo-responsive="true"
                                     data-vimeo-dnt="true" 
                                     id="video4"
-                                    aria-hidden="true"
                                     >
                                 </div>
                             </div>
@@ -267,10 +266,10 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" aria-labelledby="project-4-subtitle" href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project4->ID )); ?>">
                         <div class="project-title-container">
-                            <h1 class="project-title"><span aria-hidden="true"><?php echo esc_html( $projectName ); ?><span></h1>
-                            <h6 class="project-subtitle" id="project-4-subtitle">Click for more info</span></h6>
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
                         </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project4->ID ): ?>
@@ -335,10 +334,10 @@ if( ! empty( $newest->posts ) ) {
                 </div>
                 <div class="project-bg-color"></div>
                 <div class="project-content">
-                    <a role="link" class="project-title-link" aria-labelledby="project-5-subtitle" href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
+                    <a role="link" class="project-title-link" href="<?php echo esc_url(get_permalink( $featured_project5->ID )); ?>">
                         <div class="project-title-container">
-                            <h1 class="project-title"><span aria-hidden="true"><?php echo esc_html( $projectName ); ?><span></h1>
-                            <h6 class="project-subtitle" id="project-5-subtitle">Click for more info</span></h6>
+                            <h1 class="project-title"><span><?php echo esc_html( $projectName ); ?><span></h1>
+                            <h6 class="project-subtitle">Click for more info</span></h6>
                         </div>
                     </a>
                     <?php if( isset($newest_post_id) && $newest_post_id == $featured_project5->ID ): ?>

@@ -25,10 +25,10 @@
             <div class="divider"></div>
             <div class="p-2">
               <?php if ( ! empty( $phone ) ): ?>
-                <a role="link" aria-label="Call us" class="contact-info--item" href="tel:<?php echo $phone ?>"><em class="icon fas fa-phone mr-3"></em><?php echo $phone ?></a>
+                <a role="link" class="contact-info--item" href="tel:<?php echo $phone ?>"><em class="icon fas fa-phone mr-3"></em><?php echo $phone ?></a>
               <?php endif ?>
               <?php if ( ! empty( $email ) ): ?>
-                <a role="link" aria-label="Send Email" class="contact-info--item" href="mailto:<?php echo $email ?>"><em class="icon far fa-envelope mr-3"></em><?php echo $email ?></a>
+                <a role="link" class="contact-info--item" href="mailto:<?php echo $email ?>"><em class="icon far fa-envelope mr-3"></em><?php echo $email ?></a>
               <?php endif ?>
               <?php if ( ! empty( $address1 ) ): ?>
                 <p class="contact-info--item"><em class="icon fas fa-map-marker-alt mr-3"></em><?php echo $address1; ?></p>

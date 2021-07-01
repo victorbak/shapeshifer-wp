@@ -37,7 +37,7 @@
         <div class="map-column col-lg-6">
           <div class="column-map-banner">
               <div class="overlay">
-                <a role="link" aria-labelledby="get-directions-1" href="<?php echo esc_url($google_maps1); ?>" target="_blank" rel="noopener noreferrer">
+                <a role="link" href="<?php echo esc_url($google_maps1); ?>" target="_blank" rel="noopener noreferrer">
                   <?php if ( $location1_text ): ?>
                     <div class="city d-flex flex-column align-items-center">
                       <h1 class="city-text"><?php echo $location1_text ?></h1>
@@ -50,8 +50,7 @@
                       <?php if( $address1 ): ?>
                         <p class="cta"><?php echo $address1 ?></p>
                       <?php endif ?>
-                      <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> <span aria-hidden="true">GET DIRECTIONS</span></h6>
-                      <span id="get-directions-1" class="visually-hidden">Get Directions</span>
+                      <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
                     </div>
                     <div class="col-md-3">
                     </div>
@@ -63,7 +62,7 @@
         <div class="map-column col-lg-6">
           <div class="map-banner">
               <div class="overlay">
-                <a role="link" aria-labelledby="get-directions-1" href="<?php echo esc_url($google_maps2); ?>" target="_blank" rel="noopener noreferrer">
+                <a role="link" href="<?php echo esc_url($google_maps2); ?>" target="_blank" rel="noopener noreferrer">
                   <?php if ( $location1_text ): ?>
                     <div class="city d-flex justify-content-center">
                       <h1 class="city-text"><?php echo $location2_text ?></h1>
@@ -77,7 +76,6 @@
                         <p class="cta"><?php echo $address2 ?></p>
                       <?php endif ?>
                       <h6 class="cta"><i class="pr-2 fas fa-map-marker-alt"></i> GET DIRECTIONS</h6>
-                      <span id="get-directions-2" class="visually-hidden">Get Directions</span>
                     </div>
                     <div class="col-md-3">
                     </div>

@@ -38,7 +38,7 @@
             flex-direction: column;
             justify-content: center;">
             <div class="logo" style="text-align: center;">
-              <img class="image mr-2 skip-lazy" onload="this.style.opacity=1"  src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
+              <img class="image mr-2 skip-lazy" onload="this.style.opacity=1"  src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shape Shifters Creative">
             </div>
             <div class="container-fluid">
                 <div class="full-divider"></div>
@@ -56,7 +56,7 @@
           <div class="col-md-2 col-lg-4 logo-col">
             <div class="header-logo">
               <a role="link" href="/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v3.svg" alt="Shapeshifter">
+                <img class="skip-lazy" src="<?php bloginfo('template_url'); ?>/assets/Logo_Text_Lockup-v3.svg" alt="Shape Shifters Creative">
               </a>
             </div>
             <button role="button" class="mobile-menu-btn" aria-label="Mobile menu button">

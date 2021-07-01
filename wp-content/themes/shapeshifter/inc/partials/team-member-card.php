@@ -46,44 +46,44 @@
       <div class="team-member__contact-info py-1">
         <!-- <div class="divider"></div> -->
         <?php if ( ! empty( $email ) ): ?>
-          <a role="link" aria-label="Send Email" class="team-member__contact-info-item" href="<?php echo esc_url( 'mailto:' . $email ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon far fa-envelope"></em>
-            <span class="visually-hidden"><?php echo "Email of" . $full_name; ?></span>
+          <a role="link" aria-label="<?php echo "Email of " . $full_name . "." ?>" class="team-member__contact-info-item" href="<?php echo esc_url( 'mailto:' . $email ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon far fa-envelope"></em>
+            <span class="visually-hidden"><?php echo "Email of " . $full_name; ?></span>
             <span aria-hidden="true"><?php echo $email ?></span>
           </a>
         <?php endif ?>
         <?php if ( ! empty( $linkedin ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> Linkedin page" class="team-member__contact-info-item" href="<?php echo esc_url( $linkedin ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-linkedin-in"></em>
-            <span class="visually-hidden"><?php echo "Linkedin of" . $full_name; ?></span>
+          <a role="link" aria-label="<?php echo "Linkedin of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( $linkedin ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-linkedin-in"></em>
+            <span class="visually-hidden"><?php echo "Linkedin of " . $full_name . "."; ?></span>
             <span aria-hidden="true"><?php echo $linkedin ?></span>
           </a>
         <?php endif ?>
         <?php if ( ! empty( $phone ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> phone number" class="team-member__contact-info-item" href="<?php echo esc_url( 'tel:' . $phone ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-phone"></em>
-            <span class="visually-hidden"><?php echo "Phone number of" . $full_name . "."; ?></span>
+          <a role="link" aria-label="<?php echo "Phone number of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( 'tel:' . $phone ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-phone"></em>
+            <span class="visually-hidden"><?php echo "Phone number of " . $full_name . "."; ?></span>
             <span><?php echo $phone ?></span>
           </a>
         <?php endif ?>
         <?php if ( ! empty( $artstation ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> Artstation page" class="team-member__contact-info-item" href="<?php echo esc_url( $artstation ) ?>" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-artstation"></i>
-            <span class="visually-hidden"><?php echo "Artstation of" . $full_name . "."; ?></span>
+          <a role="link" aria-label="<?php echo "Artstation of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( $artstation ) ?>" target="_blank" rel="noopener noreferrer"><i class="icon fab fa-artstation"></i>
+            <span class="visually-hidden"><?php echo "Artstation of " . $full_name . "."; ?></span>
             <span aria-hidden="true"><?php echo $artstation ?></span>
         </a>
         <?php endif ?>
         <?php if ( ! empty( $youtube ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> Youtube page" class="team-member__contact-info-item" href="<?php echo esc_url( $youtube ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-youtube"></em>
-            <span class="visually-hidden"><?php echo "Youtube of" . $full_name . "."; ?></span>
+          <a role="link" aria-label="<?php echo "Youtube of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( $youtube ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-youtube"></em>
+            <span class="visually-hidden"><?php echo "Youtube of " . $full_name . "."; ?></span>
             <span aria-hidden="true"><?php echo $youtube ?></span>
           </a>
         <?php endif ?>
         <?php if ( ! empty( $demo_reel ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> Demo Reel" class="team-member__contact-info-item" href="<?php echo esc_url( $demo_reel ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-film"></em>
-            <span class="visually-hidden"><?php echo "Demo reel of" . $full_name . "."; ?></span>
+          <a role="link" aria-label="<?php echo "Demo reel of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( $demo_reel ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fas fa-film"></em>
+            <span class="visually-hidden"><?php echo "Demo reel of " . $full_name . "."; ?></span>
             <span aria-hidden="true"><?php echo $demo_reel ?></span>
           </a>
         <?php endif ?>
         <?php if ( ! empty( $imdb ) ): ?>
-          <a role="link" aria-label="<?php echo $full_name . "'s"; ?> IMDB" class="team-member__contact-info-item" href="<?php echo esc_url( $imdb ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-imdb"></em>
-            <span class="visually-hidden"><?php echo "IMDB of" . $full_name . "."; ?></span>
+          <a role="link" aria-label="<?php echo "IMDB of " . $full_name . "."; ?>" class="team-member__contact-info-item" href="<?php echo esc_url( $imdb ) ?>" target="_blank" rel="noopener noreferrer"><em class="icon fab fa-imdb"></em>
+            <span class="visually-hidden"><?php echo "IMDB of " . $full_name . "."; ?></span>
             <span aria-hidden="true"><?php echo $imdb ?></span>
           </a>
         <?php endif ?>

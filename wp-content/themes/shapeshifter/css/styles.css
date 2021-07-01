@@ -3958,7 +3958,7 @@ input[type="reset"] {
 }
 
 .category-header .name {
-  color: #777;
+  color: #b5b6b7;
   letter-spacing: 0;
   font-weight: 300;
   text-transform: uppercase;
@@ -3966,7 +3966,7 @@ input[type="reset"] {
 
 .contact-info--header {
   font-size: 16px;
-  color: #9FA6AD;
+  color: #b5b6b7;
   margin-bottom: .3rem;
   text-transform: uppercase;
 }

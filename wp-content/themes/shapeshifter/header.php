@@ -38,7 +38,7 @@
             flex-direction: column;
             justify-content: center;">
             <div class="logo" style="text-align: center;">
-              <img class="image mr-2" onload="this.style.opacity=1"  src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
+              <img class="image mr-2 skip-lazy" onload="this.style.opacity=1"  src="<?php bloginfo('template_url'); ?>/assets/Logo_Vector.svg" alt="Shapeshifter">
             </div>
             <div class="container-fluid">
                 <div class="full-divider"></div>

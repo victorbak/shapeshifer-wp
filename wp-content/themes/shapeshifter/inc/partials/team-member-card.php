@@ -92,8 +92,8 @@
     <?php endif ?>
     <div class="team-member__bio" aria-hidden="true" id="content-<?php echo $id; ?>">
       <div class="divider"></div>
-      <div class="team-member__bio-content">
-      <?php if ( ! empty($bio ) ): ?>
+      <div class="team-member__bio-content pb-2">
+      <?php if ( ! empty( $bio ) ): ?>
         <?php echo "<p>" . $bio ."</p>"; ?>
       <?php endif ?>
       </div>
